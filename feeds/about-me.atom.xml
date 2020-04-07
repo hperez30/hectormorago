@@ -2,4 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Hector' log - about-me</title><link href="/hectormorago/" rel="alternate"></link><link href="/hectormorago/feeds/about-me.atom.xml" rel="self"></link><id>/hectormorago/</id><updated>2020-04-06T20:31:00+02:00</updated><subtitle>A personal blog.</subtitle><entry><title>About Me</title><link href="/hectormorago/about-me.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/about-me.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my research interests.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Research interest&lt;/h2&gt;
 &lt;p&gt;My research interests include, but are not limited to Variability Modeling, 
 Software Product Lines, Feature Models, software testing, Binary Decision 
-Diagrams, and Bibliometric Techniques.&lt;/p&gt;</content><category term="about-me"></category><category term="principal"></category><category term="otros"></category></entry></feed>
+Diagrams, and Bibliometric Techniques.&lt;/p&gt;
+&lt;h2&gt;Publications&lt;/h2&gt;
+&lt;h3&gt;Speeding up Derivative Configuration from Product Platforms&lt;/h3&gt;
+&lt;p&gt;Heradio, R.; Fernandez-Amoros, D.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Adan, A
+Journal Paper Entropy, June 2014, Volume 17, Pages 3329-3356
+Impact Factor 1.743 (Journal Citation Reports) | 2nd Quartile&lt;/p&gt;</content><category term="about-me"></category><category term="principal"></category><category term="otros"></category></entry></feed>
