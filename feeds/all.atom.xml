@@ -46,7 +46,25 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;</con
 &lt;li&gt;Elemento 3&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Al texto en Markdown puedes añadirle formato como &lt;strong&gt;negrita&lt;/strong&gt; o &lt;em&gt;cursiva&lt;/em&gt; de una manera muy sencilla.&lt;/p&gt;
-&lt;p&gt;Todo esto fue extraído de este &lt;a href="https://markdown.es/sintaxis-markdown/"&gt;Post sobre markdown&lt;/a&gt;&lt;/p&gt;</content><category term="blog"></category><category term="principal"></category><category term="otros"></category></entry><entry><title>Prueba</title><link href="/hectormorago/prueba.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/prueba.html</id><summary type="html">&lt;p&gt;Mi primer post usando Pelican y GitHub Pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Prueba de archivo &lt;em&gt;Markdown&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Todo esto fue extraído de este &lt;a href="https://markdown.es/sintaxis-markdown/"&gt;Post sobre markdown&lt;/a&gt;&lt;/p&gt;</content><category term="blog"></category><category term="principal"></category><category term="otros"></category></entry><entry><title>Projects</title><link href="/hectormorago/projects.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/projects.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my main projects.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Projects&lt;/h2&gt;
+&lt;h3&gt;Context&lt;/h3&gt;
+&lt;p&gt;Variability models play a key role in product line engineering as they 
+are used to represent the common and variable features that products may 
+include, and what constraints among the features must be satisfied to 
+guarantee the validity of the products. Valuable analysis operations on 
+variability models can be performed by black box reusing logic engines, 
+such as SAT-solvers and binary decision diagram libraries. Unfortunately, 
+such kind of reuse implies long computation times for operations that 
+need calling the engines many times. To overcome this problem, we work 
+on new algorithms that directly deal with the data structure of a binary 
+decision diagram encoding a variability model. In particular, the 
+algorithm published in this site is specifically designed to detect core 
+and dead features&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;
+&lt;p&gt;This repository provides an algorithm to identify core and dead features, 
+which is written in the C++ programming language as an extension of the 
+BuDDy BDD package.&lt;/p&gt;
+&lt;h3&gt;The following link provides a more detailed description of the projects.&lt;/h3&gt;</content><category term="About Me"></category><category term="research"></category><category term="projects"></category><category term="others"></category></entry><entry><title>Prueba</title><link href="/hectormorago/prueba.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/prueba.html</id><summary type="html">&lt;p&gt;Mi primer post usando Pelican y GitHub Pages&lt;/p&gt;</summary><content type="html">&lt;p&gt;Prueba de archivo &lt;em&gt;Markdown&lt;/em&gt;.&lt;/p&gt;
 &lt;h2&gt;Título&lt;/h2&gt;
 &lt;h3&gt;Subtítulo&lt;/h3&gt;
 &lt;p&gt;Este es un ejemplo de texto que da entrada a una lista genérica de elementos:&lt;/p&gt;
