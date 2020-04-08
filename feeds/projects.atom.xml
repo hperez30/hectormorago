@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hector' log - Projects</title><link href="/hectormorago/" rel="alternate"></link><link href="/hectormorago/feeds/projects.atom.xml" rel="self"></link><id>/hectormorago/</id><updated>2020-04-06T20:31:00+02:00</updated><subtitle>A personal blog.</subtitle><entry><title>Projects</title><link href="/hectormorago/projects.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/projects.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my main projects.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Projects&lt;/h2&gt;
+&lt;h3&gt;Context&lt;/h3&gt;
+&lt;p&gt;Variability models play a key role in product line engineering as they 
+are used to represent the common and variable features that products may 
+include, and what constraints among the features must be satisfied to 
+guarantee the validity of the products. Valuable analysis operations on 
+variability models can be performed by black box reusing logic engines, 
+such as SAT-solvers and binary decision diagram libraries. Unfortunately, 
+such kind of reuse implies long computation times for operations that 
+need calling the engines many times. To overcome this problem, we work 
+on new algorithms that directly deal with the data structure of a binary 
+decision diagram encoding a variability model. In particular, the 
+algorithm published in this site is specifically designed to detect core 
+and dead features&lt;/p&gt;
+&lt;h3&gt;Description&lt;/h3&gt;
+&lt;p&gt;This repository provides an algorithm to identify core and dead features, 
+which is written in the C++ programming language as an extension of the 
+BuDDy BDD package.&lt;/p&gt;
+&lt;h3&gt;The following link provides a more detailed description of the projects.&lt;/h3&gt;</content><category term="Projects"></category><category term="research"></category><category term="projects"></category><category term="others"></category></entry></feed>
