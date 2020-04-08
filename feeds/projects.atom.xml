@@ -16,6 +16,6 @@ and dead features&lt;/p&gt;
 &lt;h3&gt;Description&lt;/h3&gt;
 &lt;p&gt;This repository provides an algorithm to identify core and dead features, 
 which is written in the C++ programming language as an extension of the 
-BuDDy BDD package.&lt;/p&gt;
-&lt;h3&gt;More information about this projects could be found in its [main&lt;/h3&gt;
-&lt;p&gt;projects page](https://hperez30.github.io/CoreAndDeadFeatures/).&lt;/p&gt;</content><category term="Projects"></category><category term="research"></category><category term="projects"></category><category term="others"></category></entry></feed>
+&lt;a href="http://buddy.sourceforge.net/manual/main.html"&gt;BuDDy BDD package&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;More information about this projects could be found in its&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://hperez30.github.io/CoreAndDeadFeatures/"&gt;main projects page&lt;/a&gt;.&lt;/p&gt;</content><category term="Projects"></category><category term="research"></category><category term="projects"></category><category term="others"></category></entry></feed>
