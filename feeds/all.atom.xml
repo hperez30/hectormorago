@@ -31,8 +31,7 @@ St. Chiara, Naples, Italy September 15-17, 2015&lt;/p&gt;
 Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enrique
 Conference Paper The 15th International Conference on Intelligent Software 
 Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;</content><category term="About Me"></category><category term="research"></category><category term="publications"></category><category term="others"></category></entry><entry><title>Algoritmos de planificación</title><link href="/hectormorago/alg-planificacion.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-planificacion.html</id><summary type="html"></summary><content type="html">&lt;p&gt;Entrada&lt;/p&gt;
-&lt;h2&gt;Algoritmos de planificación&lt;/h2&gt;
-&lt;h3&gt;FCFS&lt;/h3&gt;
+&lt;h2&gt;FCFS&lt;/h2&gt;
 &lt;p&gt;Este es un ejemplo de texto que da entrada a una lista genérica de elementos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Elemento 1&lt;/li&gt;
@@ -47,7 +46,7 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;</con
 &lt;/ol&gt;
 &lt;p&gt;Al texto en Markdown puedes añadirle formato como &lt;strong&gt;negrita&lt;/strong&gt; o &lt;em&gt;cursiva&lt;/em&gt; de una manera muy sencilla.&lt;/p&gt;
 &lt;p&gt;Todo esto fue extraído de este &lt;a href="https://markdown.es/sintaxis-markdown/"&gt;Post sobre markdown&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;SJF&lt;/h3&gt;
+&lt;h2&gt;SJF&lt;/h2&gt;
 &lt;p&gt;Este es un ejemplo de texto que da entrada a una lista genérica de elementos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Elemento 1&lt;/li&gt;
@@ -62,7 +61,7 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;</con
 &lt;/ol&gt;
 &lt;p&gt;Al texto en Markdown puedes añadirle formato como &lt;strong&gt;negrita&lt;/strong&gt; o &lt;em&gt;cursiva&lt;/em&gt; de una manera muy sencilla.&lt;/p&gt;
 &lt;p&gt;Todo esto fue extraído de este &lt;a href="https://markdown.es/sintaxis-markdown/"&gt;Post sobre markdown&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;SRT&lt;/h3&gt;
+&lt;h2&gt;SRT&lt;/h2&gt;
 &lt;p&gt;Este es un ejemplo de texto que da entrada a una lista genérica de elementos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Elemento 1&lt;/li&gt;
@@ -77,7 +76,7 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;</con
 &lt;/ol&gt;
 &lt;p&gt;Al texto en Markdown puedes añadirle formato como &lt;strong&gt;negrita&lt;/strong&gt; o &lt;em&gt;cursiva&lt;/em&gt; de una manera muy sencilla.&lt;/p&gt;
 &lt;p&gt;Todo esto fue extraído de este &lt;a href="https://markdown.es/sintaxis-markdown/"&gt;Post sobre markdown&lt;/a&gt;&lt;/p&gt;
-&lt;h3&gt;Round Robin&lt;/h3&gt;
+&lt;h2&gt;Round Robin&lt;/h2&gt;
 &lt;p&gt;Este es un ejemplo de texto que da entrada a una lista genérica de elementos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Elemento 1&lt;/li&gt;
