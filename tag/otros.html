@@ -38,21 +38,20 @@
 necesitamos de herramientas que de algún modo multiplexen los recursos del sistema. Una de estas herramientas 
 la proporciona el sistema operativo, mediante el <strong>planificador</strong> o scheduler, que se encarga de decidir 
 el siguiente proceso que pasará a ejecutarse de entre aquellos que se encuentran preparados para su ejecución.</p>
+<p>Entre los principales algoritmos de planificación podemos citar los siguientes:</p>
 <h2>FCFS</h2>
-<p>Este es un ejemplo de texto que da entrada a una lista genérica de elementos:</p>
+<p>Primero en llegar primero en ser servido, FCFS (First Come First Server). Es uno de los algortimos de planificación 
+más sencillos de implementar. El planificador maneja la cola de procesos como una cola FIFO. Entre sus ventajas destacamos:</p>
 <ul>
-<li>Elemento 1</li>
-<li>Elemento 2</li>
-<li>Elemento 3</li>
+<li>Faciliadad de implementación.</li>
+<li>Poca sobrecarga.</li>
 </ul>
-<p>Este es un ejemplo de texto que da entrada a una lista numerada:</p>
-<ol>
-<li>Elemento 1</li>
-<li>Elemento 2</li>
-<li>Elemento 3</li>
-</ol>
-<p>Al texto en Markdown puedes añadirle formato como <strong>negrita</strong> o <em>cursiva</em> de una manera muy sencilla.</p>
-<p>Todo esto fue extraído de este <a href="https://markdown.es/sintaxis-markdown/">Post sobre markdown</a></p>
+<p>Sus principlaes desventajas son:</p>
+<ul>
+<li>Penaliza los procesos con tiempos de ráfaga más cortos con respecto a aqquellos que tienen tiempo de ráfaga más largos.</li>
+<li>Puede aparecer lo que se denomina como efecto convoy.</li>
+<li>Sufre la anomalia de belady.</li>
+</ul>
 <h2>SJF</h2>
 <p>Este es un ejemplo de texto que da entrada a una lista genérica de elementos:</p>
 <ul>

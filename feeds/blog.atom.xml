@@ -3,21 +3,20 @@
 necesitamos de herramientas que de algún modo multiplexen los recursos del sistema. Una de estas herramientas 
 la proporciona el sistema operativo, mediante el &lt;strong&gt;planificador&lt;/strong&gt; o scheduler, que se encarga de decidir 
 el siguiente proceso que pasará a ejecutarse de entre aquellos que se encuentran preparados para su ejecución.&lt;/p&gt;
+&lt;p&gt;Entre los principales algoritmos de planificación podemos citar los siguientes:&lt;/p&gt;
 &lt;h2&gt;FCFS&lt;/h2&gt;
-&lt;p&gt;Este es un ejemplo de texto que da entrada a una lista genérica de elementos:&lt;/p&gt;
+&lt;p&gt;Primero en llegar primero en ser servido, FCFS (First Come First Server). Es uno de los algortimos de planificación 
+más sencillos de implementar. El planificador maneja la cola de procesos como una cola FIFO. Entre sus ventajas destacamos:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Elemento 1&lt;/li&gt;
-&lt;li&gt;Elemento 2&lt;/li&gt;
-&lt;li&gt;Elemento 3&lt;/li&gt;
+&lt;li&gt;Faciliadad de implementación.&lt;/li&gt;
+&lt;li&gt;Poca sobrecarga.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Este es un ejemplo de texto que da entrada a una lista numerada:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Elemento 1&lt;/li&gt;
-&lt;li&gt;Elemento 2&lt;/li&gt;
-&lt;li&gt;Elemento 3&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Al texto en Markdown puedes añadirle formato como &lt;strong&gt;negrita&lt;/strong&gt; o &lt;em&gt;cursiva&lt;/em&gt; de una manera muy sencilla.&lt;/p&gt;
-&lt;p&gt;Todo esto fue extraído de este &lt;a href="https://markdown.es/sintaxis-markdown/"&gt;Post sobre markdown&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Sus principlaes desventajas son:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Penaliza los procesos con tiempos de ráfaga más cortos con respecto a aqquellos que tienen tiempo de ráfaga más largos.&lt;/li&gt;
+&lt;li&gt;Puede aparecer lo que se denomina como efecto convoy.&lt;/li&gt;
+&lt;li&gt;Sufre la anomalia de belady.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;SJF&lt;/h2&gt;
 &lt;p&gt;Este es un ejemplo de texto que da entrada a una lista genérica de elementos:&lt;/p&gt;
 &lt;ul&gt;
