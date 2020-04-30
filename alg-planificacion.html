@@ -40,12 +40,22 @@
 <p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
 <p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
 </footer><!-- /.post-info -->      <p>En sistemas operativos multitarea, donde podemos podemos ejecutar cientos procesos al mismo tiempo,
-necesitamos de herramientas que de algún modo multiplexen los recursos del sistema. Una de estas herramientas 
-la proporciona el sistema operativo, mediante el <strong>planificador</strong> o scheduler, que se encarga de decidir 
-el siguiente proceso que pasará a ejecutarse de entre aquellos que se encuentran preparados para su ejecución.</p>
-<p>Entre los principales algoritmos de planificación podemos citar los siguientes:</p>
+necesitamos de herramientas que de algún modo multiplexen los recursos hardware del sistema. Una de estas herramientas 
+la proporciona el sistema operativo, mediante el <strong>planificador</strong> o scheduler. En general podemos distinguir tres 
+<strong>niveles de planificación</strong>: <strong>a corto plazo</strong> (se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre 
+aquellos que se encuentran preparados para su ejecución), <strong>a medio plazo</strong> (decide entre los procesos que están en memoria 
+secundaria cual pasa a memoria principal, y viceversa. Es decir, regula el grado de multiprogramación.) y <strong>a largo plazo</strong>
+(decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación de un proceso).
+Aparte de estos tres niveles de planificación se puede distinguir un cuarto nivel, la planificación de E/S que
+decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho dispositivo.</p>
+<p>La parte del SO que se encarga de realizar las tareas de planificación puede dividirse en los siguientes componentes:
+- <strong>Encolador</strong> (enqueuer).
+- <strong>Conmutador de contexto</strong> (context switcher).
+- <strong>Distribuidor</strong> o despachador (dispatcher). Se encarga de seleccionar un proceso de la cola de procesos preparados de 
+acuerdo con un determinado algoritmo de planificación.</p>
+<p>Entre los <strong>principales algoritmos de planificación</strong> podemos citar los siguientes:</p>
 <h2>FCFS</h2>
-<p>Primero en llegar primero en ser servido, FCFS (First Come First Server). Es uno de los algortimos de planificación 
+<p>Primero en llegar primero en ser servido, FCFS (First Come First Served). Es uno de los algoritmos de planificación 
 más sencillos de implementar. El planificador maneja la cola de procesos como una cola FIFO. Entre sus ventajas destacamos:</p>
 <ul>
 <li>Facilidad de implementación.</li>
@@ -59,21 +69,19 @@ más sencillos de implementar. El planificador maneja la cola de procesos como u
 </ul>
 <h2>SJF</h2>
 <p>Primero el que tiene un tiempo de ráfaga más corto, SJF (Shortest Job First). Este algoritmo de planificación selecciona 
-como proceso para ser ejecutado a aquel que tiene un tiempo de ráfaga de CPU más pequeño. Este algoritmo es dificial de 
-implementar en la práctica a que requiere conocer por adelantado los tiempos de ráfaga de CPU de todos los procesos, lo cual
+como proceso para ser ejecutado a aquel que tiene un tiempo de ráfaga de CPU más pequeño. Este algoritmo es difícil de 
+implementar en la práctica ya que requiere conocer por adelantado los tiempos de ráfaga de CPU de todos los procesos, lo cual
 no es posible. Para su implemntación lo que se suele utilizar es un estimación del tiempo de ráfaga de CPU basado en los 
 tiempos de ráfaga pasados. Existen dos implementaciones de este algoritmo en función de si se sigue una planificacion de tipo
 cooperativa o expropiativa. Entre sus principales ventajas se encuentran las siguientes:</p>
 <ul>
-<li>Difícil de implementar.</li>
-<li>Sobrecarga introducidad en el sistema debido al calculo de las estimaciones del tiempo de ráfaga de los procesos.</li>
+<li>Elimina algunos de los problemas del algoritmo FCFS.</li>
 </ul>
 <p>Sus principales desventajas son::</p>
 <ul>
-<li>Elimina algunos de los problemas del algoritmo FCFS.</li>
+<li>Difícil de implementar.</li>
+<li>Sobrecarga introducidad en el sistema debido al calculo de las estimaciones del tiempo de ráfaga de los procesos.</li>
 </ul>
-<p>Al texto en Markdown puedes añadirle formato como <strong>negrita</strong> o <em>cursiva</em> de una manera muy sencilla.</p>
-<p>Todo esto fue extraído de este <a href="https://markdown.es/sintaxis-markdown/">Post sobre markdown</a></p>
 <h2>SRT</h2>
 <p>Este es un ejemplo de texto que da entrada a una lista genérica de elementos:</p>
 <ul>
@@ -87,8 +95,6 @@ cooperativa o expropiativa. Entre sus principales ventajas se encuentran las sig
 <li>Elemento 2</li>
 <li>Elemento 3</li>
 </ol>
-<p>Al texto en Markdown puedes añadirle formato como <strong>negrita</strong> o <em>cursiva</em> de una manera muy sencilla.</p>
-<p>Todo esto fue extraído de este <a href="https://markdown.es/sintaxis-markdown/">Post sobre markdown</a></p>
 <h2>Round Robin</h2>
 <p>Este es un ejemplo de texto que da entrada a una lista genérica de elementos:</p>
 <ul>
@@ -102,8 +108,6 @@ cooperativa o expropiativa. Entre sus principales ventajas se encuentran las sig
 <li>Elemento 2</li>
 <li>Elemento 3</li>
 </ol>
-<p>Al texto en Markdown puedes añadirle formato como <strong>negrita</strong> o <em>cursiva</em> de una manera muy sencilla.</p>
-<p>Todo esto fue extraído de este <a href="https://markdown.es/sintaxis-markdown/">Post sobre markdown</a></p>
     </div><!-- /.entry-content -->
 
   </article>
