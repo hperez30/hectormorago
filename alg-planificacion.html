@@ -41,21 +41,26 @@
 <p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
 </footer><!-- /.post-info -->      <p>En sistemas operativos multitarea, donde podemos podemos ejecutar cientos procesos al mismo tiempo,
 necesitamos de herramientas que de algún modo multiplexen los recursos hardware del sistema. Una de estas herramientas 
-la proporciona el sistema operativo, mediante el <strong>planificador</strong> o scheduler. En general podemos distinguir tres 
-<strong>niveles de planificación</strong>: <strong>a corto plazo</strong> (se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre 
-aquellos que se encuentran preparados para su ejecución), <strong>a medio plazo</strong> (decide entre los procesos que están en memoria 
-secundaria cual pasa a memoria principal, y viceversa. Es decir, regula el grado de multiprogramación.) y <strong>a largo plazo</strong>
-(decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación de un proceso).
-Aparte de estos tres niveles de planificación se puede distinguir un cuarto nivel, la planificación de E/S que
+la proporciona el sistema operativo (SO), mediante el <strong>planificador</strong> o scheduler. En general podemos distinguir tres 
+<strong>niveles de planificación</strong>: </p>
+<ul>
+<li><strong>a corto plazo</strong>, se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre 
+aquellos que se encuentran preparados para su ejecución. </li>
+<li><strong>a medio plazo</strong>, decide entre los procesos que están en memoria secundaria cual pasa a memoria principal, y viceversa. 
+Es decir, regula el grado de multiprogramación. </li>
+<li><strong>a largo plazo</strong>, decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación 
+de un proceso.</li>
+</ul>
+<p>Aparte de estos tres niveles de planificación se puede distinguir un cuarto nivel, la <strong>planificación de E/S</strong> que
 decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho dispositivo.</p>
 <p>La parte del SO que se encarga de realizar las tareas de planificación puede dividirse en los siguientes componentes:</p>
 <ul>
-<li><strong>Encolador</strong> (enqueuer).</li>
-<li><strong>Conmutador de contexto</strong> (context switcher).</li>
+<li><strong>Encolador</strong>  o enqueuer.</li>
+<li><strong>Conmutador de contexto</strong> o context switcher.</li>
 <li><strong>Distribuidor</strong> o despachador (dispatcher). Se encarga de seleccionar un proceso de la cola de procesos preparados de 
 acuerdo con un determinado algoritmo de planificación.</li>
 </ul>
-<p>La tarea de plamificación introduce sobrecarga, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
+<p>La tarea de plamificación introduce <strong>sobrecarga</strong>, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
 procesos de los usuarios y que, por tanto, hay que minimizar. Hay que tener en cuenta determinadas 
 Latencia de despacho, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la
 ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos
@@ -63,6 +68,13 @@ SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten
 proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso
 entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de
 despacho puede ser larga ya que algunas llamadas al sistema son complejas.</p>
+<p>En general a la hora de planificar procesos vamos a tener en cuenta una serie de criterios generales:</p>
+<ul>
+<li>Previsibilidad. Tareas similares igual tiempo.</li>
+<li>Uso equilibrado de recursos.</li>
+<li>Proporcionalidad. Tareas que parecen sencillas deben ejecutarse en plazos relativamente cortos.</li>
+<li>Equidad.</li>
+</ul>
 <p>Entre los <strong>principales algoritmos de planificación</strong> podemos citar los siguientes:</p>
 <h2>FCFS</h2>
 <p>Primero en llegar primero en ser servido, FCFS (First Come First Served). Es uno de los algoritmos de planificación 

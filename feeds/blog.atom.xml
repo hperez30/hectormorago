@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Hector' log - blog</title><link href="/hectormorago/" rel="alternate"></link><link href="/hectormorago/feeds/blog.atom.xml" rel="self"></link><id>/hectormorago/</id><updated>2020-04-06T20:31:00+02:00</updated><subtitle>A personal blog.</subtitle><entry><title>Algoritmos de planificación</title><link href="/hectormorago/alg-planificacion.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-planificacion.html</id><summary type="html">&lt;p&gt;Revisión de los pricipales algortimos de planificación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En sistemas operativos multitarea, donde podemos podemos ejecutar cientos procesos al mismo tiempo,
 necesitamos de herramientas que de algún modo multiplexen los recursos hardware del sistema. Una de estas herramientas 
-la proporciona el sistema operativo, mediante el &lt;strong&gt;planificador&lt;/strong&gt; o scheduler. En general podemos distinguir tres 
-&lt;strong&gt;niveles de planificación&lt;/strong&gt;: &lt;strong&gt;a corto plazo&lt;/strong&gt; (se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre 
-aquellos que se encuentran preparados para su ejecución), &lt;strong&gt;a medio plazo&lt;/strong&gt; (decide entre los procesos que están en memoria 
-secundaria cual pasa a memoria principal, y viceversa. Es decir, regula el grado de multiprogramación.) y &lt;strong&gt;a largo plazo&lt;/strong&gt;
-(decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación de un proceso).
-Aparte de estos tres niveles de planificación se puede distinguir un cuarto nivel, la planificación de E/S que
+la proporciona el sistema operativo (SO), mediante el &lt;strong&gt;planificador&lt;/strong&gt; o scheduler. En general podemos distinguir tres 
+&lt;strong&gt;niveles de planificación&lt;/strong&gt;: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;a corto plazo&lt;/strong&gt;, se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre 
+aquellos que se encuentran preparados para su ejecución. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;a medio plazo&lt;/strong&gt;, decide entre los procesos que están en memoria secundaria cual pasa a memoria principal, y viceversa. 
+Es decir, regula el grado de multiprogramación. &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;a largo plazo&lt;/strong&gt;, decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación 
+de un proceso.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Aparte de estos tres niveles de planificación se puede distinguir un cuarto nivel, la &lt;strong&gt;planificación de E/S&lt;/strong&gt; que
 decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho dispositivo.&lt;/p&gt;
 &lt;p&gt;La parte del SO que se encarga de realizar las tareas de planificación puede dividirse en los siguientes componentes:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Encolador&lt;/strong&gt; (enqueuer).&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Conmutador de contexto&lt;/strong&gt; (context switcher).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Encolador&lt;/strong&gt;  o enqueuer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Conmutador de contexto&lt;/strong&gt; o context switcher.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Distribuidor&lt;/strong&gt; o despachador (dispatcher). Se encarga de seleccionar un proceso de la cola de procesos preparados de 
 acuerdo con un determinado algoritmo de planificación.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;La tarea de plamificación introduce sobrecarga, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
+&lt;p&gt;La tarea de plamificación introduce &lt;strong&gt;sobrecarga&lt;/strong&gt;, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
 procesos de los usuarios y que, por tanto, hay que minimizar. Hay que tener en cuenta determinadas 
 Latencia de despacho, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la
 ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos
@@ -23,6 +28,13 @@ SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten
 proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso
 entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de
 despacho puede ser larga ya que algunas llamadas al sistema son complejas.&lt;/p&gt;
+&lt;p&gt;En general a la hora de planificar procesos vamos a tener en cuenta una serie de criterios generales:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Previsibilidad. Tareas similares igual tiempo.&lt;/li&gt;
+&lt;li&gt;Uso equilibrado de recursos.&lt;/li&gt;
+&lt;li&gt;Proporcionalidad. Tareas que parecen sencillas deben ejecutarse en plazos relativamente cortos.&lt;/li&gt;
+&lt;li&gt;Equidad.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Entre los &lt;strong&gt;principales algoritmos de planificación&lt;/strong&gt; podemos citar los siguientes:&lt;/p&gt;
 &lt;h2&gt;FCFS&lt;/h2&gt;
 &lt;p&gt;Primero en llegar primero en ser servido, FCFS (First Come First Served). Es uno de los algoritmos de planificación 
