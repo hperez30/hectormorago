@@ -43,11 +43,21 @@ secundaria cual pasa a memoria principal, y viceversa. Es decir, regula el grado
 (decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación de un proceso).
 Aparte de estos tres niveles de planificación se puede distinguir un cuarto nivel, la planificación de E/S que
 decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho dispositivo.</p>
-<p>La parte del SO que se encarga de realizar las tareas de planificación puede dividirse en los siguientes componentes:
-- <strong>Encolador</strong> (enqueuer).
-- <strong>Conmutador de contexto</strong> (context switcher).
-- <strong>Distribuidor</strong> o despachador (dispatcher). Se encarga de seleccionar un proceso de la cola de procesos preparados de 
-acuerdo con un determinado algoritmo de planificación.</p>
+<p>La parte del SO que se encarga de realizar las tareas de planificación puede dividirse en los siguientes componentes:</p>
+<ul>
+<li><strong>Encolador</strong> (enqueuer).</li>
+<li><strong>Conmutador de contexto</strong> (context switcher).</li>
+<li><strong>Distribuidor</strong> o despachador (dispatcher). Se encarga de seleccionar un proceso de la cola de procesos preparados de 
+acuerdo con un determinado algoritmo de planificación.</li>
+</ul>
+<p>La tarea de plamificación introduce sobrecarga, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
+procesos de los usuarios y que, por tanto, hay que minimizar. Hay que tener en cuenta determinadas 
+Latencia de despacho, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la
+ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos
+SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten que se pueda expropiar un
+proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso
+entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de
+despacho puede ser larga ya que algunas llamadas al sistema son complejas.</p>
 <p>Entre los <strong>principales algoritmos de planificación</strong> podemos citar los siguientes:</p>
 <h2>FCFS</h2>
 <p>Primero en llegar primero en ser servido, FCFS (First Come First Served). Es uno de los algoritmos de planificación 
