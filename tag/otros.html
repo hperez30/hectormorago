@@ -39,8 +39,8 @@ necesitamos de herramientas que de algún modo multiplexen los recursos hardware
 la proporciona el sistema operativo (SO), mediante el <strong>planificador</strong> o scheduler. En general podemos distinguir tres 
 <strong>niveles de planificación</strong>: </p>
 <ul>
-<li><strong>a corto plazo</strong>, se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre 
-aquellos que se encuentran preparados para su ejecución. </li>
+<li><strong>a corto plazo</strong>, se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre  aquellos que se encuentran 
+preparados para su ejecución. </li>
 <li><strong>a medio plazo</strong>, decide entre los procesos que están en memoria secundaria cual pasa a memoria principal, y viceversa. 
 Es decir, regula el grado de multiprogramación. </li>
 <li><strong>a largo plazo</strong>, decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación 
@@ -55,7 +55,7 @@ decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho d
 <li><strong>Distribuidor</strong> o despachador (dispatcher). Se encarga de seleccionar un proceso de la cola de procesos preparados de 
 acuerdo con un determinado algoritmo de planificación.</li>
 </ul>
-<p>La tarea de plamificación introduce <strong>sobrecarga</strong>, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
+<p>La tarea de planificación introduce <strong>sobrecarga</strong>, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
 procesos de los usuarios y que, por tanto, hay que minimizar. Hay que tener en cuenta determinadas 
 Latencia de despacho, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la
 ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos
@@ -80,16 +80,16 @@ más sencillos de implementar. El planificador maneja la cola de procesos como u
 </ul>
 <p>Sus principales desventajas son:</p>
 <ul>
-<li>Penaliza los procesos con tiempos de ráfaga más cortos con respecto a aqquellos que tienen tiempo de ráfaga más largos.</li>
+<li>Penaliza los procesos con tiempos de ráfaga más cortos con respecto a aquellos que tienen tiempo de ráfaga más largos.</li>
 <li>Puede aparecer lo que se denomina como efecto convoy.</li>
-<li>Sufre la anomalia de belady.</li>
+<li>Sufre la anomalía de belady.</li>
 </ul>
 <h2>SJF</h2>
 <p>Primero el que tiene un tiempo de ráfaga más corto, SJF (Shortest Job First). Este algoritmo de planificación selecciona 
 como proceso para ser ejecutado a aquel que tiene un tiempo de ráfaga de CPU más pequeño. Este algoritmo es difícil de 
 implementar en la práctica ya que requiere conocer por adelantado los tiempos de ráfaga de CPU de todos los procesos, lo cual
-no es posible. Para su implemntación lo que se suele utilizar es un estimación del tiempo de ráfaga de CPU basado en los 
-tiempos de ráfaga pasados. Existen dos implementaciones de este algoritmo en función de si se sigue una planificacion de tipo
+no es posible. Para su implementación lo que se suele utilizar es un estimación del tiempo de ráfaga de CPU basado en los 
+tiempos de ráfaga pasados. Existen dos implementaciones de este algoritmo en función de si se sigue una planificación de tipo
 cooperativa o expropiativa. Entre sus principales ventajas se encuentran las siguientes:</p>
 <ul>
 <li>Elimina algunos de los problemas del algoritmo FCFS.</li>
@@ -100,31 +100,7 @@ cooperativa o expropiativa. Entre sus principales ventajas se encuentran las sig
 <li>Sobrecarga introducidad en el sistema debido al calculo de las estimaciones del tiempo de ráfaga de los procesos.</li>
 </ul>
 <h2>SRT</h2>
-<p>Este es un ejemplo de texto que da entrada a una lista genérica de elementos:</p>
-<ul>
-<li>Elemento 1</li>
-<li>Elemento 2</li>
-<li>Elemento 3</li>
-</ul>
-<p>Este es un ejemplo de texto que da entrada a una lista numerada:</p>
-<ol>
-<li>Elemento 1</li>
-<li>Elemento 2</li>
-<li>Elemento 3</li>
-</ol>
-<h2>Round Robin</h2>
-<p>Este es un ejemplo de texto que da entrada a una lista genérica de elementos:</p>
-<ul>
-<li>Elemento 1</li>
-<li>Elemento 2</li>
-<li>Elemento 3</li>
-</ul>
-<p>Este es un ejemplo de texto que da entrada a una lista numerada:</p>
-<ol>
-<li>Elemento 1</li>
-<li>Elemento 2</li>
-<li>Elemento 3</li>
-</ol>                </article>
+<h2>Round Robin</h2>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
