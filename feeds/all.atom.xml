@@ -34,10 +34,10 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;</con
 necesitamos de herramientas que de algún modo multiplexen los recursos hardware del sistema. Una de estas herramientas 
 la proporciona el sistema operativo (SO), mediante el &lt;strong&gt;planificador&lt;/strong&gt; o scheduler. El planificador se encarga de repartir 
 la CPU entre los procesos que se encuentran en el sistema listos para ejecutarse. Su funcionamiento básico se basa en la 
-forma en la que los procesos se ejecutan, que consiste en relizar de forma alternativa ráfagas de CPU y de E/S (ver Figura 1). 
-En función de la dureación de dichas ráfagas podemos distinguir entre procesos que se encuentan limitados por la CPU, donde 
-la duración de las rágas de CPU es mucho mayor que las de E/S, y proceos que se encuentan limitados por la E/S, donde 
-la duración de las rágas de E/S es mucho mayor que las de E/S. El SO consciente de este funcionamiento aprovecha las ráfagas 
+forma en la que los procesos se ejecutan, que consiste en realizar de forma alternativa ráfagas de CPU y de E/S (ver Figura 1). 
+En función de la duración de dichas ráfagas podemos distinguir entre procesos que se encuentran limitados por la CPU, donde 
+la duración de las ráfagas de CPU es mucho mayor que las de E/S, y procesos que se encentan limitados por la E/S, donde 
+la duración de las ráfagas de E/S es mucho mayor que las de E/S. El SO consciente de este funcionamiento aprovecha las ráfagas 
 de E/S para ejecutar otro proceso, ya que en caso contrario la CPU se quedaría inactiva. &lt;/p&gt;
 &lt;p&gt;En general podemos distinguir tres &lt;strong&gt;niveles de planificación&lt;/strong&gt;: &lt;/p&gt;
 &lt;ul&gt;
