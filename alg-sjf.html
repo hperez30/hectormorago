@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
         <meta charset="utf-8" />
-        <title>Algoritmo de planificación Round Robin</title>
+        <title>Algoritmo de planificación Shortest Job First</title>
         <link rel="stylesheet" href="/hectormorago/theme/css/main.css" />
         <link href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hector' log Atom Feed" />
 </head>
@@ -21,7 +21,7 @@
     <header>
       <h1 class="entry-title">
         <a href="/hectormorago/alg-sjf.html" rel="bookmark"
-           title="Permalink to Algoritmo de planificación Round Robin">Algoritmo de planificación Round Robin</a></h1>
+           title="Permalink to Algoritmo de planificación Shortest Job First">Algoritmo de planificación Shortest Job First</a></h1>
     </header>
 
     <div class="entry-content">
@@ -41,18 +41,19 @@
 <p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
 </footer><!-- /.post-info -->      <h2>SJF</h2>
 <p>Primero el que tiene un tiempo de ráfaga más corto, SJF (Shortest Job First). Este algoritmo de planificación selecciona 
-como proceso para ser ejecutado a aquel que tiene un tiempo de ráfaga de CPU más pequeño. Este algoritmo es difícil de 
+como proceso para ser ejecutado a aquel que tiene un <strong>tiempo de ráfaga de CPU más corto</strong>. Es un algoritmo difícil de 
 implementar en la práctica ya que requiere conocer por adelantado los tiempos de ráfaga de CPU de todos los procesos, lo cual
-no es posible. Para su implementación lo que se suele utilizar es un estimación del tiempo de ráfaga de CPU basado en los 
-tiempos de ráfaga pasados. Existen dos implementaciones de este algoritmo en función de si se sigue una planificación de tipo
-cooperativa o expropiativa. Entre sus principales ventajas se encuentran las siguientes:</p>
+no es posible. En vez de utilizar el tiempo real de ráfaga de CPU de los distintos procesos, lo que se suele utilizar es una 
+estimación del tiempo de ráfaga de CPU basado en los tiempos de ráfaga pasados. 
+Existen dos implementaciones de este algoritmo en función de si se sigue una planificación de tipo cooperativa o expropiativa. 
+Entre sus <strong>principales ventajas</strong> se encuentran las siguientes:</p>
 <ul>
 <li>Elimina algunos de los problemas del algoritmo FCFS.</li>
 </ul>
 <p>Sus principales desventajas son::</p>
 <ul>
 <li>Difícil de implementar.</li>
-<li>Sobrecarga introducidad en el sistema debido al calculo de las estimaciones del tiempo de ráfaga de los procesos.</li>
+<li>Sobrecarga introducidad en el sistema debido al cálculo de las estimaciones del tiempo de ráfaga de los procesos.</li>
 </ul>
     </div><!-- /.entry-content -->
 
