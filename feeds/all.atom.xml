@@ -9,7 +9,7 @@ Diagrams, and Bibliometric Techniques.&lt;/p&gt;
 &lt;p&gt;Heradio, R.; Fernandez-Amoros, D.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Adan, A
 Journal Paper Entropy, June 2014, Volume 17, Pages 3329-3356
 Impact Factor 1.743 (Journal Citation Reports) | 2nd Quartile&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ars.els-cdn.com/content/image/X03772217.jpg" alt="ejor-logo" title="European Journal of Operational Research" style="float: right; max-height: 80px; margin: 0 0 0 0;"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://ars.els-cdn.com/content/image/X03772217.jpg" alt="ejor-logo" title="European Journal of Operational Research" style="float: left; max-height: 80px; margin: 0 0 0 0;"&gt;&lt;/p&gt;
 &lt;h3&gt;Augmenting Measure Sensitivity to Detect Essential, Dispensable and Highly Incompatible Features in Mass Customization&lt;/h3&gt;
 &lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Alferez, M.; Fernandez-Amoros, D.; Alferez G.
 Journal Paper European Journal of Operational Research, August 2015, 
@@ -38,24 +38,24 @@ Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enr
 Conference Paper The 15th International Conference on Intelligent Software 
 Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;</content><category term="About Me"></category><category term="research"></category><category term="publications"></category><category term="others"></category></entry><entry><title>Algoritmo de planificación First Come First Served</title><link href="/hectormorago/alg-fcfs.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-fcfs.html</id><summary type="html">&lt;p&gt;Algoritmo de planificación First Come First Served.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;FCFS&lt;/h2&gt;
 &lt;p&gt;Primero en llegar primero en ser servido, FCFS (First Come First Served). Es uno de los algoritmos de planificación 
-más sencillos de implementar. El planificador maneja la cola de procesos como una cola FIFO. Entre sus ventajas destacamos:&lt;/p&gt;
+más sencillos de implementar. El planificador maneja la cola de procesos como una cola FIFO. Entre sus &lt;strong&gt;ventajas&lt;/strong&gt; destacamos:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Facilidad de implementación.&lt;/li&gt;
 &lt;li&gt;Poca sobrecarga.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Sus principales desventajas son:&lt;/p&gt;
+&lt;p&gt;Sus principales &lt;strong&gt;desventajas&lt;/strong&gt; son:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Penaliza los procesos con tiempos de ráfaga más cortos con respecto a aquellos que tienen tiempo de ráfaga más largos.&lt;/li&gt;
 &lt;li&gt;Puede aparecer lo que se denomina como efecto convoy.&lt;/li&gt;
 &lt;li&gt;Sufre la anomalía de belady.&lt;/li&gt;
-&lt;/ul&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="algoritmos"></category><category term="otros"></category></entry><entry><title>Planificación de procesos</title><link href="/hectormorago/alg-planificacion.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-planificacion.html</id><summary type="html">&lt;p&gt;Revisión de los principales algoritmos de planificación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En &lt;strong&gt;sistemas operativos multitarea&lt;/strong&gt;, donde podemos podemos ejecutar cientos procesos al mismo tiempo,
+&lt;/ul&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="algoritmos"></category><category term="otros"></category></entry><entry><title>Planificación de procesos</title><link href="/hectormorago/alg-planificacion.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-planificacion.html</id><summary type="html">&lt;p&gt;Revisión de los principales algoritmos de planificación.&lt;/p&gt;</summary><content type="html">&lt;p&gt;En &lt;strong&gt;sistemas operativos multitarea&lt;/strong&gt;, donde podemos ejecutar cientos procesos al mismo tiempo,
 necesitamos de herramientas que de algún modo &lt;strong&gt;multiplexen los recursos hardware&lt;/strong&gt; del sistema. Una de estas herramientas 
 la proporciona el sistema operativo (SO), mediante el &lt;strong&gt;planificador&lt;/strong&gt; o scheduler. 
 El planificador se encarga de repartir la CPU entre los procesos que se encuentran en el sistema listos para ejecutarse. 
 Su funcionamiento básico se basa en la forma en la que los procesos se ejecutan, que consiste en realizar de forma alternativa 
 ráfagas de CPU y de E/S (ver Figura 1). En función de la duración de dichas ráfagas podemos distinguir entre procesos que se 
-encuentran limitados por la CPU, donde la duración de las ráfagas de CPU es mucho mayor que las de E/S, y procesos que se 
-encuentran limitados por la E/S, donde la duración de las ráfagas de E/S es mucho mayor que las de E/S. El SO consciente de 
+encuentran limitados por la CPU (donde la duración de las ráfagas de CPU es mucho mayor que las de E/S) y procesos que se 
+encuentran limitados por la E/S (donde la duración de las ráfagas de E/S es mucho mayor que las de E/S). El SO consciente de 
 este funcionamiento aprovecha las ráfagas de E/S para ejecutar otro proceso, ya que en caso contrario la CPU se quedaría inactiva. &lt;/p&gt;
 &lt;p&gt;En general podemos distinguir tres &lt;strong&gt;niveles de planificación&lt;/strong&gt;: &lt;/p&gt;
 &lt;ul&gt;
@@ -72,17 +72,11 @@ decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho d
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Encolador&lt;/strong&gt;  o enqueuer.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Conmutador de contexto&lt;/strong&gt; o context switcher.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Distribuidor&lt;/strong&gt; o despachador (dispatcher). Se encarga de seleccionar un proceso de la cola de procesos preparados de 
+&lt;li&gt;&lt;strong&gt;Distribuidor&lt;/strong&gt;,  despachador o dispatcher. Se encarga de seleccionar un proceso de la cola de procesos preparados de 
 acuerdo con un determinado algoritmo de planificación.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;La tarea de planificación introduce &lt;strong&gt;sobrecarga&lt;/strong&gt;, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
-procesos de los usuarios y que, por tanto, hay que minimizar. Hay que tener en cuenta determinadas 
-Latencia de despacho, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la
-ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos
-SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten que se pueda expropiar un
-proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso
-entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de
-despacho puede ser larga ya que algunas llamadas al sistema son complejas.&lt;/p&gt;
+&lt;p&gt;Es importante destacar que la tarea de planificación introduce &lt;strong&gt;sobrecarga&lt;/strong&gt;, es decir, tiempo que el SO está dedicado a tareas que no repercute en los procesos de los usuarios y que, por tanto, hay que minimizar. A la hora de seleccionar un algortimo de planificación podemos utilizar determinadas métricas como: &lt;strong&gt;Latencia de despacho&lt;/strong&gt;, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos
+SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten que se pueda expropiar un proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de despacho puede ser larga ya que algunas llamadas al sistema son complejas.&lt;/p&gt;
 &lt;p&gt;En general a la hora de planificar procesos vamos a tener en cuenta una serie de criterios generales:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Previsibilidad. Tareas similares igual tiempo.&lt;/li&gt;
@@ -91,8 +85,8 @@ despacho puede ser larga ya que algunas llamadas al sistema son complejas.&lt;/p
 &lt;li&gt;Equidad.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Entre los &lt;strong&gt;principales algoritmos de planificación&lt;/strong&gt; podemos citar los siguientes: 
-&lt;a href="https://hperez30.github.io/fcfs/"&gt;FCFS&lt;/a&gt;, &lt;a href="https://hperez30.github.io/sjf/"&gt;SJF&lt;/a&gt;, 
-&lt;a href="https://hperez30.github.io/srt/"&gt;SRT&lt;/a&gt;, &lt;a href="https://hperez30.github.io/round-robin/"&gt;Round Robin&lt;/a&gt;, etc.&lt;/p&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="algoritmos"></category><category term="otros"></category></entry><entry><title>Algoritmo de planificación Round Robin</title><link href="/hectormorago/alg-round-robin.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-round-robin.html</id><summary type="html">&lt;p&gt;Algoritmo de planificación Round Robin.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Round Robin&lt;/h2&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="algoritmos"></category><category term="otros"></category></entry><entry><title>Algoritmo de planificación Shortest Job First</title><link href="/hectormorago/alg-sjf.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-sjf.html</id><summary type="html">&lt;p&gt;Algoritmo de planificación Shortest Job First.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;SJF&lt;/h2&gt;
+&lt;a href="https://hperez30.github.io/alg-fcfs/"&gt;FCFS&lt;/a&gt;, &lt;a href="https://hperez30.github.io/alg-sjf/"&gt;SJF&lt;/a&gt;, 
+&lt;a href="https://hperez30.github.io/alg-srt/"&gt;SRT&lt;/a&gt;, &lt;a href="https://hperez30.github.io/alg-round-robin/"&gt;Round Robin&lt;/a&gt;, etc.&lt;/p&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="algoritmos"></category><category term="otros"></category></entry><entry><title>Algoritmo de planificación Round Robin</title><link href="/hectormorago/alg-round-robin.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-round-robin.html</id><summary type="html">&lt;p&gt;Algoritmo de planificación Round Robin.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Round Robin&lt;/h2&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="algoritmos"></category><category term="otros"></category></entry><entry><title>Algoritmo de planificación Shortest Job First</title><link href="/hectormorago/alg-sjf.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-sjf.html</id><summary type="html">&lt;p&gt;Algoritmo de planificación Shortest Job First.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;SJF&lt;/h2&gt;
 &lt;p&gt;Primero el que tiene un tiempo de ráfaga más corto, SJF (Shortest Job First). Este algoritmo de planificación selecciona 
 como proceso para ser ejecutado a aquel que tiene un &lt;strong&gt;tiempo de ráfaga de CPU más corto&lt;/strong&gt;. Es un algoritmo difícil de 
 implementar en la práctica ya que requiere conocer por adelantado los tiempos de ráfaga de CPU de todos los procesos, lo cual

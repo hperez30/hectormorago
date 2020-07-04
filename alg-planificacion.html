@@ -39,14 +39,14 @@
         </address>
 <p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
 <p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
-</footer><!-- /.post-info -->      <p>En <strong>sistemas operativos multitarea</strong>, donde podemos podemos ejecutar cientos procesos al mismo tiempo,
+</footer><!-- /.post-info -->      <p>En <strong>sistemas operativos multitarea</strong>, donde podemos ejecutar cientos procesos al mismo tiempo,
 necesitamos de herramientas que de algún modo <strong>multiplexen los recursos hardware</strong> del sistema. Una de estas herramientas 
 la proporciona el sistema operativo (SO), mediante el <strong>planificador</strong> o scheduler. 
 El planificador se encarga de repartir la CPU entre los procesos que se encuentran en el sistema listos para ejecutarse. 
 Su funcionamiento básico se basa en la forma en la que los procesos se ejecutan, que consiste en realizar de forma alternativa 
 ráfagas de CPU y de E/S (ver Figura 1). En función de la duración de dichas ráfagas podemos distinguir entre procesos que se 
-encuentran limitados por la CPU, donde la duración de las ráfagas de CPU es mucho mayor que las de E/S, y procesos que se 
-encuentran limitados por la E/S, donde la duración de las ráfagas de E/S es mucho mayor que las de E/S. El SO consciente de 
+encuentran limitados por la CPU (donde la duración de las ráfagas de CPU es mucho mayor que las de E/S) y procesos que se 
+encuentran limitados por la E/S (donde la duración de las ráfagas de E/S es mucho mayor que las de E/S). El SO consciente de 
 este funcionamiento aprovecha las ráfagas de E/S para ejecutar otro proceso, ya que en caso contrario la CPU se quedaría inactiva. </p>
 <p>En general podemos distinguir tres <strong>niveles de planificación</strong>: </p>
 <ul>
@@ -63,17 +63,11 @@ decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho d
 <ul>
 <li><strong>Encolador</strong>  o enqueuer.</li>
 <li><strong>Conmutador de contexto</strong> o context switcher.</li>
-<li><strong>Distribuidor</strong> o despachador (dispatcher). Se encarga de seleccionar un proceso de la cola de procesos preparados de 
+<li><strong>Distribuidor</strong>,  despachador o dispatcher. Se encarga de seleccionar un proceso de la cola de procesos preparados de 
 acuerdo con un determinado algoritmo de planificación.</li>
 </ul>
-<p>La tarea de planificación introduce <strong>sobrecarga</strong>, es decir, tiempo que el SO está dedicado a tareas que no repercute en los 
-procesos de los usuarios y que, por tanto, hay que minimizar. Hay que tener en cuenta determinadas 
-Latencia de despacho, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la
-ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos
-SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten que se pueda expropiar un
-proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso
-entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de
-despacho puede ser larga ya que algunas llamadas al sistema son complejas.</p>
+<p>Es importante destacar que la tarea de planificación introduce <strong>sobrecarga</strong>, es decir, tiempo que el SO está dedicado a tareas que no repercute en los procesos de los usuarios y que, por tanto, hay que minimizar. A la hora de seleccionar un algortimo de planificación podemos utilizar determinadas métricas como: <strong>Latencia de despacho</strong>, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos
+SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten que se pueda expropiar un proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de despacho puede ser larga ya que algunas llamadas al sistema son complejas.</p>
 <p>En general a la hora de planificar procesos vamos a tener en cuenta una serie de criterios generales:</p>
 <ul>
 <li>Previsibilidad. Tareas similares igual tiempo.</li>
@@ -82,8 +76,8 @@ despacho puede ser larga ya que algunas llamadas al sistema son complejas.</p>
 <li>Equidad.</li>
 </ul>
 <p>Entre los <strong>principales algoritmos de planificación</strong> podemos citar los siguientes: 
-<a href="https://hperez30.github.io/fcfs/">FCFS</a>, <a href="https://hperez30.github.io/sjf/">SJF</a>, 
-<a href="https://hperez30.github.io/srt/">SRT</a>, <a href="https://hperez30.github.io/round-robin/">Round Robin</a>, etc.</p>
+<a href="https://hperez30.github.io/alg-fcfs/">FCFS</a>, <a href="https://hperez30.github.io/alg-sjf/">SJF</a>, 
+<a href="https://hperez30.github.io/alg-srt/">SRT</a>, <a href="https://hperez30.github.io/alg-round-robin/">Round Robin</a>, etc.</p>
     </div><!-- /.entry-content -->
 
   </article>
