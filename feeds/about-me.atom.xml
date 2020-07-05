@@ -22,7 +22,8 @@ Journal Paper Information and Software Technology, 72, April 2016
 Impact Factor 1.569 (Journal Citation Reports) | 2nd Quartile
 &lt;div&gt;
 &lt;img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left; max-height: 80px; margin: 0 0 0 0;"&gt;
-&lt;/div&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id='impact-factor'&gt;&lt;/div&gt;&lt;/p&gt;
 &lt;h3&gt;Efficient Identification of Core and Dead Features in Variability Models&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Hector Perez-Morago&lt;/strong&gt;, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and 
 Jose Antonio Cerrada Journal Paper IEEE Access. Nov 2015
@@ -36,4 +37,35 @@ St. Chiara, Naples, Italy September 15-17, 2015&lt;/p&gt;
 &lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Fernandez-Amoros, D.; 
 Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enrique
 Conference Paper The 15th International Conference on Intelligent Software 
-Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;</content><category term="About Me"></category><category term="research"></category><category term="publications"></category><category term="others"></category></entry></feed>
+Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;
+&lt;script type="text/javascript"&gt;
+    var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+  function doCORSRequest(options, printResult) {
+    var x = new XMLHttpRequest();
+    x.open(options.method, cors_api_url + options.url);
+    x.onload = x.onerror = function() {
+      //var y = x.responseXML;  
+      var parser = new DOMParser();
+    var doc = parser.parseFromString(x.responseText, "text/html");
+    elem = doc.getElementsByClassName("header-impact-factor-sci")[0];
+    elem = elem.getElementsByClassName("number")[0].innerHTML;
+      printResult((elem || ''));
+    };
+    x.send();
+  }
+
+  // Bind event
+  (function() {
+    var urlField = document.getElementById('url');
+    var outputField = document.getElementById('impact-factor');
+    window.onload = function(e) {
+      e.preventDefault();
+      doCORSRequest({
+        method: 'GET',
+        url: 'https://mdpi.com/journal/entropy/stats#if',
+      }, function printResult(result) {
+        outputField.value = result;
+      });
+    };
+  })();
+&lt;/script&gt;</content><category term="About Me"></category><category term="research"></category><category term="publications"></category><category term="others"></category></entry></feed>

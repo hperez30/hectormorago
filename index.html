@@ -57,7 +57,8 @@ Journal Paper Information and Software Technology, 72, April 2016
 Impact Factor 1.569 (Journal Citation Reports) | 2nd Quartile
 <div>
 <img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left; max-height: 80px; margin: 0 0 0 0;">
-</div></p>
+</div>
+<div id='impact-factor'></div></p>
 <h3>Efficient Identification of Core and Dead Features in Variability Models</h3>
 <p><strong>Hector Perez-Morago</strong>, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and 
 Jose Antonio Cerrada Journal Paper IEEE Access. Nov 2015
@@ -71,7 +72,38 @@ St. Chiara, Naples, Italy September 15-17, 2015</p>
 <p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Fernandez-Amoros, D.; 
 Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enrique
 Conference Paper The 15th International Conference on Intelligent Software 
-Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016</p>                </article>
+Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016</p>
+<script type="text/javascript">
+    var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+  function doCORSRequest(options, printResult) {
+    var x = new XMLHttpRequest();
+    x.open(options.method, cors_api_url + options.url);
+    x.onload = x.onerror = function() {
+      //var y = x.responseXML;  
+      var parser = new DOMParser();
+    var doc = parser.parseFromString(x.responseText, "text/html");
+    elem = doc.getElementsByClassName("header-impact-factor-sci")[0];
+    elem = elem.getElementsByClassName("number")[0].innerHTML;
+      printResult((elem || ''));
+    };
+    x.send();
+  }
+
+  // Bind event
+  (function() {
+    var urlField = document.getElementById('url');
+    var outputField = document.getElementById('impact-factor');
+    window.onload = function(e) {
+      e.preventDefault();
+      doCORSRequest({
+        method: 'GET',
+        url: 'https://mdpi.com/journal/entropy/stats#if',
+      }, function printResult(result) {
+        outputField.value = result;
+      });
+    };
+  })();
+</script>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
