@@ -39,7 +39,7 @@ Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enr
 Conference Paper The 15th International Conference on Intelligent Software 
 Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;
 &lt;script type="text/javascript"&gt;
-    var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+  var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
   function doCORSRequest(options, printResult) {
     var x = new XMLHttpRequest();
     x.open(options.method, cors_api_url + options.url);
@@ -64,7 +64,7 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;
         url: 'https://mdpi.com/journal/entropy/stats#if',
       }, function printResult(result) {
         console.log(result);
-        outputField.value = result;
+        outputField.innerHTML = result;
       });
     };
   })();
