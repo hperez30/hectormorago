@@ -88,7 +88,6 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016</p>
       var doc = parser.parseFromString(x.responseText, "text/html");
       elem = doc.getElementsByClassName("header-impact-factor-sci")[0];
       elem = elem.getElementsByClassName("number")[0].innerHTML;
-      console.log(elem);
       printResult((elem || ''));
     };
     x.send();
@@ -104,6 +103,7 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016</p>
         method: 'GET',
         url: 'https://mdpi.com/journal/entropy/stats#if',
       }, function printResult(result) {
+        console.log(result);
         outputField.value = result;
       });
     };
