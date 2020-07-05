@@ -17,25 +17,43 @@ Impact Factor 1.743 (Journal Citation Reports) | 2nd Quartile&lt;/p&gt;
     &lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;img src="https://ars.els-cdn.com/content/image/X03772217.jpg" alt="ejor-logo" title="European Journal of Operational Research" style="float: left; max-height: 80px; margin: 0 0 0 0;"&gt;&lt;/p&gt;
 &lt;h3&gt;Augmenting Measure Sensitivity to Detect Essential, Dispensable and Highly Incompatible Features in Mass Customization&lt;/h3&gt;
 &lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Alferez, M.; Fernandez-Amoros, D.; Alferez G.
 Journal Paper European Journal of Operational Research, August 2015, 
 248(3):1066-1077 Impact Factor 2.679 (Journal Citation Reports) | 1st Quartile&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://ars.els-cdn.com/content/image/X09505849.jpg" alt="ist-logo" title="Information and Software Technology" style="float: right; max-height: 80px; margin: 0 0 0 0;"&gt;&lt;/p&gt;
+&lt;div&gt;
+    &lt;img src="https://ars.els-cdn.com/content/image/X03772217.jpg" alt="ejor-logo" title="European Journal of Operational Research" style="float: left; max-height: 80px; margin: 0 0 0 0;"&gt;
+    &lt;p id='impact-factor'&gt;
+        &lt;spam class="label label-danger"&gt;EJOR impact factor: &lt;/spam&gt;
+        &lt;strong id='impact-factor-number-ejor'&gt;&lt;/strong&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+
 &lt;h3&gt;A Bibliometric Analysis of 20 Years of Research on Software Product Lines&lt;/h3&gt;
 &lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Fernandez-Amoros, D.; Cabrerizo, 
 Francisco Javier; Herrera-Viedma, Enrique
 Journal Paper Information and Software Technology, 72, April 2016
 Impact Factor 1.569 (Journal Citation Reports) | 2nd Quartile&lt;/p&gt;
 &lt;div&gt;
-&lt;img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left; max-height: 80px; margin: 0 0 0 0;"&gt;
+    &lt;img src="https://ars.els-cdn.com/content/image/X09505849.jpg" alt="ist-logo" title="Information and Software Technology" style="float: right; max-height: 80px; margin: 0 0 0 0;"&gt;
+    &lt;p id='impact-factor'&gt;
+        &lt;spam class="label label-danger"&gt;IST impact factor: &lt;/spam&gt;
+        &lt;strong id='impact-factor-number-ist'&gt;&lt;/strong&gt;
+    &lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Efficient Identification of Core and Dead Features in Variability Models&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Hector Perez-Morago&lt;/strong&gt;, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and 
 Jose Antonio Cerrada Journal Paper IEEE Access. Nov 2015
 Impact Factor 1.249 (Journal Citation Reports) | 2nd Quartile&lt;/p&gt;
+&lt;div&gt;
+    &lt;img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left; max-height: 80px; margin: 0 0 0 0;"&gt;
+    &lt;p id='impact-factor'&gt;
+        &lt;spam class="label label-danger"&gt;IEEE Access impact factor: &lt;/spam&gt;
+        &lt;strong id='impact-factor-number-ieeeaccess'&gt;&lt;/strong&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+
 &lt;h3&gt;Science Mapping Analysis of the Literature on Software Product Lines.&lt;/h3&gt;
 &lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Fernandez-Amoros, D.; Cabrerizo, Francisco Javier; 
 Herrera-Viedma, Enrique Conference Paper The 14th International Conference on 
