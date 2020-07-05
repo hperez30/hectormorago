@@ -84,11 +84,11 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016</p>
     var x = new XMLHttpRequest();
     x.open(options.method, cors_api_url + options.url);
     x.onload = x.onerror = function() {
-      //var y = x.responseXML;  
       var parser = new DOMParser();
-    var doc = parser.parseFromString(x.responseText, "text/html");
-    elem = doc.getElementsByClassName("header-impact-factor-sci")[0];
-    elem = elem.getElementsByClassName("number")[0].innerHTML;
+      var doc = parser.parseFromString(x.responseText, "text/html");
+      elem = doc.getElementsByClassName("header-impact-factor-sci")[0];
+      elem = elem.getElementsByClassName("number")[0].innerHTML;
+      console.log(elem);
       printResult((elem || ''));
     };
     x.send();
