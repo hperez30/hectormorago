@@ -45,6 +45,9 @@ Diagrams, and Bibliometric Techniques.&lt;/p&gt;
 &lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Alferez, M.; Fernandez-Amoros, D.; Alferez G.&lt;/p&gt;
 &lt;div&gt;
     &lt;img src="https://ars.els-cdn.com/content/image/X03772217.jpg" alt="ejor-logo" title="European Journal of Operational Research" style="float: left; max-height: 60px; margin: 0 0 0 0; padding:2px;"&gt;
+    &lt;p&gt;
+        **Abstract**: Software product line engineering has proven to be an efficient paradigm to developing families of similar software systems at lower costs, in shorter time, and with higher quality. This paper analyzes the literature on product lines from 1995 to 2014, identifying the most influential publications, the most researched topics, and how the interest in those topics has evolved along the way. Bibliographic data have been gathered from ISI Web of Science and Scopus. The data have been examined using two prominent bibliometric approaches: science mapping and performance analysis.Results: According to the study carried out, (i) software architecture was the initial motor of research in SPL; (ii) work on systematic software reuse has been essential for the development of the area; and (iii) feature modeling has been the most important topic for the last fifteen years, having the best evolution behavior in terms of number of published papers and received citations. Science mapping has been used to identify the main researched topics, the evolution of the interest in those topics and the relationships among topics. Performance analysis has been used to recognize the most influential papers, the journals and conferences that have published most papers, how numerous is the literature on product lines and what is its distribution over time.
+    &lt;/p&gt;
     &lt;div id='journal'&gt;
         &lt;spam class="label label-success"&gt;Journal Paper&lt;/spam&gt;
         European Journal of Operational Research, August 2015, 248(3):1066-1077
@@ -63,6 +66,9 @@ Francisco Javier; Herrera-Viedma, Enrique&lt;/p&gt;
 &lt;div&gt;
     &lt;img src="https://ars.els-cdn.com/content/image/X09505849.jpg" alt="ist-logo" title="Information and Software Technology" style="float: left; max-height: 60px; margin: 0 0 0 0; padding:2px;"&gt;
     &lt;div id='journal'&gt;
+        &lt;p&gt;
+        **Abstract**: Software product line engineering has proven to be an efficient paradigm to developing families of similar software systems at lower costs, in shorter time, and with higher quality. This paper analyzes the literature on product lines from 1995 to 2014, identifying the most influential publications, the most researched topics, and how the interest in those topics has evolved along the way. Bibliographic data have been gathered from ISI Web of Science and Scopus. The data have been examined using two prominent bibliometric approaches: science mapping and performance analysis.Results: According to the study carried out, (i) software architecture was the initial motor of research in SPL; (ii) work on systematic software reuse has been essential for the development of the area; and (iii) feature modeling has been the most important topic for the last fifteen years, having the best evolution behavior in terms of number of published papers and received citations. Science mapping has been used to identify the main researched topics, the evolution of the interest in those topics and the relationships among topics. Performance analysis has been used to recognize the most influential papers, the journals and conferences that have published most papers, how numerous is the literature on product lines and what is its distribution over time.
+        &lt;/p&gt;
         &lt;spam class="label label-success"&gt;Journal Paper&lt;/spam&gt;
         Information and Software Technology, 72, April 2016
     &lt;/div&gt;
@@ -78,6 +84,9 @@ Francisco Javier; Herrera-Viedma, Enrique&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Hector Perez-Morago&lt;/strong&gt;, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and Jose Antonio Cerrada &lt;/p&gt;
 &lt;div&gt;
     &lt;img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left ;max-height: 50px; margin: 0 0 0 0;"&gt;
+    &lt;p&gt;
+        **Abstract**: Mass customization enables the creation of personalized products that fulfill the features desired by specific customers. In this context, variability models are used to specify which configurable features are supported and which constraints among the features must be satisfied to guarantee the validity of the derived products. As the market demand grows and evolves, variability models become increasingly complex. In such entangled models, it is hard to identify which features are absolutely essential or dispensable because they are required to be included or excluded from all the possible products, respectively. This paper exposes the limitations of existing approaches to automatically detect those features and provides an algorithm that efficiently performs such detection.
+    &lt;/p&gt;
     &lt;div id='journal'&gt;
         &lt;spam class="label label-success"&gt;Journal Paper&lt;/spam&gt;
         IEEE Access. Nov 2015.
@@ -95,6 +104,9 @@ Francisco Javier; Herrera-Viedma, Enrique&lt;/p&gt;
 Herrera-Viedma, Enrique&lt;/p&gt;
 &lt;div&gt;
     &lt;img src="https://images.springer.com/sgw/books/medium/9783319226880.jpg" alt="somet2015-logo" title="Somet 2015" style="float: left ;max-height: 60px; margin: 0 0 0 0; padding:2px;"&gt;
+    &lt;p&gt;
+        **Abstract**: To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires companies to shift from mass production to mass customization. In the context of software development, software product line engineering has emerged as a cost effective approach to developing families of similar products by support high levels of mass customization. This paper analyzes the literature on software product lines from its beginnings to 2014. A science mapping approach is applied to identify the most researched topics, and how the interest in those topics has evolved along the way.
+    &lt;/p&gt;
     &lt;div id='journal'&gt;
         &lt;spam class="label label-warning"&gt;Conference Paper&lt;/spam&gt;
         The 14th International Conference on Intelligent Software Methodologies, Tools and Techniques Monumental Complex of St. Chiara, Naples, Italy September 15-17, 2015
@@ -110,7 +122,7 @@ Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;
 &lt;div&gt;
     &lt;img src="https://www.cyprusconferences.org/somet2016/img/somet2016logonotitle.png" alt="somet2015-logo" title="Somet 2015" style="float: left ;max-height: 60px; margin: 0 0 0 0; padding:2px;"&gt;
     &lt;p&gt;
-        Variability models play a key role in software product line engineering as they are used to represent the common and variable features that products may include, and what constraints among the features must be satisfied to guarantee the validity of the products. Valuable analysis operations on variability models can be performed by black box reusing logic engines, such as SAT-solvers and binary decision diagram libraries. Unfortunately, such kind of reuse implies long computation times for operations that need calling the engines many times. To overcome this problem, we propose new algorithms that directly deal with the data structure of a binary decision diagram encoding a variability model. In particular, our algorithms are specifically designed to detect core &amp; dead features, and the impact &amp; exclusion sets of every feature.
+        **Abstract**: Variability models play a key role in software product line engineering as they are used to represent the common and variable features that products may include, and what constraints among the features must be satisfied to guarantee the validity of the products. Valuable analysis operations on variability models can be performed by black box reusing logic engines, such as SAT-solvers and binary decision diagram libraries. Unfortunately, such kind of reuse implies long computation times for operations that need calling the engines many times. To overcome this problem, we propose new algorithms that directly deal with the data structure of a binary decision diagram encoding a variability model. In particular, our algorithms are specifically designed to detect core &amp; dead features, and the impact &amp; exclusion sets of every feature.
     &lt;/p&gt;
     &lt;div id='journal'&gt;
         &lt;spam class="label label-warning"&gt;Conference Paper&lt;/spam&gt;
