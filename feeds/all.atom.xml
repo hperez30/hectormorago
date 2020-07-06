@@ -86,8 +86,8 @@ Francisco Javier; Herrera-Viedma, Enrique&lt;/p&gt;
 &lt;h3&gt;Efficient Identification of Core and Dead Features in Variability Models&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Hector Perez-Morago&lt;/strong&gt;, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and Jose Antonio Cerrada &lt;/p&gt;
 &lt;div&gt;
-    &lt;img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left ;max-height: 50px; margin: 0 0 0 0;"&gt;
-    &lt;p&gt;
+    &lt;img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left ;max-height: 50px; margin: 0 0 0 0; "&gt;
+    &lt;p style="padding:-10px;"&gt;
         &lt;strong&gt;Abstract&lt;/strong&gt; : Mass customization enables the creation of personalized products that fulfill the features desired by specific customers. In this context, variability models are used to specify which configurable features are supported and which constraints among the features must be satisfied to guarantee the validity of the derived products. As the market demand grows and evolves, variability models become increasingly complex. In such entangled models, it is hard to identify which features are absolutely essential or dispensable because they are required to be included or excluded from all the possible products, respectively. This paper exposes the limitations of existing approaches to automatically detect those features and provides an algorithm that efficiently performs such detection.
     &lt;/p&gt;
     &lt;div id='journal'&gt;
