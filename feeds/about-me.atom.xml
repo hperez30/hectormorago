@@ -12,7 +12,10 @@
     vertical-align: baseline;
     border-radius: .25em;
 }
-.label-success{background-color:#5cb85c}.label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}
+.label-success{background-color:#5cb85c}
+.label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}
+.label-danger{background-color:#d9534f}
+.label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}
 &lt;/style&gt;
 
 &lt;h2&gt;Research interest&lt;/h2&gt;
