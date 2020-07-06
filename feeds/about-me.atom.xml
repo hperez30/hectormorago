@@ -95,12 +95,13 @@ St. Chiara, Naples, Italy September 15-17, 2015&lt;/p&gt;
 Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enrique
 Conference Paper The 15th International Conference on Intelligent Software 
 Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;
-&lt;h2&gt;phd dissertation&lt;/h2&gt;
-&lt;h3&gt;Binary Decision Diagram Algorithms to Perform Hard Analysis Operations on Variability Models.&lt;/h3&gt;
-&lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Fernandez-Amoros, D.; 
-Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enrique
-Conference Paper The 15th International Conference on Intelligent Software 
-Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;
+&lt;h2&gt;Phd dissertation&lt;/h2&gt;
+&lt;h3&gt;BDD Algorithms to Perform Hard Analysis Operations on Variability Models.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Héctor José Pérez Morago&lt;/strong&gt; UNED 2016&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;
+To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires companies to shift from mass production to mass customization. In the context of software development, software product line engineering has emerged as a cost-effective approach to developing families of similar products by supporting high levels of mass customization.
+Variability models are often used to specify the common and variable features of the products in one such family. Moreover, they model the inter-feature constraints which must be satisfied to guarantee the validity of the derived products. Despite the benefits of variability models, constructing and maintaining them can be a laborious task, especially in product lines with a large number of features and constraints. As a consequence, the study of automated techniques to reason on variability models has become an important research topic for the product line community.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Full version&lt;/strong&gt;&lt;/p&gt;
 &lt;script type="text/javascript"&gt;
   var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
   function doCORSRequest(options, printResult) {
