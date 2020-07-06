@@ -16,6 +16,8 @@
 .label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}
 .label-danger{background-color:#d9534f}
 .label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}
+.label-warning{background-color:#f0ad4e}
+.label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}
 &lt;/style&gt;
 
 &lt;h2&gt;Research interest&lt;/h2&gt;
@@ -70,13 +72,12 @@ Francisco Javier; Herrera-Viedma, Enrique&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;h3&gt;Efficient Identification of Core and Dead Features in Variability Models&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Hector Perez-Morago&lt;/strong&gt;, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and 
-Jose Antonio Cerrada Journal Paper IEEE Access. Nov 2015&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hector Perez-Morago&lt;/strong&gt;, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and Jose Antonio Cerrada &lt;/p&gt;
 &lt;div&gt;
     &lt;img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left ;max-height: 60px; margin: 0 0 0 0;"&gt;
     &lt;div id='journal'&gt;
         &lt;spam class="label label-success"&gt;Journal Paper&lt;/spam&gt;
-        IEEE Access. Nov 2015
+        IEEE Access. Nov 2015.
     &lt;/div&gt;
     &lt;div id='impact-factor'&gt;
         &lt;spam class="label label-danger"&gt;Impact factor&lt;/spam&gt;
@@ -87,17 +88,32 @@ Jose Antonio Cerrada Journal Paper IEEE Access. Nov 2015&lt;/p&gt;
 
 &lt;h3&gt;Science Mapping Analysis of the Literature on Software Product Lines.&lt;/h3&gt;
 &lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Fernandez-Amoros, D.; Cabrerizo, Francisco Javier; 
-Herrera-Viedma, Enrique Conference Paper The 14th International Conference on 
-Intelligent Software Methodologies, Tools and Techniques Monumental Complex of 
-St. Chiara, Naples, Italy September 15-17, 2015&lt;/p&gt;
+Herrera-Viedma, Enrique&lt;/p&gt;
+&lt;div&gt;
+    &lt;img src="http://www.impianti.unina.it/somet2015/images/SoMeT2015_mark.jpg" alt="somet2015-logo" title="Somet 2015" style="float: left ;max-height: 60px; margin: 0 0 0 0;"&gt;
+    &lt;div id='journal'&gt;
+        &lt;spam class="label label-warning"&gt;Conference Paper&lt;/spam&gt;
+        The 14th International Conference on Intelligent Software Methodologies, Tools and Techniques Monumental Complex of St. Chiara, Naples, Italy September 15-17, 2015
+    &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h3&gt;Binary Decision Diagram Algorithms to Perform Hard Analysis Operations on Variability Models.&lt;/h3&gt;
 &lt;p&gt;Heradio, R.; &lt;strong&gt;Perez-Morago, H.&lt;/strong&gt;; Fernandez-Amoros, D.; 
 Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enrique
 Conference Paper The 15th International Conference on Intelligent Software 
 Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016&lt;/p&gt;
+&lt;div&gt;
+    &lt;img src="https://www.cyprusconferences.org/somet2016/img/somet2016logonotitle.png" alt="somet2015-logo" title="Somet 2015" style="float: left ;max-height: 60px; margin: 0 0 0 0;"&gt;
+    &lt;div id='journal'&gt;
+        &lt;spam class="label label-warning"&gt;Conference Paper&lt;/spam&gt;
+        The 14th International Conference on Intelligent Software Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016
+    &lt;/div&gt;
+&lt;/div&gt;
+
 &lt;h2&gt;Phd dissertation&lt;/h2&gt;
 &lt;h3&gt;BDD Algorithms to Perform Hard Analysis Operations on Variability Models.&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Héctor José Pérez Morago&lt;/strong&gt; UNED 2016&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Héctor José Pérez Morago&lt;/strong&gt; 
+Universidad Nacional de Educación a Distancia (España). Escuela Internacional de Doctorado. Programa de Doctorado en Ingeniería de Sistemas y Control&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Abstract&lt;/strong&gt;
 To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires companies to shift from mass production to mass customization. In the context of software development, software product line engineering has emerged as a cost-effective approach to developing families of similar products by supporting high levels of mass customization.
 Variability models are often used to specify the common and variable features of the products in one such family. Moreover, they model the inter-feature constraints which must be satisfied to guarantee the validity of the derived products. Despite the benefits of variability models, constructing and maintaining them can be a laborious task, especially in product lines with a large number of features and constraints. As a consequence, the study of automated techniques to reason on variability models has become an important research topic for the product line community.&lt;/p&gt;
