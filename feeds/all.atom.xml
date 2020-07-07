@@ -67,7 +67,13 @@ La &lt;strong&gt;normalización&lt;/strong&gt; trata de comprobar mediante un m�
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundate los datos de un estudiante cada vez que realiza un solicitud, con los datos de las becas pasa los mismo. Otros problemas que nos podemos encontrar son inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas.&lt;/p&gt;
+&lt;p&gt;De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundate los datos de un estudiante cada vez que realiza un solicitud, con los datos de las becas pasa los mismo. Otros problemas que nos podemos encontrar son inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas, problemas para almacenar los datos de estudiantes que no han solicitado becas o de becas que no han sido solicitadas, problemas en el borrado de solicitudes (perderíamos los datos del estudiante en el caso de sólo hubiese solicitado esa beca), etc.&lt;/p&gt;
+&lt;p&gt;Con el fin de solventar todos estos problemas surge la teoría de la Normalización. Podemos afirmar que la teoría de la normalización permite afrontar el problema de diseño de bases de datos relacionales de una manera rigurosa y objetiva.
+Una aspecto crucial en la normalización es el concepto de &lt;strong&gt;Dependencia Funcional&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Las dependencias nos permiten representar interdependencias entre los datos, son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional.
+Se han de cumplir en cualquier extensión de un esquema de relación (son invariantes en el tiempo).
+No es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.
+Existen diferentes tipos de dependencias: Funcionales, multivaluadas, jerárquicas y de combinación.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006&lt;/li&gt;
