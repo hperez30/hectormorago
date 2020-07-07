@@ -58,7 +58,8 @@
 &lt;li&gt;Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001&lt;/li&gt;
 &lt;li&gt;Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.&lt;/li&gt;
 &lt;li&gt;Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. &lt;/li&gt;
-&lt;/ul&gt;</content><category term="blog"></category><category term="BBDD"></category><category term="teoria"></category><category term="otros"></category></entry><entry><title>About Me</title><link href="/hectormorago/about-me.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/about-me.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my research interests.&lt;/p&gt;</summary><content type="html">&lt;style&gt; 
+&lt;/ul&gt;</content><category term="blog"></category><category term="BBDD"></category><category term="teoria"></category><category term="otros"></category></entry><entry><title>About Me</title><link href="/hectormorago/about-me.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/about-me.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my research interests.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"&gt;
+&lt;style&gt; 
     .label {
     display: inline;
     padding: .2em .6em .3em;
@@ -77,8 +78,7 @@
 .label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}
 .label-warning{background-color:#f0ad4e}
 .label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}
-&lt;/style&gt;
-
+&lt;/style&gt;&lt;/p&gt;
 &lt;h2&gt;Research interest&lt;/h2&gt;
 &lt;p&gt;My research interests include, but are not limited to Variability Modeling, 
 Software Product Lines, Feature Models, software testing, Binary Decision 
