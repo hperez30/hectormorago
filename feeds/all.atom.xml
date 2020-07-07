@@ -53,10 +53,12 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;-Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006
-- Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001
-- Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.
-- Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. &lt;/p&gt;</content><category term="blog"></category><category term="BBDD"></category><category term="teoria"></category><category term="otros"></category></entry><entry><title>About Me</title><link href="/hectormorago/about-me.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/about-me.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my research interests.&lt;/p&gt;</summary><content type="html">&lt;style&gt; 
+&lt;ul&gt;
+&lt;li&gt;Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006&lt;/li&gt;
+&lt;li&gt;Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001&lt;/li&gt;
+&lt;li&gt;Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.&lt;/li&gt;
+&lt;li&gt;Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. &lt;/li&gt;
+&lt;/ul&gt;</content><category term="blog"></category><category term="BBDD"></category><category term="teoria"></category><category term="otros"></category></entry><entry><title>About Me</title><link href="/hectormorago/about-me.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/about-me.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my research interests.&lt;/p&gt;</summary><content type="html">&lt;style&gt; 
     .label {
     display: inline;
     padding: .2em .6em .3em;
