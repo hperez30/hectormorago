@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+        <meta charset="utf-8" />
+        <title>Normalización</title>
+        <link rel="stylesheet" href="/hectormorago/theme/css/main.css" />
+        <link href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hector' log Atom Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
+                <nav><ul>
+                    <li><a href="/hectormorago/category/about-me.html">About Me</a></li>
+                    <li class="active"><a href="/hectormorago/category/blog.html">blog</a></li>
+                    <li><a href="/hectormorago/category/projects.html">Projects</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/hectormorago/normalizacion.html" rel="bookmark"
+           title="Permalink to Normalización">Normalización</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2020-07-07T20:31:00+02:00">
+                Published: mar 07 julio 2020
+        </abbr>
+		<br />
+        <abbr class="modified" title="2020-07-07T20:31:00+02:00">
+                Updated: mar 07 julio 2020
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
+        </address>
+<p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
+<p>tags: <a href="/hectormorago/tag/bbdd.html">BBDD</a> <a href="/hectormorago/tag/teoria.html">teoria</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
+</footer><!-- /.post-info -->      <p>La <strong>normalización</strong> trata de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias debemos de proceder su descomposición de modo que las relaciones resultantes {R1, R2, R3, ... Rn} sean <strong>correctas</strong> y <strong>no</strong> presenten <strong>inconsistencias</strong>.</p>
+<p>Al realizar el diseño de una base de datos, ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes problemas:</p>
+<ul>
+<li>Redundancias.</li>
+<li>Ambigüedades.</li>
+<li>Pérdida de información.</li>
+<li>Existencia de valores no aplicacbles o desconocidos.</li>
+<li>Aparición de estados que no son válidos en el mundo real.</li>
+<li>Pérdidas de relaciones entre los datos.</li>
+</ul>
+<p>Con el fin de evitar estos problemas surge la teoría de la normalización. Vamos a ver una relación de ejemplo en el que se presentan algunos de los problemas anteriormente citados.</p>
+<p>Sea la relación Estudiante_solicita_beca</p>
+<table>
+<thead>
+<tr>
+<th>cod_est</th>
+<th>nombre_est</th>
+<th>cod_beca</th>
+<th>nombre_beca</th>
+<th>fecha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Roberto</td>
+<td>B1</td>
+<td>Erasmus</td>
+<td>2020-07-07</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Gema</td>
+<td>B2</td>
+<td>Apoyo biblioteca</td>
+<td>2020-07-07</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Laura</td>
+<td>B2</td>
+<td>Apoyo biblioteca</td>
+<td>2020-07-07</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Miguel</td>
+<td>B3</td>
+<td>Investigación</td>
+<td>2020-07-07</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bibliografia</strong></p>
+<p>-Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006
+- Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001
+- Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.
+- Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. </p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="https://www.researchgate.net/profile/Hector_Perez-Morago">ResearchGate</a></li>
+                            <li><a href="https://scholar.google.es/citations?user=kayx53AAAAAJ&hl=es">ai-google-scholar-square</a></li>
+                            <li><a href="https://publons.com/researcher/1280179/hector-perez-morago/">Publons</a></li>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="https://github.com/hperez30">Github</a></li>
+                            <li><a href="https://es.linkedin.com/in/hector-perez-morago">Linkedin</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -19,7 +19,92 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/hectormorago/about-me.html">About Me</a></h1>
+                    <h1 class="entry-title"><a href="/hectormorago/normalizacion.html">Normalización</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2020-07-07T20:31:00+02:00">
+                Published: mar 07 julio 2020
+        </abbr>
+		<br />
+        <abbr class="modified" title="2020-07-07T20:31:00+02:00">
+                Updated: mar 07 julio 2020
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
+        </address>
+<p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
+<p>tags: <a href="/hectormorago/tag/bbdd.html">BBDD</a> <a href="/hectormorago/tag/teoria.html">teoria</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
+</footer><!-- /.post-info --><p>La <strong>normalización</strong> trata de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias debemos de proceder su descomposición de modo que las relaciones resultantes {R1, R2, R3, ... Rn} sean <strong>correctas</strong> y <strong>no</strong> presenten <strong>inconsistencias</strong>.</p>
+<p>Al realizar el diseño de una base de datos, ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes problemas:</p>
+<ul>
+<li>Redundancias.</li>
+<li>Ambigüedades.</li>
+<li>Pérdida de información.</li>
+<li>Existencia de valores no aplicacbles o desconocidos.</li>
+<li>Aparición de estados que no son válidos en el mundo real.</li>
+<li>Pérdidas de relaciones entre los datos.</li>
+</ul>
+<p>Con el fin de evitar estos problemas surge la teoría de la normalización. Vamos a ver una relación de ejemplo en el que se presentan algunos de los problemas anteriormente citados.</p>
+<p>Sea la relación Estudiante_solicita_beca</p>
+<table>
+<thead>
+<tr>
+<th>cod_est</th>
+<th>nombre_est</th>
+<th>cod_beca</th>
+<th>nombre_beca</th>
+<th>fecha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Roberto</td>
+<td>B1</td>
+<td>Erasmus</td>
+<td>2020-07-07</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Gema</td>
+<td>B2</td>
+<td>Apoyo biblioteca</td>
+<td>2020-07-07</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Laura</td>
+<td>B2</td>
+<td>Apoyo biblioteca</td>
+<td>2020-07-07</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Miguel</td>
+<td>B3</td>
+<td>Investigación</td>
+<td>2020-07-07</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bibliografia</strong></p>
+<p>-Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006
+- Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001
+- Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.
+- Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. </p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/hectormorago/about-me.html" rel="bookmark"
+                           title="Permalink to About Me">About Me</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-04-06T20:31:00+02:00">
                 Published: lun 06 abril 2020
@@ -34,185 +119,10 @@
         </address>
 <p>In <a href="/hectormorago/category/about-me.html">About Me</a>.</p>
 <p>tags: <a href="/hectormorago/tag/research.html">research</a> <a href="/hectormorago/tag/publications.html">publications</a> <a href="/hectormorago/tag/others.html">others</a> </p>
-</footer><!-- /.post-info --><style> 
-    .label {
-    display: inline;
-    padding: .2em .6em .3em;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
-}
-.label-success{background-color:#5cb85c}
-.label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}
-.label-danger{background-color:#d9534f}
-.label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}
-.label-warning{background-color:#f0ad4e}
-.label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}
-</style>
-
-<h2>Research interest</h2>
-<p>My research interests include, but are not limited to Variability Modeling, 
-Software Product Lines, Feature Models, software testing, Binary Decision 
-Diagrams, and Bibliometric Techniques.</p>
-<h2>Publications</h2>
-<h3>Speeding up Derivative Configuration from Product Platforms</h3>
-<p>Heradio, R.; Fernandez-Amoros, D.; <strong>Perez-Morago, H.</strong>; Adan, A</p>
-<div>
-    <img src="https://www.mdpi.com/img/journals/entropy-logo.png?78b1902e596e9c35" alt="entropy-logo" title="entropy Open Access Journals" style="float: left; max-height: 50px; margin: 0 0 0 0; ">
-    <p style="padding:-50px;"">
-        <strong>Abstract</strong> : To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires that companies shift from mass production to mass customization. Under this approach, a generic architecture, named product platform, is designed to support the derivation of customized products through a configuration process that determines which components the product comprises. When a customer configures a derivative, typically not every combination of available components is valid. To guarantee that all dependencies and incompatibilities among the derivative constituent components are satisfied, automated configurators are used. Flexible product platforms provide a big number of interrelated components, and so, the configuration of all, but trivial, derivatives involves considerable effort to select which components the derivative should include. Our approach alleviates that effort by speeding up the derivative configuration using a heuristic based on the information theory concept of entropy. View Full-Text
-    </p>
-    <div id='journal'>
-        <spam class="label label-success">Journal Paper</spam>
-        Entropy June 2014, Volume 17, Pages 3329-3356
-    </div>
-    <div id='impact-factor'>
-        <spam class="label label-danger">Impact factor</spam>
-        <strong id='impact-factor-number-entropy'></strong>
-        (Journal Citation Reports) | 2nd Quartile
-    </div>
-</div>
-
-<p></br></p>
-<h3>Augmenting Measure Sensitivity to Detect Essential, Dispensable and Highly Incompatible Features in Mass Customization</h3>
-<p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Alferez, M.; Fernandez-Amoros, D.; Alferez G.</p>
-<div>
-    <img src="https://ars.els-cdn.com/content/image/X03772217.jpg" alt="ejor-logo" title="European Journal of Operational Research" style="float: left; max-height: 100px; margin: 0 0 0 0; padding:2px;">
-    <p>
-        <strong>Abstract</strong> : Software product line engineering has proven to be an efficient paradigm to developing families of similar software systems at lower costs, in shorter time, and with higher quality. This paper analyzes the literature on product lines from 1995 to 2014, identifying the most influential publications, the most researched topics, and how the interest in those topics has evolved along the way. Bibliographic data have been gathered from ISI Web of Science and Scopus. The data have been examined using two prominent bibliometric approaches: science mapping and performance analysis.Results: According to the study carried out, (i) software architecture was the initial motor of research in SPL; (ii) work on systematic software reuse has been essential for the development of the area; and (iii) feature modeling has been the most important topic for the last fifteen years, having the best evolution behavior in terms of number of published papers and received citations. Science mapping has been used to identify the main researched topics, the evolution of the interest in those topics and the relationships among topics. Performance analysis has been used to recognize the most influential papers, the journals and conferences that have published most papers, how numerous is the literature on product lines and what is its distribution over time.
-    </p>
-    <div id='journal'>
-        <spam class="label label-success">Journal Paper</spam>
-        European Journal of Operational Research, August 2015, 248(3):1066-1077
-    </div>
-    <div id='impact-factor'>
-        <spam class="label label-danger">Impact factor</spam>
-        <strong id='impact-factor-number-ejor'>2.679</strong>
-        (Journal Citation Reports) | 1st Quartile
-    </div>
-</div>
-
-<p></br></p>
-<h3>A Bibliometric Analysis of 20 Years of Research on Software Product Lines</h3>
-<p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Fernandez-Amoros, D.; Cabrerizo, 
-Francisco Javier; Herrera-Viedma, Enrique</p>
-<div>
-    <img src="https://ars.els-cdn.com/content/image/X09505849.jpg" alt="ist-logo" title="Information and Software Technology" style="float: left; max-height: 100px; margin: 0 0 0 0; padding:2px;">
-    <div id='journal'>
-        <p>
-        <strong>Abstract</strong> : Software product line engineering has proven to be an efficient paradigm to developing families of similar software systems at lower costs, in shorter time, and with higher quality. This paper analyzes the literature on product lines from 1995 to 2014, identifying the most influential publications, the most researched topics, and how the interest in those topics has evolved along the way. Bibliographic data have been gathered from ISI Web of Science and Scopus. The data have been examined using two prominent bibliometric approaches: science mapping and performance analysis.Results: According to the study carried out, (i) software architecture was the initial motor of research in SPL; (ii) work on systematic software reuse has been essential for the development of the area; and (iii) feature modeling has been the most important topic for the last fifteen years, having the best evolution behavior in terms of number of published papers and received citations. Science mapping has been used to identify the main researched topics, the evolution of the interest in those topics and the relationships among topics. Performance analysis has been used to recognize the most influential papers, the journals and conferences that have published most papers, how numerous is the literature on product lines and what is its distribution over time.
-        </p>
-        <spam class="label label-success">Journal Paper</spam>
-        Information and Software Technology, 72, April 2016
-    </div>
-    <div id='impact-factor'>
-        <spam class="label label-danger">Impact factor</spam>
-        <strong id='impact-factor-number-ejor'>1.569</strong>
-        (Journal Citation Reports) | 2nd Quartile
-    </div>
-</div>
-
-<p></br></p>
-<h3>Efficient Identification of Core and Dead Features in Variability Models</h3>
-<p><strong>Hector Perez-Morago</strong>, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and Jose Antonio Cerrada </p>
-<div>
-    <img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left ;max-height: 50px; margin: 0 0 0 0; ">
-    <p style="padding:-10px;">
-        <strong>Abstract</strong> : Mass customization enables the creation of personalized products that fulfill the features desired by specific customers. In this context, variability models are used to specify which configurable features are supported and which constraints among the features must be satisfied to guarantee the validity of the derived products. As the market demand grows and evolves, variability models become increasingly complex. In such entangled models, it is hard to identify which features are absolutely essential or dispensable because they are required to be included or excluded from all the possible products, respectively. This paper exposes the limitations of existing approaches to automatically detect those features and provides an algorithm that efficiently performs such detection.
-    </p>
-    <div id='journal'>
-        <spam class="label label-success">Journal Paper</spam>
-        IEEE Access. Nov 2015.
-    </div>
-    <div id='impact-factor'>
-        <spam class="label label-danger">Impact factor</spam>
-        <strong id='impact-factor-number-ejor'>1.249</strong>
-        (Journal Citation Reports) | 1st Quartile
-    </div>
-</div>
-
-<p></br></p>
-<h3>Science Mapping Analysis of the Literature on Software Product Lines.</h3>
-<p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Fernandez-Amoros, D.; Cabrerizo, Francisco Javier; 
-Herrera-Viedma, Enrique</p>
-<div>
-    <img src="https://images.springer.com/sgw/books/medium/9783319226880.jpg" alt="somet2015-logo" title="Somet 2015" style="float: left ;max-height: 100px; margin: 0 0 0 0; padding:2px;">
-    <p>
-        <strong>Abstract</strong> : To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires companies to shift from mass production to mass customization. In the context of software development, software product line engineering has emerged as a cost effective approach to developing families of similar products by support high levels of mass customization. This paper analyzes the literature on software product lines from its beginnings to 2014. A science mapping approach is applied to identify the most researched topics, and how the interest in those topics has evolved along the way.
-    </p>
-    <div id='journal'>
-        <spam class="label label-warning">Conference Paper</spam>
-        The 14th International Conference on Intelligent Software Methodologies, Tools and Techniques Monumental Complex of St. Chiara, Naples, Italy September 15-17, 2015
-    </div>
-</div>
-
-<p></br></p>
-<h3>Binary Decision Diagram Algorithms to Perform Hard Analysis Operations on Variability Models.</h3>
-<p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Fernandez-Amoros, D.; 
-Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enrique
-Conference Paper The 15th International Conference on Intelligent Software 
-Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016</p>
-<div>
-    <img src="https://www.cyprusconferences.org/somet2016/img/somet2016logonotitle.png" alt="somet2015-logo" title="Somet 2015" style="float: left ;max-height: 60px; margin: 0 0 0 0; padding:2px;">
-    <p>
-        <strong>Abstract</strong> : Variability models play a key role in software product line engineering as they are used to represent the common and variable features that products may include, and what constraints among the features must be satisfied to guarantee the validity of the products. Valuable analysis operations on variability models can be performed by black box reusing logic engines, such as SAT-solvers and binary decision diagram libraries. Unfortunately, such kind of reuse implies long computation times for operations that need calling the engines many times. To overcome this problem, we propose new algorithms that directly deal with the data structure of a binary decision diagram encoding a variability model. In particular, our algorithms are specifically designed to detect core & dead features, and the impact & exclusion sets of every feature.
-    </p>
-    <div id='journal'>
-        <spam class="label label-warning">Conference Paper</spam>
-        The 14th International Conference on Intelligent Software Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016
-    </div>
-</div>
-
-<p></br></p>
-<h2><strong>Phd dissertation</strong></h2>
-<h3>BDD Algorithms to Perform Hard Analysis Operations on Variability Models.</h3>
-<p><strong>Héctor José Pérez Morago</strong> 
-Universidad Nacional de Educación a Distancia (España). Escuela Internacional de Doctorado. Programa de Doctorado en Ingeniería de Sistemas y Control</p>
-<p><strong>Abstract</strong>
-To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires companies to shift from mass production to mass customization. In the context of software development, software product line engineering has emerged as a cost-effective approach to developing families of similar products by supporting high levels of mass customization.
-Variability models are often used to specify the common and variable features of the products in one such family. Moreover, they model the inter-feature constraints which must be satisfied to guarantee the validity of the derived products. Despite the benefits of variability models, constructing and maintaining them can be a laborious task, especially in product lines with a large number of features and constraints. As a consequence, the study of automated techniques to reason on variability models has become an important research topic for the product line community.</p>
-<p><a href="http://e-spacio.uned.es/fez/view/tesisuned:IngInf-Hjperez"><strong>Full version</strong></a></p>
-<script type="text/javascript">
-  var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
-  function doCORSRequest(options, printResult) {
-    var x = new XMLHttpRequest();
-    x.open(options.method, cors_api_url + options.url);
-    x.onload = x.onerror = function() {
-      var parser = new DOMParser();
-      var doc = parser.parseFromString(x.responseText, "text/html");
-      elem = doc.getElementsByClassName("header-impact-factor-sci")[0];
-      elem = elem.getElementsByClassName("number")[0].innerHTML;
-      printResult((elem || ''));
-    };
-    x.send();
-  }
-
-  // Bind event
-  (function() {
-    var urlField = document.getElementById('url');
-    var outputField = document.getElementById('impact-factor-number-entropy');
-    window.onload = function(e) {
-      e.preventDefault();
-      doCORSRequest({
-        method: 'GET',
-        url: 'https://mdpi.com/journal/entropy/stats#if',
-      }, function printResult(result) {
-        //console.log(result);
-        outputField.innerHTML += result;
-      });
-    };
-  })();
-</script>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                <p>This section provides a summarize of my research interests.</p>
+                <a class="readmore" href="/hectormorago/about-me.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -289,32 +199,6 @@ Variability models are often used to specify the common and variable features of
 <p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
 </footer><!-- /.post-info -->                <p>Algoritmo de planificación Round Robin.</p>
                 <a class="readmore" href="/hectormorago/alg-round-robin.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/hectormorago/alg-sjf.html" rel="bookmark"
-                           title="Permalink to Algoritmo de planificación Shortest Job First">Algoritmo de planificación Shortest Job First</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-04-06T20:31:00+02:00">
-                Published: lun 06 abril 2020
-        </abbr>
-		<br />
-        <abbr class="modified" title="2020-04-06T20:31:00+02:00">
-                Updated: lun 06 abril 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
-        </address>
-<p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
-<p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
-</footer><!-- /.post-info -->                <p>Algoritmo de planificación Shortest Job First.</p>
-                <a class="readmore" href="/hectormorago/alg-sjf.html">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
                 </ol><!-- /#posts-list -->
