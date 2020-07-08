@@ -76,7 +76,12 @@ La &lt;strong&gt;normalización&lt;/strong&gt; se ocupa de comprobar mediante un
 &lt;p&gt;Por ejemplo: Cod_Estudiante -&amp;gt; Nombre&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Definición&lt;/strong&gt;: Sea el esquema de relación R(A,DF), y sean X, Y dos subconjuntos de A, a los que llamamos descriptores. 
 Se dice que Y depende funcionalmente de X o que X implica o determina a Y, y se denota como X -&amp;gt; Y si, y sólo si, a cada valor x del descriptor X le corresponde un único valor y del descriptor Y.&lt;/p&gt;
-&lt;p&gt;Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si Cod_Estudiante toma el valor 2, nombre sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, nombre podría tomar cualquier valor del dominio sobre el que esta definido.&lt;/p&gt;
+&lt;p&gt;Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si Cod_Estudiante toma el valor 2, nombre sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, nombre podría tomar cualquier valor del dominio sobre el que esta definido. Además, y adelandonos al concepto de clave que veremos más adelante, podemos afirmar que si un conjunto A, es clave, el resto de atributos de la relación dependenden de él. En caso contrario, es decir, A no es clave (o clave candidata), entonces se introduce cierta redundancia.  &lt;/p&gt;
+&lt;p&gt;Este último aspecto, junto al hecho de que a mayor número de dependencias mayor sobrecarga se introduce en el Sistema de Gestión de Base Datos, hace que sea importante tener en cuenta sólo aquellas dependencias (entre los datos que estamos modelando) que sean estrictamente necesarias.&lt;/p&gt;
+&lt;p&gt;Propiedades de la dependencias funcionales:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dos descriptores X e Y son equivalentes si: X -&amp;gt; Y e Y -&amp;gt; X, o bien, X &amp;lt;-&amp;gt; Y. Ejemplo: Cod_Estudiante &amp;lt;-&amp;gt; DNI&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006&lt;/li&gt;

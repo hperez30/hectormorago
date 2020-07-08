@@ -116,7 +116,12 @@ La <strong>normalización</strong> se ocupa de comprobar mediante un método sis
 <p>Por ejemplo: Cod_Estudiante -&gt; Nombre</p>
 <p><strong>Definición</strong>: Sea el esquema de relación R(A,DF), y sean X, Y dos subconjuntos de A, a los que llamamos descriptores. 
 Se dice que Y depende funcionalmente de X o que X implica o determina a Y, y se denota como X -&gt; Y si, y sólo si, a cada valor x del descriptor X le corresponde un único valor y del descriptor Y.</p>
-<p>Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si Cod_Estudiante toma el valor 2, nombre sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, nombre podría tomar cualquier valor del dominio sobre el que esta definido.</p>
+<p>Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si Cod_Estudiante toma el valor 2, nombre sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, nombre podría tomar cualquier valor del dominio sobre el que esta definido. Además, y adelandonos al concepto de clave que veremos más adelante, podemos afirmar que si un conjunto A, es clave, el resto de atributos de la relación dependenden de él. En caso contrario, es decir, A no es clave (o clave candidata), entonces se introduce cierta redundancia.  </p>
+<p>Este último aspecto, junto al hecho de que a mayor número de dependencias mayor sobrecarga se introduce en el Sistema de Gestión de Base Datos, hace que sea importante tener en cuenta sólo aquellas dependencias (entre los datos que estamos modelando) que sean estrictamente necesarias.</p>
+<p>Propiedades de la dependencias funcionales:</p>
+<ul>
+<li>Dos descriptores X e Y son equivalentes si: X -&gt; Y e Y -&gt; X, o bien, X &lt;-&gt; Y. Ejemplo: Cod_Estudiante &lt;-&gt; DNI</li>
+</ul>
 <p><strong>Bibliografia</strong></p>
 <ul>
 <li>Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006</li>
