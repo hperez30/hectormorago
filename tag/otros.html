@@ -35,7 +35,7 @@
 <p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
 <p>tags: <a href="/hectormorago/tag/bbdd.html">BBDD</a> <a href="/hectormorago/tag/teoria.html">teoria</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
 </footer><!-- /.post-info --><p><link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-La <strong>normalización</strong> trata de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {R1, R2, R3, ... Rn} sean <strong>correctas</strong> y <strong>no</strong> presenten <strong>inconsistencias</strong>.</p>
+La <strong>normalización</strong> se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {R1, R2, R3, ... Rn} sean <strong>correctas</strong> y <strong>no</strong> presenten <strong>inconsistencias</strong>.</p>
 <p>Al realizar el diseño de una base de datos, ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes problemas:</p>
 <ul>
 <li>Redundancias.</li>
@@ -105,10 +105,9 @@ La <strong>normalización</strong> trata de comprobar mediante un método sistem
 <p>De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundate los datos de un estudiante cada vez que realiza un solicitud, con los datos de las becas pasa los mismo. Otros problemas que nos podemos encontrar son inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas, problemas para almacenar los datos de estudiantes que no han solicitado becas o de becas que no han sido solicitadas, problemas en el borrado de solicitudes (perderíamos los datos del estudiante en el caso de sólo hubiese solicitado esa beca), etc.</p>
 <p>Con el fin de solventar todos estos problemas surge la teoría de la Normalización. Podemos afirmar que la teoría de la normalización permite afrontar el problema de diseño de bases de datos relacionales de una manera rigurosa y objetiva.
 Una aspecto crucial en la normalización es el concepto de <strong>Dependencia Funcional</strong>.</p>
-<p>Las dependencias nos permiten representar interdependencias entre los datos, son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional.
-Se han de cumplir en cualquier extensión de un esquema de relación (son invariantes en el tiempo).
-No es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.
-Existen diferentes tipos de dependencias: Funcionales, multivaluadas, jerárquicas y de combinación.</p>
+<p>Las dependencias nos permiten representar interdependencias entre los datos, son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional. Se han de cumplir en cualquier extensión de un esquema de relación, es decir, son invariantes en el tiempo. Es importante tener en cuenta que no es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.</p>
+<p>Existen diferentes tipos de dependencias: Funcionales, multivaluadas, jerárquicas y de combinación. Sin embargo, en esta ocasión vamos a hablar sólo de las funcionales.</p>
+<p>Para estudio de las dependencias vamos a considerar que el esquema relacional está compuesto por un único esquema de relación, R(A, DEP), donde A es el conjunto de atributos de la relación R y DEP es el conjunto de dependencias existentes entre los atributos. Una dependencia va tener el siguiente aspecto:  <strong>A -&gt; B</strong>, donde A y B pueden ser un único atributo o varios.</p>
 <p><strong>Bibliografia</strong></p>
 <ul>
 <li>Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006</li>
