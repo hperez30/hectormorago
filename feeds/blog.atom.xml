@@ -9,6 +9,8 @@ td,
 th {
   padding: 0;
 }
+.thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}
+.table-dark{color:#fff;background-color:#212529}
 &lt;/style&gt;
 La &lt;strong&gt;normalización&lt;/strong&gt; se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {R1, R2, R3, ... Rn} sean &lt;strong&gt;correctas&lt;/strong&gt; y &lt;strong&gt;no&lt;/strong&gt; presenten &lt;strong&gt;inconsistencias&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Al realizar el diseño de una base de datos, ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes &lt;strong&gt;problemas&lt;/strong&gt;:&lt;/p&gt;
