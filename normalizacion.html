@@ -40,6 +40,16 @@
 <p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
 <p>tags: <a href="/hectormorago/tag/bbdd.html">BBDD</a> <a href="/hectormorago/tag/teoria.html">teoria</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
 </footer><!-- /.post-info -->      <p><link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<style type="text/css">
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 0;
+}
+</style>
 La <strong>normalización</strong> se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {R1, R2, R3, ... Rn} sean <strong>correctas</strong> y <strong>no</strong> presenten <strong>inconsistencias</strong>.</p>
 <p>Al realizar el diseño de una base de datos, ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes <strong>problemas</strong>:</p>
 <ul>
@@ -52,61 +62,69 @@ La <strong>normalización</strong> se ocupa de comprobar mediante un método sis
 </ul>
 <p>Con el fin de evitar estos problemas surge la teoría de la normalización. A continuación vamos a ver como ejemplo una relación en el que se presentan algunos de los problemas anteriormente citados.</p>
 <p>Sea la relación: Estudiante_solicita_beca</p>
-<table>
-<thead>
-<tr>
-<th>cod_est</th>
-<th>nombre_est</th>
-<th>cod_beca</th>
-<th>nombre_beca</th>
-<th>fecha</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Roberto</td>
-<td>B1</td>
-<td>Erasmus</td>
-<td>2020-01-21</td>
-</tr>
-<tr>
-<td>1</td>
-<td>Gema</td>
-<td>B2</td>
-<td>Apoyo biblioteca</td>
-<td>2018-02-22</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Laura</td>
-<td>B2</td>
-<td>Apoyo biblioteca</td>
-<td>2018-02-22</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Miguel</td>
-<td>B3</td>
-<td>Investigación</td>
-<td>2020-03-24</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Laura</td>
-<td>B1</td>
-<td>Erasmus</td>
-<td>2020-01-21</td>
-</tr>
-<tr>
-<td>3</td>
-<td>Miguel</td>
-<td>B1</td>
-<td>Erasmus</td>
-<td>2020-01-21</td>
-</tr>
-</tbody>
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">cod_est</th>
+      <th scope="col">nombre_est</th>
+      <th scope="col">cod_beca</th>
+      <th scope="col">nombre_beca</th>
+      <th scope="col">fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">0</th>
+      <td>0</th>
+      <td>Roberto</td>
+      <td>B1</td>
+      <td>Erasmus</td>
+      <td>2020-01-21</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>1</th>
+      <td>Gema</td>
+      <td>B2</td>
+      <td>Apoyo biblioteca</td>
+      <td>2018-02-22</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>2</th>
+      <td>Laura</td>
+      <td>B2</td>
+      <td>Apoyo biblioteca</td>
+      <td>2018-02-22</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>3</th>
+      <td>Miguel</td>
+      <td>B3</td>
+      <td>Investigación</td>
+      <td>2020-03-24</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td>2</th>
+      <td>Laura</td>
+      <td>B1</td>
+      <td>Erasmus</td>
+      <td>2020-01-21</td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td>3</th>
+      <td>Miguel</td>
+      <td>B1</td>
+      <td>Erasmus</td>
+      <td>2020-01-21</td>
+    </tr>
+  </tbody>
 </table>
+
 <p>De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundate los datos de un estudiante cada vez que realiza un solicitud (con los datos de las becas pasa los mismo). Otros problemas que nos podemos encontrar son: inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas, problemas para almacenar los datos de estudiantes que no han solicitado becas o de becas que no han sido solicitadas, problemas en el borrado de solicitudes (perderíamos los datos del estudiante en el caso de sólo hubiese solicitado esa beca), etc.</p>
 <p>Con el fin de solventar todos estos problemas surge la teoría de la Normalización. Podemos afirmar que la teoría de la normalización permite afrontar el problema de diseño de bases de datos relacionales de una manera rigurosa y objetiva.</p>
 <p>Un aspecto crucial en la normalización es el concepto de <strong>Dependencia Funcional</strong>. Las dependencias nos permiten representar interdependencias entre los datos, son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional. Se han de cumplir en cualquier extensión de un esquema de relación, es decir, son invariantes en el tiempo. Es importante tener en cuenta que no es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.</p>
