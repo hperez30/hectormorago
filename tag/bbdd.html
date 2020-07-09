@@ -141,6 +141,13 @@ Se dice que Y depende funcionalmente de X o que X implica o determina a Y, y se 
 <li><strong>Dependencia funcional transitiva</strong>. Sea R({X,Y,Z}, {X-&gt;Y, Y-&gt;Z}), decimos que Z depende tansitivamente de X. Si además Z-/-&gt;Y se dice que es estricta. Ejemplo: R({CP, Localidad, Provincia}, {CP-&gt;Localidad, Localidad-&gt;Provincia}), decimos que Provincia depende transitivamente de CP. Además, como Provincia -/-&gt; Localidad, entonces decimos que es estricta.</li>
 </ul>
 <p>Otro aspecto importante en relación a las dependencias funcionales es el concepto de <strong>cierre de un conjunto de dependencias funcionales</strong>. El cierre de un conjunto de dependencias funcionales, DF+, es el conjunto de todas las dependencias que pertenecen a DF o pueden derivarse de este (por ejemplo por la aplicación de los <strong>axiomas de armstrong</strong>).    </p>
+<p><strong>Axiomas de armstrong</strong>:</p>
+<ul>
+<li>Reflesividad, si Y es un subconjunto de X, entonces X -&gt; Y (X -&gt; Y trivial)</li>
+<li>Aumento: si X -&gt; Y, entonces XZ -&gt; YZ</li>
+<li>Transitividad: si X -&gt; Y y Y -&gt; Z, entonces X -&gt; Z</li>
+</ul>
+<p>Se puede demostrar que toda dependencia X<pre>→</pre>Y derivada de DF mediante la aplicación de los axiomas está en DF<sup>+</sup>.</p>
 <p><strong>Bibliografia</strong></p>
 <ul>
 <li>Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006</li>
