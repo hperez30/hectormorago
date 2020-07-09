@@ -110,18 +110,17 @@ Se dice que Y depende funcionalmente de X o que X implica o determina a Y, y se 
 &lt;ul&gt;
 &lt;li&gt;Reflesividad, si Y es un subconjunto de X, entonces X -&amp;gt; Y (X -&amp;gt; Y trivial)&lt;/li&gt;
 &lt;li&gt;Aumento: si X -&amp;gt; Y, entonces XZ -&amp;gt; YZ&lt;/li&gt;
-&lt;li&gt;Transitividad: si X -&amp;gt; Y y Y -&amp;gt; Z, entonces X -&amp;gt; Z&lt;/li&gt;
+&lt;li&gt;Transitividad: si X -&amp;gt; Y y Y -&amp;gt; Z, entonces X -&amp;gt; Z
+&lt;p&gt;This text contains &lt;sub&gt;subscript&lt;/sub&gt; text.&lt;/p&gt;
+&lt;p&gt;Se puede demostrar que toda dependencia &lt;pre&gt;X → Y&lt;/pre&gt; derivada de DF mediante la aplicación de los axiomas está en DF&lt;sup&gt;+&lt;/sup&gt;.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Se puede demostrar que toda dependencia &lt;pre&gt;X→Y&lt;/pre&gt; derivada de DF mediante la aplicación de los axiomas está en DF&lt;sup&gt;+&lt;/sup&gt;
-
-.&lt;/p&gt;
-
-**Bibliografia**
-
-- Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006
-- Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001
-- Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.
-- Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997.</content><category term="blog"></category><category term="BBDD"></category><category term="teoria"></category><category term="otros"></category></entry><entry><title>About Me</title><link href="/hectormorago/about-me.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/about-me.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my research interests.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"&gt;
+&lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006&lt;/li&gt;
+&lt;li&gt;Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001&lt;/li&gt;
+&lt;li&gt;Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.&lt;/li&gt;
+&lt;li&gt;Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. &lt;/li&gt;
+&lt;/ul&gt;</content><category term="blog"></category><category term="BBDD"></category><category term="teoria"></category><category term="otros"></category></entry><entry><title>About Me</title><link href="/hectormorago/about-me.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/about-me.html</id><summary type="html">&lt;p&gt;This section provides a summarize of my research interests.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"&gt;
 &lt;style&gt; 
     .label {
     display: inline;
