@@ -151,36 +151,21 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
     \(A \rightarrow B, B \rightarrow A, C \rightarrow A, D \rightarrow C, (E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) 
 &lt;/p&gt;
 
-&lt;p&gt;
-} 
-&lt;/p&gt;
+&lt;p&gt; } &lt;/p&gt;
 
 &lt;p&gt;Hallar el cierre del descriptor (E, C)&lt;/p&gt;
 
-&lt;p&gt;
-\((E, C)^+\) = {E, C} 
-&lt;/p&gt;
+&lt;p&gt; \((E, C)^+\) = {E, C}  &lt;/p&gt;
 
-&lt;p&gt;
-\((E, C)^+\) = {E, C, D}
-&lt;/p&gt;
+&lt;p&gt; \((E, C)^+\) = {E, C, D} &lt;/p&gt;
 
-&lt;p&gt;
-\((E, C)^+\) = {E, C, D, A}
-&lt;/p&gt;
+&lt;p&gt; \((E, C)^+\) = {E, C, D, A} &lt;/p&gt;
 
-&lt;p&gt;
-\((E, C)^+\) = {E, C, D, A, B}
-&lt;/p&gt;
+&lt;p&gt; \((E, C)^+\) = {E, C, D, A, B} &lt;/p&gt;
 
-&lt;p&gt;
-\((E, C)^+\) = {E, C, D, A, B, F}
-&lt;/p&gt;
+&lt;p&gt; \((E, C)^+\) = {E, C, D, A, B, F} &lt;/p&gt;
 
-&lt;p&gt;Por tanto,   
-(E, C) + = {E, C, D, A, B, F }
- (E,C) es superclave. 
-&lt;/p&gt;
+&lt;p&gt;Por tanto, \((E, C)^+\) = {E, C, D, A, B, F} por lo que (E,C) es superclave.&lt;/p&gt;
 
 &lt;p&gt;
 Hallar el cierre del descriptor B
