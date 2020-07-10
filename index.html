@@ -178,10 +178,10 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 <p>Esta no es la única forma de determinar si una \(DF\) es cierta. Por ejemplo, podemos utilizar herramientas como los SAT Solver o las librerías de BDD's para responder a esta pregunta. Un SAT Solver es una herramienta que nos permite determinar si una fórmula lóica en Forma Normal Conjuntiva es satisfacible (existe al menos una asignación en la cual la fórmula se evalua a cierto) o no. Por otro lado, un BDD (binary decision diagram), es un grafo dirigido aciclico que nos permite representar de forma compacta la tabla de verdad de una forma lógica. En cualquiera de los dos casos, el proceso requiere de algunos conocimientos de lógica proposicional.</p>
 
-<p>Una forma de calcular el cierre de un descriptor es mediante el **Algoritmo de Ullman** que utiliza el concepto de transitividad es las dependencias. Vamos a ver con un ejemplo cual es su funcionamiento.</p>
+<p>Una forma de calcular el cierre de un descriptor es mediante el <strong>Algoritmo de Ullman</strong> que utiliza el concepto de transitividad es las dependencias. Vamos a ver con un ejemplo cual es su funcionamiento.</p>
 
 <p> Sea R ({A, B, C, D, E, F}, DF), donde DF = { \(A \rightarrow B, B \rightarrow A, C \rightarrow A, D \rightarrow C, 
-(E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) } </p>
+(E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) } </p>
 
 <p>Hallar el cierre del descriptor (E, C)
 E, C  E, C 
