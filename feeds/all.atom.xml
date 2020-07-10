@@ -145,7 +145,9 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 &lt;p&gt;Una forma de calcular el cierre de un descriptor es mediante el &lt;strong&gt;Algoritmo de Ullman&lt;/strong&gt; que utiliza el concepto de transitividad es las dependencias. Vamos a ver con un ejemplo cual es su funcionamiento.&lt;/p&gt;
 
-&lt;p&gt; Sea R ({A, B, C, D, E, F}, DF), donde DF = { 
+&lt;p&gt; Sea R ({A, B, C, D, E, F}, DF), donde DF = { &lt;/p&gt;
+
+&lt;p&gt;
     \(A \rightarrow B, B \rightarrow A, C \rightarrow A, D \rightarrow C, (E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) 
 } 
 &lt;/p&gt;
@@ -154,6 +156,9 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 &lt;p&gt;
 \((E, C)^+\) = {E, C} 
+&lt;/p&gt;
+
+&lt;p&gt;
 \((E, C)^+\) = {E, C, D}
 \((E, C)^+\) = {E, C, D, A}
 \((E, C)^+\) = {E, C, D, A, B}
