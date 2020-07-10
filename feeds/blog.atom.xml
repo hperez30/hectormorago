@@ -170,7 +170,7 @@ Hallar el cierre del descriptor B
 
 Nos interesa saber si una dependencia es cierta
 Por ejemplo, ¿\(B \rightarrow F\)? 
-A-&gt; B y B-&gt; A (son equivalentes) por lo tanto B-&gt; F
+A \rightarrow B y B \rightarrow A (son equivalentes) por lo tanto B-&gt; F
 &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
