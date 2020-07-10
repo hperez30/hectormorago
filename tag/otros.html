@@ -135,7 +135,7 @@ th {
 
 <p>Por ejemplo: \(Cod\_Estudiante \rightarrow Nombre\)</p>
 
-<p><strong>Definición</strong>: Sea el esquema de relación \(R(A,DF)\), y sean \(X, Y \subseteq A\), a los que llamamos descriptores. Se dice que \(Y\) depende funcionalmente de \(X\) o que \(X\) implica o determina a \(Y\), y se denota como \(X \rightarrow Y\) si, y sólo si, \( \forall x \in X \exists y \in Y \cdot x \rightarrow y \wedge \nexists \y^' \cdot x \rightarrow y^' \).
+<p><strong>Definición</strong>: Sea el esquema de relación \(R(A,DF)\), y sean \(X, Y \subseteq A\), a los que llamamos descriptores. Se dice que \(Y\) depende funcionalmente de \(X\) o que \(X\) implica o determina a \(Y\), y se denota como \(X \rightarrow Y\) si, y sólo si, \( \forall x \in X \exists y \in Y \cdot x \rightarrow y \wedge \nexists y' \cdot x \rightarrow y' \).
 
 <p>Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si \(Cod\_Estudiante\) toma el valor 2, \(nombre\) sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, \(nombre\) podría tomar cualquier valor del dominio sobre el que esta definido. Además, y adelandonos al concepto de clave que veremos más adelante, podemos afirmar que si \(A \subseteq AT\), es clave, \(A \rightarrow AT \minus A\), es decir, el resto de atributos de la relación dependenden de él. En caso contrario, es decir, A no es clave (o clave candidata), entonces se introduce cierta redundancia.</p>  
 
