@@ -145,11 +145,16 @@ th {
 <ul>
 <li> Dos <strong>descriptores</strong> X e Y son <strong>equivalentes</strong> si: <p>\(X \rightarrow Y\) e \(Y \rightarrow X\), o bien, \(X \leftrightarrow Y\).</p>
 Ejemplo: \(Cod\_Estudiante \leftrightarrow DNI\)
-<li> Una <strong>dependencia</strong> se dice que es <strong>trivial</strong> si el implicado esta incluido en el implicante. Si \(X \rightarrow Y\), \(Y \subseteq X\), entonces \(X \rightarrow Y\) es trivial. 
+<li> Una <strong>dependencia</strong> se dice que es <strong>trivial</strong> si el implicado esta incluido en el implicante. Si \(X \rightarrow Y\), \(Y \subseteq X\), entonces \(X \rightarrow Y\) es trivial.
+
 Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Cod\_curso\)
+
 <li> <strong>Dependencia funcional plena</strong>, sea la dependencia \(X \rightarrow Y\) se dice que es plena, si \(\nexists X', X' \subset X \cdot X' \rightarrow Y\). En caso contrario se dice que no es plena, y que los atributos \(X-X'\), son extraños. 
+
 Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos los cursos tienen el mismo programa independientemente de su edición). En este caso diríamos que \(Cod\_edicion\) es un <strong>atributo extraño</strong>.
+
 <li> <strong>Dependencia funcional transitiva</strong>. Sea \(R(\{X,Y,Z\}, \{X \rightarrow Y, Y \rightarrow Z\})\), decimos que \(Z\) depende tansitivamente de \(X\). Si además \(Z \nrightarrow Y\) se dice que es estricta. 
+
 Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad \rightarrow Provincia\})\), decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.
 </ul>
 
@@ -157,7 +162,7 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 <p><strong>Axiomas de armstrong</strong>:
 <ul>
-<li> Reflesividad, si (Y \subset X \wedge X \rightarrow Y, X \rightarrow Y ) es trivial </li>
+<li> Reflesividad, si (Y \subset X \wedge X \rightarrow Y, X \rightarrow Y ) es trivial.
 <li> Aumento: si X -&gt; Y, entonces XZ -&gt; YZ </li>
 <li> Transitividad: si X -&gt; Y y Y -&gt; Z, entonces X -&gt; Z </li>
 </ul>

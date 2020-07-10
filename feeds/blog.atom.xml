@@ -110,11 +110,16 @@ th {
 &lt;ul&gt;
 &lt;li&gt; Dos &lt;strong&gt;descriptores&lt;/strong&gt; X e Y son &lt;strong&gt;equivalentes&lt;/strong&gt; si: &lt;p&gt;\(X \rightarrow Y\) e \(Y \rightarrow X\), o bien, \(X \leftrightarrow Y\).&lt;/p&gt;
 Ejemplo: \(Cod\_Estudiante \leftrightarrow DNI\)
-&lt;li&gt; Una &lt;strong&gt;dependencia&lt;/strong&gt; se dice que es &lt;strong&gt;trivial&lt;/strong&gt; si el implicado esta incluido en el implicante. Si \(X \rightarrow Y\), \(Y \subseteq X\), entonces \(X \rightarrow Y\) es trivial. 
+&lt;li&gt; Una &lt;strong&gt;dependencia&lt;/strong&gt; se dice que es &lt;strong&gt;trivial&lt;/strong&gt; si el implicado esta incluido en el implicante. Si \(X \rightarrow Y\), \(Y \subseteq X\), entonces \(X \rightarrow Y\) es trivial.
+
 Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Cod\_curso\)
+
 &lt;li&gt; &lt;strong&gt;Dependencia funcional plena&lt;/strong&gt;, sea la dependencia \(X \rightarrow Y\) se dice que es plena, si \(\nexists X', X' \subset X \cdot X' \rightarrow Y\). En caso contrario se dice que no es plena, y que los atributos \(X-X'\), son extraños. 
+
 Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos los cursos tienen el mismo programa independientemente de su edición). En este caso diríamos que \(Cod\_edicion\) es un &lt;strong&gt;atributo extraño&lt;/strong&gt;.
+
 &lt;li&gt; &lt;strong&gt;Dependencia funcional transitiva&lt;/strong&gt;. Sea \(R(\{X,Y,Z\}, \{X \rightarrow Y, Y \rightarrow Z\})\), decimos que \(Z\) depende tansitivamente de \(X\). Si además \(Z \nrightarrow Y\) se dice que es estricta. 
+
 Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad \rightarrow Provincia\})\), decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.
 &lt;/ul&gt;
 
@@ -122,7 +127,7 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 &lt;p&gt;&lt;strong&gt;Axiomas de armstrong&lt;/strong&gt;:
 &lt;ul&gt;
-&lt;li&gt; Reflesividad, si (Y \subset X \wedge X \rightarrow Y, X \rightarrow Y ) es trivial &lt;/li&gt;
+&lt;li&gt; Reflesividad, si (Y \subset X \wedge X \rightarrow Y, X \rightarrow Y ) es trivial.
 &lt;li&gt; Aumento: si X -&amp;gt; Y, entonces XZ -&amp;gt; YZ &lt;/li&gt;
 &lt;li&gt; Transitividad: si X -&amp;gt; Y y Y -&amp;gt; Z, entonces X -&amp;gt; Z &lt;/li&gt;
 &lt;/ul&gt;
