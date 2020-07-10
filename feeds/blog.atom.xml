@@ -168,11 +168,8 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 &lt;p&gt;Por tanto, \((E, C)^+\) = {E, C, D, A, B, F} por lo que (E,C) es superclave.&lt;/p&gt;
 
 &lt;p&gt;
-Hallar el cierre del descriptor B
-
-Nos interesa saber si una dependencia es cierta
-Por ejemplo, ¿\(B \rightarrow F\)? 
-A \rightarrow B y B \rightarrow A (son equivalentes) por lo tanto B-&gt; F
+Nos interesa saber si una dependencia es cierta. Por ejemplo, ¿\(B \rightarrow F\)? 
+\(A \rightarrow B\) y \(B \rightarrow A\) (son equivalentes) por lo tanto \(B \rightarrow F\)
 &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
