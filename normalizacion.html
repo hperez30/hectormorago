@@ -154,18 +154,19 @@ Ejemplo: \(Cod\_Estudiante \leftrightarrow DNI\)
 Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Cod\_curso\)
 <li> <strong>Dependencia funcional plena</strong>, sea la dependencia \(X \rightarrow Y\) se dice que es plena, si \(\nexists X', X' \subset X \cdot X' \rightarrow Y\). En caso contrario se dice que no es plena, y que los atributos \(X-X'\), son extraños. 
 Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos los cursos tienen el mismo programa independientemente de su edición). En este caso diríamos que \(Cod\_edicion\) es un <strong>atributo extraño</strong>.
-<li> <strong>Dependencia funcional transitiva</strong>. Sea R({X,Y,Z}, {X->Y, Y->Z}), decimos que Z depende tansitivamente de X. Si además Z-/->Y se dice que es estricta. Ejemplo: R({CP, Localidad, Provincia}, {CP->Localidad, Localidad->Provincia}), decimos que Provincia depende transitivamente de CP. Además, como Provincia -/-> Localidad, entonces decimos que es estricta.
+<li> <strong>Dependencia funcional transitiva</strong>. Sea \(R(\{X,Y,Z\}, \{X \rightarrow Y, Y \rightarrow Z\})\), decimos que \(Z\) depende tansitivamente de \(X\). Si además \(Z \nrightarrow Y\) se dice que es estricta. 
+Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad \rightarrow Provincia\})\), decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.
 </ul>
 
-<p>Otro aspecto importante en relación a las dependencias funcionales es el concepto de <strong>cierre de un conjunto de dependencias funcionales</strong>. El cierre de un conjunto de dependencias funcionales, \(DF^+\), es el conjunto de todas las dependencias que pertenecen a DF o pueden derivarse de este (por ejemplo por la aplicación de los <strong>axiomas de armstrong</strong>).</p>
+<p>Otro aspecto importante en relación a las dependencias funcionales es el concepto de <strong>cierre de un conjunto de dependencias funcionales</strong>. El cierre de un conjunto de dependencias funcionales, \(DF^+\), es el conjunto de todas las dependencias que pertenecen a \(DF\) o pueden derivarse de este (por ejemplo por la aplicación de los <strong>axiomas de armstrong</strong>).</p>
 
-<p><strong>Axiomas de armstrong</strong>:</p>
+<p><strong>Axiomas de armstrong</strong>:
 <ul>
-<li>Reflesividad, si Y es un subconjunto de X, entonces X -&gt; Y (X -&gt; Y trivial)</li>
-<li>Aumento: si X -&gt; Y, entonces XZ -&gt; YZ</li>
-<li>Transitividad: si X -&gt; Y y Y -&gt; Z, entonces X -&gt; Z</li>
+<li> Reflesividad, si (Y \subset X \wedge X \rightarrow Y, X \rightarrow Y ) es trivial </li>
+<li> Aumento: si X -&gt; Y, entonces XZ -&gt; YZ </li>
+<li> Transitividad: si X -&gt; Y y Y -&gt; Z, entonces X -&gt; Z </li>
 </ul>
-<p>Se puede demostrar que toda dependencia X → Y derivada de DF mediante la aplicación de los axiomas está en DF+.</p>
+Se puede demostrar que toda dependencia X → Y derivada de DF mediante la aplicación de los axiomas está en DF+.</p>
 <p>Por ejemplo, si queremos saber si una DF es cierta (DF pertenece DF+): 
 Calcular el cierre de un subconjunto, tal que X sea implicante: cierre transitivo de un descriptor X de R respecto al conjunto de dependencias DF, (X+DF)</p>
 <p>Dado R(A, DF), se define X+DF como un subconjunto de los atributos de A tales que X -&gt; X+DF pertenece DF+, siendo X+DF máximo en el sentido de que la adición de cualquier atributo vulneraría la condición anterior. 
