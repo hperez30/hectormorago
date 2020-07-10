@@ -185,16 +185,20 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 <p>Una forma de calcular el cierre de un descriptor es mediante el <strong>Algoritmo de Ullman</strong> que utiliza el concepto de transitividad es las dependencias. Vamos a ver con un ejemplo cual es su funcionamiento.</p>
 
-<p> Sea R ({A, B, C, D, E, F}, DF), donde DF = { \(A \rightarrow B, B \rightarrow A, C \rightarrow A, D \rightarrow C, 
-(E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) } </p>
+<p> Sea R ({A, B, C, D, E, F}, DF), donde DF = { 
+    \(A \rightarrow B, B \rightarrow A, C \rightarrow A, D \rightarrow C, (E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) 
+} </p>
 
-<p>Hallar el cierre del descriptor (E, C)
-E, C  E, C 
-E, C  E, C, D 
-E, C  E, C, D, A
-E, C  E, C, D, A, B
-E, C  E, C, D, A, B, F
-Por tanto,<br>
+<p>
+Hallar el cierre del descriptor (E, C)
+\((E, C)^+\) = {E, C} 
+\((E, C)^+\) = {E, C, D}
+\((E, C)^+\) = {E, C, D, A}
+\((E, C)^+\) = {E, C, D, A, B}
+\((E, C)^+\) = {E, C, D, A, B, F}
+</p>
+
+<p>Por tanto,<br>
 (E, C) + = {E, C, D, A, B, F }
  (E,C) es superclave. </p>
 <p>Hallar el cierre del descriptor B</p>
