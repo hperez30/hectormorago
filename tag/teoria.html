@@ -131,19 +131,15 @@ th {
 <p>Existen diferentes tipos de dependencias: funcionales, multivaluadas, jerárquicas y de combinación. Sin embargo, en esta ocasión vamos a hablar sólo de las funcionales.</p>
 <p>Para el estudio de las dependencias vamos a considerar que el esquema relacional está compuesto por una única relación, \(R(AT, DEP)\), donde \(AT\) es el conjunto de atributos de la relación \(R\) y \(DEP\) es el conjunto de dependencias existentes entre los atributos.</p>
 
-<p>
-  When \(a_{2} \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
-</p>
+<p>Una dependencia va tener el siguiente aspecto:  \(A \rightarrow B\), donde \(A, B \subseteq AT\). La parte de la izquierda recibe el nombre de determinante o implicante, mientras que la parte de la derecha recibe el nombre implicado.</p>
 
-<p>Una dependencia va tener el siguiente aspecto:  \(A \righttarrow B\), donde \(A, B \subseteq AT\). La parte de la izquierda recibe el nombre de determinante o implicante, mientras que la parte de la derecha recibe el nombre implicado.</p>
+<p>Por ejemplo: \(Cod\_Estudiante \rightarrow Nombre\)</p>
 
-<p>Por ejemplo: \(Cod_Estudiante \rightarrow Nombre\)</p>
+<p><strong>Definición</strong>: Sea el esquema de relación \(R(A,DF)\), y sean \(X, Y \subseteq A\), a los que llamamos descriptores. Se dice que \(Y\) depende funcionalmente de \(X\) o que \(X\) implica o determina a \(Y\), y se denota como \(X \rightarrow Y\) si, y sólo si, \(\forall x \in X \exists y in Y \cdot y es único \).
 
-<p><strong>Definición</strong>: Sea el esquema de relación R(A,DF), y sean X, Y dos subconjuntos de A, a los que llamamos descriptores. 
-Se dice que Y depende funcionalmente de X o que X implica o determina a Y, y se denota como X -&gt; Y si, y sólo si, a cada valor x del descriptor X le corresponde un único valor y del descriptor Y.</p>
-<p>Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si Cod_Estudiante toma el valor 2, nombre sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, nombre podría tomar cualquier valor del dominio sobre el que esta definido. Además, y adelandonos al concepto de clave que veremos más adelante, podemos afirmar que si un conjunto A, es clave, el resto de atributos de la relación dependenden de él. En caso contrario, es decir, A no es clave (o clave candidata), entonces se introduce cierta redundancia.  </p>
-<p>Este último aspecto, junto al hecho de que a mayor número de dependencias mayor sobrecarga se introduce en el Sistema de Gestión de Base Datos, hace que sea importante tener en cuenta sólo aquellas dependencias (entre los datos que estamos modelando) que sean estrictamente necesarias.</p>
+<p>Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si \(Cod\_Estudiante\) toma el valor 2, \(nombre\) sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, \(nombre\) podría tomar cualquier valor del dominio sobre el que esta definido. Además, y adelandonos al concepto de clave que veremos más adelante, podemos afirmar que si \(A \subseteq AT\), es clave, \(A \rightarrow AT \minus A\), es decir, el resto de atributos de la relación dependenden de él. En caso contrario, es decir, A no es clave (o clave candidata), entonces se introduce cierta redundancia.</p>  
+
+<p>Este último aspecto, junto al hecho de que a mayor número de dependencias mayor sobrecarga se introduce en el Sistema de Gestión de Base Datos (SGBD), hace que sea importante tener en cuenta sólo aquellas dependencias (entre los datos que estamos modelando) que sean estrictamente necesarias.</p>
 <p><strong>Propiedades</strong> de la dependencias funcionales:</p>
 <ul>
 <li>Dos <strong>descriptores</strong> X e Y son <strong>equivalentes</strong> si: X -&gt; Y e Y -&gt; X, o bien, X &lt;-&gt; Y. Ejemplo: Cod_Estudiante &lt;-&gt; DNI</li>
