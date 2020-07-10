@@ -127,9 +127,9 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 &lt;p&gt;&lt;strong&gt;Axiomas de armstrong&lt;/strong&gt;:
 &lt;ul&gt;
-&lt;li&gt; Reflesividad, si (Y \subset X \wedge X \rightarrow Y, X \rightarrow Y ) es trivial.
-&lt;li&gt; Aumento: si X -&amp;gt; Y, entonces XZ -&amp;gt; YZ &lt;/li&gt;
-&lt;li&gt; Transitividad: si X -&amp;gt; Y y Y -&amp;gt; Z, entonces X -&amp;gt; Z &lt;/li&gt;
+&lt;li&gt; Reflesividad: si (Y \subset X \wedge X \rightarrow Y, X \rightarrow Y ) es trivial.
+&lt;li&gt; Aumento: si (X \rightarrow Y, XZ \rightarrow YZ) 
+&lt;li&gt; Transitividad: si (X \rightarrow Y \wedge Y \rightarrow Z, X \rightarrow Z) 
 &lt;/ul&gt;
 Se puede demostrar que toda dependencia X → Y derivada de DF mediante la aplicación de los axiomas está en DF+.&lt;/p&gt;
 &lt;p&gt;Por ejemplo, si queremos saber si una DF es cierta (DF pertenece DF+): 
