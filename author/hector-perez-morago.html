@@ -170,10 +170,12 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 <p>Se puede demostrar que toda dependencia \(X \rightarrow Y\) derivada de \(DF\) mediante la aplicación de los axiomas está en \(DF^+\).</p>
 
-<p>Por ejemplo, si queremos saber si una DF es cierta (DF pertenece DF+): 
-Calcular el cierre de un subconjunto, tal que X sea implicante: cierre transitivo de un descriptor X de R respecto al conjunto de dependencias DF, (X_{DF}^+)</p>
-<p>Dado R(A, DF), se define X+DF como un subconjunto de los atributos de A tales que X -&gt; X+DF pertenece DF+, siendo X+DF máximo en el sentido de que la adición de cualquier atributo vulneraría la condición anterior. 
+<p>Por ejemplo, si queremos saber si una DF es cierta, es decir, si \(DF \in DF^+\): Calcular el cierre de un subconjunto, tal que \(X\) sea implicante: cierre transitivo de un descriptor \(X\) de \(R\) respecto al conjunto de dependencias \(DF\), \(X_{DF}^+\)</p>
+
+<p>Dado \(R(AT, DF)\), se define \(X_{DF}^+\) como un subconjunto de los atributos de \(AT\) tales que \(X \rightarrow X_{DF}^+ in DF^+\), siendo \(X_{DF}^+\) máximo en el sentido de que la adición de cualquier atributo vulneraría la condición anterior.
+
 Consecuencias: con X+DF  es posible el cálculo de superclaves (SK) y claves (K)</p>
+
 <p>Esta no es la única forma de determinar si una DF es cierta. Por ejemplo, podemos utilizar herramientas como los SAT Solver o las librerías de BDD's para responder a esta pregunta. Un SAT Solver es una herramienta que nos permite determinar si una fórmula lóica en Forma Normal Conjuntiva es satisfacible (existe al menos una asignación en la cual la fórmula se evalua a cierto) o no. Por otro lado, un BDD (binary decision diagram), es un grafo dirigido aciclico que nos permite representar de forma compacta la tabla de verdad de una forma lógica. En cualquiera de los dos casos, el proceso requiere de algunos conocimientos de lógica proposicional. En primer lugar comprobar que no exista    </p>
 <p>Algoritmo de Ullman (algoritmo del cierre de un descriptor) : Transitividad.</p>
 <p><strong>Bibliografia</strong></p>
