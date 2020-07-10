@@ -12,7 +12,14 @@ th {
 .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}
 .table-dark{color:#fff;background-color:#212529}
 &lt;/style&gt;
-La &lt;strong&gt;normalización&lt;/strong&gt; se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {R&lt;sub&gt;1&lt;/sub&gt;, R2, R3, ... Rn} sean &lt;strong&gt;correctas&lt;/strong&gt; y &lt;strong&gt;no&lt;/strong&gt; presenten &lt;strong&gt;inconsistencias&lt;/strong&gt;.&lt;/p&gt;
+&lt;script src="https://polyfill.io/v3/polyfill.min.js?features=es6"&gt;&lt;/script&gt;
+&lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;p&gt;
+  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+&lt;/p&gt;
+
+&lt;p&gt;La &lt;strong&gt;normalización&lt;/strong&gt; se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {R&lt;sub&gt;1&lt;/sub&gt;, R2, R3, ... Rn} sean &lt;strong&gt;correctas&lt;/strong&gt; y &lt;strong&gt;no&lt;/strong&gt; presenten &lt;strong&gt;inconsistencias&lt;/strong&gt;.&lt;/p&gt;
 &lt;p&gt;Al realizar el diseño de una base de datos, ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes &lt;strong&gt;problemas&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Redundancias.&lt;/li&gt;
