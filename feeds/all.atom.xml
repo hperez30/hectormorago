@@ -108,7 +108,7 @@ th {
 &lt;p&gt;&lt;strong&gt;Propiedades&lt;/strong&gt; de la dependencias funcionales:
 &lt;p&gt;
     &lt;ul&gt;
-        &lt;li&gt; Dos &lt;strong&gt;descriptores&lt;/strong&gt; X e Y son &lt;strong&gt;equivalentes&lt;/strong&gt; si: &lt;p&gt;(X \rightarrow Y) e (Y \rightarrow X), o bien, X \leftrightarrow Y.&lt;/p&gt;
+        &lt;li&gt; Dos &lt;strong&gt;descriptores&lt;/strong&gt; X e Y son &lt;strong&gt;equivalentes&lt;/strong&gt; si: &lt;p&gt;(X \rightarrow Y) e (Y \rightarrow X), o bien, (X \leftrightarrow Y).&lt;/p&gt;
         Ejemplo: (Cod_Estudiante \leftrightarrow DNI)&lt;/li&gt;
         &lt;li&gt;Una &lt;strong&gt;dependencia&lt;/strong&gt; se dice que es &lt;strong&gt;trivial&lt;/strong&gt; si el implicado esta incluido en el implicante. Si X -&amp;gt; Y, Y es subcinjunto de X, entonces X-&amp;gt; Y es trivial. Ejemplo: Cod_curso, Cod_edicion -&amp;gt; Cod_curso&lt;/li&gt;
         &lt;li&gt; &lt;strong&gt;Dependencia funcional plena&lt;/strong&gt;, sea la dependencia X -&amp;gt; Y se dice que es plena, si no existe X' subconjunto de X tal que X' -&amp;gt; Y. En caso contrario se dice que no es plena, y que los atributos X-X', son extraños. Ejemplo: Cod_curso, Cod_edicion -&amp;gt; Programa (suponemos que todos los cursos tienen el mismo programa independientemente de su edición). En este caso diríamos que Cod_edición es un &lt;strong&gt;atributo extraño&lt;/strong&gt;.&lt;/li&gt;

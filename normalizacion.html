@@ -148,7 +148,7 @@ th {
 <p><strong>Propiedades</strong> de la dependencias funcionales:
 <p>
     <ul>
-        <li> Dos <strong>descriptores</strong> X e Y son <strong>equivalentes</strong> si: <p>(X \rightarrow Y) e (Y \rightarrow X), o bien, X \leftrightarrow Y.</p>
+        <li> Dos <strong>descriptores</strong> X e Y son <strong>equivalentes</strong> si: <p>(X \rightarrow Y) e (Y \rightarrow X), o bien, (X \leftrightarrow Y).</p>
         Ejemplo: (Cod_Estudiante \leftrightarrow DNI)</li>
         <li>Una <strong>dependencia</strong> se dice que es <strong>trivial</strong> si el implicado esta incluido en el implicante. Si X -&gt; Y, Y es subcinjunto de X, entonces X-&gt; Y es trivial. Ejemplo: Cod_curso, Cod_edicion -&gt; Cod_curso</li>
         <li> <strong>Dependencia funcional plena</strong>, sea la dependencia X -&gt; Y se dice que es plena, si no existe X' subconjunto de X tal que X' -&gt; Y. En caso contrario se dice que no es plena, y que los atributos X-X', son extraños. Ejemplo: Cod_curso, Cod_edicion -&gt; Programa (suponemos que todos los cursos tienen el mismo programa independientemente de su edición). En este caso diríamos que Cod_edición es un <strong>atributo extraño</strong>.</li>
