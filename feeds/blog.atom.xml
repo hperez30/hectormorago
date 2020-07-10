@@ -14,14 +14,9 @@ th {
 &lt;/style&gt;
 &lt;script src="https://polyfill.io/v3/polyfill.min.js?features=es6"&gt;&lt;/script&gt;
 &lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"&gt;&lt;/script&gt;&lt;/p&gt;
-&lt;p&gt;
-  When \(a_{2} \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
-&lt;/p&gt;
+&lt;p&gt; La &lt;strong&gt;normalización&lt;/strong&gt; se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, es decir, que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes \(\{R_{1}, R_{2}, R_{3},  ..., R_{n}\}\) sean &lt;strong&gt;correctas&lt;/strong&gt; y &lt;strong&gt;no&lt;/strong&gt; presenten &lt;strong&gt;inconsistencias&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt; La &lt;strong&gt;normalización&lt;/strong&gt; se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, en el sentido de que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes \(\{R_{1}, R_{2}, R_{3},  ..., R_{n}\}\) sean &lt;strong&gt;correctas&lt;/strong&gt; y &lt;strong&gt;no&lt;/strong&gt; presenten &lt;strong&gt;inconsistencias&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Al realizar el diseño de una base de datos, ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes &lt;strong&gt;problemas&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;Al realizar el diseño de una base de datos (BBDD), ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes &lt;strong&gt;problemas&lt;/strong&gt;:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Redundancias.&lt;/li&gt;
 &lt;li&gt;Ambigüedades.&lt;/li&gt;
@@ -30,8 +25,8 @@ th {
 &lt;li&gt;Aparición de estados que no son válidos en el mundo real.&lt;/li&gt;
 &lt;li&gt;Pérdidas de relaciones entre los datos.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Con el fin de evitar estos problemas surge la teoría de la normalización. A continuación vamos a ver como ejemplo una relación en el que se presentan algunos de los problemas anteriormente citados.&lt;/p&gt;
-&lt;p&gt;Sea la relación: Estudiante_solicita_beca&lt;/p&gt;
+&lt;p&gt;Con el fin de evitar estos problemas surge la teoría de la normalización. A continuación tenemos una relación de ejemplo una relación que presenta algunos de los problemas anteriormente citados.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Estudiante_solicita_beca&lt;/strong&gt;&lt;/p&gt;
 &lt;table class="table"&gt;
   &lt;thead class="thead-light"&gt;
     &lt;tr&gt;
@@ -95,12 +90,18 @@ th {
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundate los datos de un estudiante cada vez que realiza un solicitud (con los datos de las becas pasa los mismo). Otros problemas que nos podemos encontrar son: inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas, problemas para almacenar los datos de estudiantes que no han solicitado becas o de becas que no han sido solicitadas, problemas en el borrado de solicitudes (perderíamos los datos del estudiante en el caso de sólo hubiese solicitado esa beca), etc.&lt;/p&gt;
-&lt;p&gt;Con el fin de solventar todos estos problemas surge la teoría de la Normalización. Podemos afirmar que la teoría de la normalización permite afrontar el problema de diseño de bases de datos relacionales de una manera rigurosa y objetiva.&lt;/p&gt;
-&lt;p&gt;Un aspecto crucial en la normalización es el concepto de &lt;strong&gt;Dependencia Funcional&lt;/strong&gt;. Las dependencias nos permiten representar interdependencias entre los datos, son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional. Se han de cumplir en cualquier extensión de un esquema de relación, es decir, son invariantes en el tiempo. Es importante tener en cuenta que no es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.&lt;/p&gt;
+&lt;p&gt;De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundante los datos de un estudiante cada vez que este realiza una solicitud (con los datos de las becas pasa los mismo). Otros problemas que podemos observar son: inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas, problemas para almacenar los datos de estudiantes que no han solicitado becas o de becas que no han sido solicitadas, problemas en el borrado de solicitudes (perderíamos los datos del estudiante en el caso de sólo hubiese solicitado esa beca), etc.&lt;/p&gt;
+&lt;p&gt;Con el fin de paliar estos problemas surge la teoría de la Normalización. Podemos afirmar que la teoría de la normalización permite afrontar el problema de diseño de BBDD relacionales de una manera rigurosa y objetiva.&lt;/p&gt;
+&lt;p&gt;Un aspecto crucial en la normalización es el concepto de &lt;strong&gt;Dependencia Funcional&lt;/strong&gt;. Las dependencias nos permiten representar interdependencias entre los datos. Son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional. Se han de cumplir en cualquier extensión de un esquema de relación, es decir, son invariantes en el tiempo. Aquí cabe destacar que no es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.&lt;/p&gt;
 &lt;p&gt;Existen diferentes tipos de dependencias: funcionales, multivaluadas, jerárquicas y de combinación. Sin embargo, en esta ocasión vamos a hablar sólo de las funcionales.&lt;/p&gt;
 &lt;p&gt;Para el estudio de las dependencias vamos a considerar que el esquema relacional está compuesto por una única relación, R(AT, DEP), donde AT es el conjunto de atributos de la relación R y DEP es el conjunto de dependencias existentes entre los atributos. &lt;/p&gt;
-&lt;p&gt;Una dependencia va tener el siguiente aspecto:  &lt;strong&gt;A -&amp;gt; B&lt;/strong&gt;, donde A y B son subconjuntos de AT. La parte de la izquierda, (A) recibe el nombre de determinante o implicante, mientras que la parte de la derecha (B) recibe el nombre implicado.&lt;/p&gt;
+&lt;p&gt;
+  When \(a_{2} \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+  \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
+&lt;/p&gt;
+
+&lt;p&gt;Una dependencia va tener el siguiente aspecto:  \(A \leftarrow B\), donde \(A, B y B \in AT\). La parte de la izquierda, (A) recibe el nombre de determinante o implicante, mientras que la parte de la derecha (B) recibe el nombre implicado.&lt;/p&gt;
+
 &lt;p&gt;Por ejemplo: Cod_Estudiante -&amp;gt; Nombre&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Definición&lt;/strong&gt;: Sea el esquema de relación R(A,DF), y sean X, Y dos subconjuntos de A, a los que llamamos descriptores. 
 Se dice que Y depende funcionalmente de X o que X implica o determina a Y, y se denota como X -&amp;gt; Y si, y sólo si, a cada valor x del descriptor X le corresponde un único valor y del descriptor Y.&lt;/p&gt;
