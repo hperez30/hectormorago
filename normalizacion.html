@@ -187,10 +187,12 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 <p> Sea R ({A, B, C, D, E, F}, DF), donde DF = { 
     \(A \rightarrow B, B \rightarrow A, C \rightarrow A, D \rightarrow C, (E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) 
-} </p>
+} 
+</p>
+
+<p>Hallar el cierre del descriptor (E, C)</p>
 
 <p>
-Hallar el cierre del descriptor (E, C)
 \((E, C)^+\) = {E, C} 
 \((E, C)^+\) = {E, C, D}
 \((E, C)^+\) = {E, C, D, A}
@@ -198,13 +200,19 @@ Hallar el cierre del descriptor (E, C)
 \((E, C)^+\) = {E, C, D, A, B, F}
 </p>
 
-<p>Por tanto,<br>
+<p>Por tanto,   
 (E, C) + = {E, C, D, A, B, F }
- (E,C) es superclave. </p>
-<p>Hallar el cierre del descriptor B</p>
-<p>Nos interesa saber si una dependencia es cierta
-Por ejemplo, ¿B  F? 
-A-&gt; B y B-&gt; A (son equivalentes) por lo tanto B-&gt; F</p>
+ (E,C) es superclave. 
+</p>
+
+<p>
+Hallar el cierre del descriptor B
+
+Nos interesa saber si una dependencia es cierta
+Por ejemplo, ¿\(B \rightarrow F\)? 
+A-> B y B-> A (son equivalentes) por lo tanto B-> F
+</p>
+
 <p><strong>Bibliografia</strong></p>
 <ul>
 <li>Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006</li>
