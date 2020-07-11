@@ -183,7 +183,7 @@ Nos interesa saber si una dependencia es cierta. Por ejemplo, ¿\(B \rightarrow 
 
 &lt;p&gt;
 Otra forma de calcularlo:
-Tenemos: \(A \rightarrow B \wedge \(B \rightarrow A\) \wedge \(A \rightarrow F\) \wedge \neg (B \rightarrow F)\)    
+Tenemos: \(A \rightarrow B \wedge B \rightarrow A \wedge A \rightarrow F \wedge \neg (B \rightarrow F)\)    
 &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
