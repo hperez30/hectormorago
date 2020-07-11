@@ -223,7 +223,12 @@ Si \(A \rightarrow B \wedge B \rightarrow A \wedge A \rightarrow F \wedge \neg (
 </p>
 
 <p>
-\(\neg A \vee B \wedge \neg B \vee A \wedge \neg A \vee F \wedge (B \wedge \neg F)\)    
+\((\neg A \vee B) \wedge (\neg B \vee A) \wedge (\neg A \vee F) \wedge (B \wedge \neg F)\)      
+</p>
+
+<p>
+Para que la fórmula sea verdadera cada uno de las clausulas de la fórmula debe evaluarse a verdadero. Para que 
+(B \wedge \neg F)\) sea cierto necesitamos que B sea cierto y F sea falso. Propagando estos valores al resto de clausulas podemos comprobar que está fórmula es no SAT por lo que \(B \rightarrow F\) es cierta.    
 </p>
 
 <p><strong>Bibliografia</strong></p>
