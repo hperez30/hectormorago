@@ -155,7 +155,8 @@ Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos 
 
 <li> <strong>Dependencia funcional transitiva</strong>. Sea \(R(\{X,Y,Z\}, \{X \rightarrow Y, Y \rightarrow Z\})\), decimos que \(Z\) depende tansitivamente de \(X\). Si además \(Z \nrightarrow Y\) se dice que es estricta. 
 
-Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad \rightarrow Provincia\})\), decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.
+Ejemplo: \(R(\{CP, Localidad, Provincia\}, DEP)\)
+\(\{CP \rightarrow Localidad, Localidad \rightarrow Provincia\}\), decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.
 </ul>
 
 <p>Otro aspecto importante en relación a las dependencias funcionales es el concepto de <strong>cierre de un conjunto de dependencias funcionales</strong>. El cierre de un conjunto de dependencias funcionales, \(DF^+\), es el conjunto de todas las dependencias que pertenecen a \(DF\) o pueden derivarse de este (por ejemplo por la aplicación de los <strong>axiomas de armstrong</strong>).</p>
@@ -182,12 +183,19 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 <p> Sea R ({A, B, C, D, E, F}, DF), donde DF = { </p>
 
-<p>
-    \(A \rightarrow B, B \rightarrow A, C \rightarrow A, D \rightarrow C, (E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) 
-</p>
+<p>\(A \rightarrow B\),</p>
 
-<p> } </p>
+<p>\(B \rightarrow A\), </p>
 
+<p>\(C \rightarrow A\), </p>
+
+<p>\(D \rightarrow C\), </p>
+
+<p>\((E, C) \rightarrow D\),</p>
+
+<p><p>(A \rightarrow F), </p>
+<p>(C \rightarrow F) </p>
+<p> } </p></p>
 <p>Hallar el cierre del descriptor (E, C)</p>
 
 <p> \((E, C)^+\) = {E, C}  </p>

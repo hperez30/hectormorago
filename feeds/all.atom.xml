@@ -120,7 +120,8 @@ Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos 
 
 &lt;li&gt; &lt;strong&gt;Dependencia funcional transitiva&lt;/strong&gt;. Sea \(R(\{X,Y,Z\}, \{X \rightarrow Y, Y \rightarrow Z\})\), decimos que \(Z\) depende tansitivamente de \(X\). Si además \(Z \nrightarrow Y\) se dice que es estricta. 
 
-Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad \rightarrow Provincia\})\), decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.
+Ejemplo: \(R(\{CP, Localidad, Provincia\}, DEP)\)
+\(\{CP \rightarrow Localidad, Localidad \rightarrow Provincia\}\), decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.
 &lt;/ul&gt;
 
 &lt;p&gt;Otro aspecto importante en relación a las dependencias funcionales es el concepto de &lt;strong&gt;cierre de un conjunto de dependencias funcionales&lt;/strong&gt;. El cierre de un conjunto de dependencias funcionales, \(DF^+\), es el conjunto de todas las dependencias que pertenecen a \(DF\) o pueden derivarse de este (por ejemplo por la aplicación de los &lt;strong&gt;axiomas de armstrong&lt;/strong&gt;).&lt;/p&gt;
@@ -147,12 +148,19 @@ Ejemplo: \(R(\{CP, Localidad, Provincia\}, \{CP \rightarrow Localidad, Localidad
 
 &lt;p&gt; Sea R ({A, B, C, D, E, F}, DF), donde DF = { &lt;/p&gt;
 
-&lt;p&gt;
-    \(A \rightarrow B, B \rightarrow A, C \rightarrow A, D \rightarrow C, (E, C) \rightarrow D, A \rightarrow F, C \rightarrow F\) 
-&lt;/p&gt;
+&lt;p&gt;\(A \rightarrow B\),&lt;/p&gt;
 
-&lt;p&gt; } &lt;/p&gt;
+&lt;p&gt;\(B \rightarrow A\), &lt;/p&gt;
 
+&lt;p&gt;\(C \rightarrow A\), &lt;/p&gt;
+
+&lt;p&gt;\(D \rightarrow C\), &lt;/p&gt;
+
+&lt;p&gt;\((E, C) \rightarrow D\),&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;(A \rightarrow F), &lt;/p&gt;
+&lt;p&gt;(C \rightarrow F) &lt;/p&gt;
+&lt;p&gt; } &lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;Hallar el cierre del descriptor (E, C)&lt;/p&gt;
 
 &lt;p&gt; \((E, C)^+\) = {E, C}  &lt;/p&gt;
