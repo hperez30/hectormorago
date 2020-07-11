@@ -187,6 +187,10 @@ Si \(A \rightarrow B \wedge B \rightarrow A \wedge A \rightarrow F \wedge \neg (
 \(B \rightarrow F\) es cierta.  
 &lt;/p&gt;
 
+&lt;p&gt;
+\(\neg A \vee B \wedge \neg B \vee A \wedge \neg A \vee F \wedge (B \wedge \neg F)\)    
+&lt;/p&gt;
+
 &lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006&lt;/li&gt;
