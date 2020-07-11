@@ -157,10 +157,10 @@ Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos 
 
 &lt;p&gt;\(D \rightarrow C\), &lt;/p&gt;
 
-&lt;p&gt;\((E, C) \rightarrow D\),&lt;/p&gt;
+&lt;p&gt;\( (E, C) \rightarrow D \),&lt;/p&gt;
 
-&lt;p&gt;&lt;p&gt;(A \rightarrow F), &lt;/p&gt;
-&lt;p&gt;(C \rightarrow F) &lt;/p&gt;
+&lt;p&gt;&lt;p&gt;( A \rightarrow F ), &lt;/p&gt;
+&lt;p&gt;( C \rightarrow F ) &lt;/p&gt;
 &lt;p&gt; } &lt;/p&gt;&lt;/p&gt;
 &lt;p&gt;Hallar el cierre del descriptor (E, C)&lt;/p&gt;
 
@@ -193,7 +193,11 @@ Si \(A \rightarrow B \wedge B \rightarrow A \wedge A \rightarrow F \wedge \neg (
 
 &lt;p&gt;
 Para que la fórmula sea verdadera cada uno de las clausulas de la fórmula debe evaluarse a verdadero. Para que 
-(B \wedge \neg F)\) sea cierto necesitamos que B sea cierto y F sea falso. Propagando estos valores al resto de clausulas podemos comprobar que está fórmula es no SAT por lo que \(B \rightarrow F\) es cierta.    
+\( (B \wedge \neg F) \) sea cierto necesitamos que B sea cierto y F sea falso. Propagando estos valores al resto de clausulas podemos comprobar que está fórmula es no SAT por lo que \(B \rightarrow F\) es cierta.    
+&lt;/p&gt;
+
+&lt;p&gt;
+\((\neg 0 \vee 1) \wedge (\neg 1 \vee 0) \wedge (\neg 0 \vee 0) \wedge (1 \wedge \neg 0)\)      
 &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Bibliografia&lt;/strong&gt;&lt;/p&gt;
