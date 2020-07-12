@@ -157,7 +157,7 @@ Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos 
 
 &lt;p&gt;\(D \rightarrow C\), &lt;/p&gt;
 
-&lt;p&gt;\((E, C) \rightarrow D\),&lt;/p&gt;
+&lt;p&gt;&lt;!--\((E, C) \rightarrow D\),--&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;p&gt;(A \rightarrow F), &lt;/p&gt;
 &lt;p&gt;(C \rightarrow F) &lt;/p&gt;
