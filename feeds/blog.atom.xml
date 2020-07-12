@@ -208,7 +208,8 @@ Para que la fórmula sea verdadera cada uno de las clausulas de la fórmula debe
 &lt;li&gt;Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001&lt;/li&gt;
 &lt;li&gt;Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.&lt;/li&gt;
 &lt;li&gt;Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. &lt;/li&gt;
-&lt;/ul&gt;</content><category term="blog"></category><category term="BBDD"></category><category term="teoria"></category><category term="otros"></category></entry><entry><title>Algoritmo de planificación First Come First Served</title><link href="/hectormorago/alg-fcfs.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-fcfs.html</id><summary type="html">&lt;p&gt;Algoritmo de planificación First Come First Served.&lt;/p&gt;</summary><content type="html">&lt;h2&gt;FCFS&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="blog"></category><category term="BBDD"></category><category term="teoria"></category><category term="otros"></category></entry><entry><title>Algoritmo de planificación First Come First Served</title><link href="/hectormorago/alg-fcfs.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/alg-fcfs.html</id><summary type="html">&lt;p&gt;Algoritmo de planificación First Come First Served.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"&gt;&lt;/p&gt;
+&lt;h2&gt;FCFS&lt;/h2&gt;
 &lt;p&gt;Primero en llegar primero en ser servido, FCFS (First Come First Served). Es uno de los algoritmos de planificación 
 más sencillos de implementar. El planificador maneja la cola de procesos como una cola FIFO. Entre sus &lt;strong&gt;ventajas&lt;/strong&gt; destacamos:&lt;/p&gt;
 &lt;ul&gt;
@@ -315,4 +316,37 @@ cooperativa o expropiativa. Entre sus principales ventajas se encuentran las sig
 &lt;li&gt;Contador de programa&lt;/li&gt;
 &lt;li&gt;Registros del procesador&lt;/li&gt;
 &lt;li&gt;Imagen de memoria&lt;/li&gt;
-&lt;/ul&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="teoria"></category><category term="otros"></category></entry></feed>
+&lt;/ul&gt;
+&lt;p&gt;Un proceso desde su creación hasta su finalización, puede pasar por varios estados distintos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nuevo: el proceso está siendo creado.&lt;/li&gt;
+&lt;li&gt;Listo: está a la espera de que le asignen un procesador.&lt;/li&gt;
+&lt;li&gt;En ejecución: se están ejecutando instrucciones del proceso.&lt;/li&gt;
+&lt;li&gt;Bloqueado: esperando que ocurra algún suceso (E/S, comunicación, sincronización . . .) que lo desbloquee.&lt;/li&gt;
+&lt;li&gt;Terminado.&lt;/li&gt;
+&lt;li&gt;Otros estados:&lt;/li&gt;
+&lt;li&gt;Preparado: el proceso está a la espera para ser ejecutado cuando tenga suficientes recursos (ejemplo: ejecución por lotes).&lt;/li&gt;
+&lt;li&gt;Suspendido: no puede pasar a ejecución porque reside enteramente en la memoria de intercambio. El objetivo de suspender procesos es el de reducir el grado de multiprogramación (número de procesos que instante determinado se encuentran cargados en memoria principal).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cada proceso se representa dentro del SO con un bloque de control de proceso o PCB. El PCB contiene información asociada al proceso, como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Identificador del proceso (pid) y del padre (ppid)&lt;/li&gt;
+&lt;li&gt;Identificador de usuario (uid) y de grupo (gid)&lt;/li&gt;
+&lt;li&gt;Estado del proceso: listo, bloqueado, ...&lt;/li&gt;
+&lt;li&gt;Estado del procesador: valores de los registros (incluyendo contador de programa). Esta información se guarda cuando se produce una interrrupción.&lt;/li&gt;
+&lt;li&gt;Información contable: tiempo empleado, límites, ...&lt;/li&gt;
+&lt;li&gt;Información de planificación: prioridad, ...&lt;/li&gt;
+&lt;li&gt;Información de gestión de memoria: descripción de los segmentos, tabla de páginas,...&lt;/li&gt;
+&lt;li&gt;Información del estado de E/S: disp. asignados, lista de descriptores de ficheros abiertos,...&lt;/li&gt;
+&lt;li&gt;Temporizadores, señales, semáforos, puertos,...&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;El SO tiene que mantner en todo momento una serie de estructuras de datos y tablas entre las que podemos citar: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tabla de Procesos -&amp;gt; Tabla de PCBs, donde cada elemento de la tabla es el PCB de un proceso&lt;/li&gt;
+&lt;li&gt;Tabla de ficheros abiertos del sistema, cada proceso tiene su tabla de descriptores de ficheros, con apuntadores a entradas de esta tabla&lt;/li&gt;
+&lt;li&gt;Tabla de Memoria&lt;/li&gt;
+&lt;li&gt;Tabla de E/S, almacena operaciones de E/S pendientes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Creación de procesos&lt;/h2&gt;
+&lt;p&gt;Los procesos pueden crear nuevos procesos. El proceso creador se denomina padre y el proceso creado se denomina hijo. A su vez los hijos también pueden crear nuevos procesos, . . ., formándose un árbol de procesos.
+La mayoría de los sistemas operativos utilizan un identificador de proceso (pid) unívoco para cada proceso.&lt;/p&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="teoria"></category><category term="otros"></category></entry></feed>

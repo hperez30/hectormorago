@@ -47,6 +47,39 @@
 <li>Registros del procesador</li>
 <li>Imagen de memoria</li>
 </ul>
+<p>Un proceso desde su creación hasta su finalización, puede pasar por varios estados distintos:</p>
+<ul>
+<li>Nuevo: el proceso está siendo creado.</li>
+<li>Listo: está a la espera de que le asignen un procesador.</li>
+<li>En ejecución: se están ejecutando instrucciones del proceso.</li>
+<li>Bloqueado: esperando que ocurra algún suceso (E/S, comunicación, sincronización . . .) que lo desbloquee.</li>
+<li>Terminado.</li>
+<li>Otros estados:</li>
+<li>Preparado: el proceso está a la espera para ser ejecutado cuando tenga suficientes recursos (ejemplo: ejecución por lotes).</li>
+<li>Suspendido: no puede pasar a ejecución porque reside enteramente en la memoria de intercambio. El objetivo de suspender procesos es el de reducir el grado de multiprogramación (número de procesos que instante determinado se encuentran cargados en memoria principal).</li>
+</ul>
+<p>Cada proceso se representa dentro del SO con un bloque de control de proceso o PCB. El PCB contiene información asociada al proceso, como:</p>
+<ul>
+<li>Identificador del proceso (pid) y del padre (ppid)</li>
+<li>Identificador de usuario (uid) y de grupo (gid)</li>
+<li>Estado del proceso: listo, bloqueado, ...</li>
+<li>Estado del procesador: valores de los registros (incluyendo contador de programa). Esta información se guarda cuando se produce una interrrupción.</li>
+<li>Información contable: tiempo empleado, límites, ...</li>
+<li>Información de planificación: prioridad, ...</li>
+<li>Información de gestión de memoria: descripción de los segmentos, tabla de páginas,...</li>
+<li>Información del estado de E/S: disp. asignados, lista de descriptores de ficheros abiertos,...</li>
+<li>Temporizadores, señales, semáforos, puertos,...</li>
+</ul>
+<p>El SO tiene que mantner en todo momento una serie de estructuras de datos y tablas entre las que podemos citar: </p>
+<ul>
+<li>Tabla de Procesos -&gt; Tabla de PCBs, donde cada elemento de la tabla es el PCB de un proceso</li>
+<li>Tabla de ficheros abiertos del sistema, cada proceso tiene su tabla de descriptores de ficheros, con apuntadores a entradas de esta tabla</li>
+<li>Tabla de Memoria</li>
+<li>Tabla de E/S, almacena operaciones de E/S pendientes</li>
+</ul>
+<h2>Creación de procesos</h2>
+<p>Los procesos pueden crear nuevos procesos. El proceso creador se denomina padre y el proceso creado se denomina hijo. A su vez los hijos también pueden crear nuevos procesos, . . ., formándose un árbol de procesos.
+La mayoría de los sistemas operativos utilizan un identificador de proceso (pid) unívoco para cada proceso.</p>
     </div><!-- /.entry-content -->
 
   </article>
