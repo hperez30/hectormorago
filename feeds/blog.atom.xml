@@ -310,7 +310,9 @@ cooperativa o expropiativa. Entre sus principales ventajas se encuentran las sig
 &lt;h2&gt;SRT&lt;/h2&gt;
 &lt;h2&gt;Round Robin&lt;/h2&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="algoritmos"></category><category term="otros"></category></entry><entry><title>Proceso</title><link href="/hectormorago/proceso.html" rel="alternate"></link><published>2020-04-06T20:31:00+02:00</published><updated>2020-04-06T20:31:00+02:00</updated><author><name>Hector Perez-Morago</name></author><id>tag:None,2020-04-06:/hectormorago/proceso.html</id><summary type="html">&lt;p&gt;Revisión teoríca del concepto de proceso.&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"&gt;&lt;/p&gt;
 &lt;p&gt;Un &lt;strong&gt;proceso&lt;/strong&gt; es un programa en ejecución. Puede haber varias réplicas de un mismo programa en ejecución. Los procesos son independientes, aunque sean instancias de un mismo programa.&lt;/p&gt;
-&lt;p&gt;Un proceso no es solamente el código del programa, también incluye la actividad actual como:
-- Contador de programa
-- Registros del procesador
-- Imagen de memoria&lt;/p&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="teoria"></category><category term="otros"></category></entry></feed>
+&lt;p&gt;Un proceso no es solamente el código del programa, también incluye la actividad actual como:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Contador de programa&lt;/li&gt;
+&lt;li&gt;Registros del procesador&lt;/li&gt;
+&lt;li&gt;Imagen de memoria&lt;/li&gt;
+&lt;/ul&gt;</content><category term="blog"></category><category term="SSOO"></category><category term="teoria"></category><category term="otros"></category></entry></feed>
