@@ -60,7 +60,7 @@ th {
 <li>Aparición de estados que no son válidos en el mundo real.</li>
 <li>Pérdidas de relaciones entre los datos.</li>
 </ul>
-<p>Con el fin de evitar estos problemas surge la teoría de la normalización. A continuación tenemos una relación de ejemplo una relación que presenta algunos de los problemas anteriormente citados.</p>
+<p>Con el fin de evitar estos problemas surge la teoría de la normalización. A continuación tenemos una relación de ejemplo que presenta algunos de los problemas anteriormente citados.</p>
 <p><strong>Estudiante_solicita_beca</strong></p>
 <table class="table">
   <thead class="thead-light">
@@ -127,15 +127,15 @@ th {
 
 <p>De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundante los datos de un estudiante cada vez que este realiza una solicitud (con los datos de las becas pasa los mismo). Otros problemas que podemos observar son: inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas, problemas para almacenar los datos de estudiantes que no han solicitado becas o de becas que no han sido solicitadas, problemas en el borrado de solicitudes (perderíamos los datos del estudiante en el caso de sólo hubiese solicitado esa beca), etc.</p>
 <p>Con el fin de paliar estos problemas surge la teoría de la Normalización. Podemos afirmar que la teoría de la normalización permite afrontar el problema de diseño de BBDD relacionales de una manera rigurosa y objetiva.</p>
-<p>Un aspecto crucial en la normalización es el concepto de <strong>Dependencia Funcional</strong>. Las dependencias nos permiten representar interdependencias entre los datos. Son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional. Se han de cumplir en cualquier extensión de un esquema de relación, es decir, son invariantes en el tiempo. Aquí cabe destacar que no es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.</p>
+<p>Un aspecto crucial en la normalización es el concepto de <strong>Dependencia</strong>. Las dependencias nos permiten representar interdependencias entre los datos, son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional. Se han de cumplir en cualquier extensión de un esquema de relación, es decir, son invariantes en el tiempo. Aquí cabe destacar que no es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.</p>
 <p>Existen diferentes tipos de dependencias: funcionales, multivaluadas, jerárquicas y de combinación. Sin embargo, en esta ocasión vamos a hablar sólo de las funcionales.</p>
-<p>Para el estudio de las dependencias vamos a considerar que el esquema relacional está compuesto por una única relación, \(R(AT, DEP)\), donde \(AT\) es el conjunto de atributos de la relación \(R\) y \(DEP\) es el conjunto de dependencias existentes entre los atributos.</p>
+<p>Para el estudio de las dependencias funcionales vamos a considerar que el esquema relacional está compuesto por una única relación, \(R(AT, DF)\), donde \(AT\) es el conjunto de atributos de la relación \(R\) y \(DF\) es el conjunto de dependencias existentes entre los atributos.</p>
 
 <p>Una dependencia va tener el siguiente aspecto:  \(A \rightarrow B\), donde \(A, B \subseteq AT\). La parte de la izquierda recibe el nombre de determinante o implicante, mientras que la parte de la derecha recibe el nombre implicado.</p>
 
 <p>Por ejemplo: \(Cod\_Estudiante \rightarrow Nombre\)</p>
 
-<p><strong>Definición</strong>: Sea el esquema de relación \(R(A,DF)\), y sean \(X, Y \subseteq A\), a los que llamamos descriptores. Se dice que \(Y\) depende funcionalmente de \(X\) o que \(X\) implica o determina a \(Y\), y se denota como \(X \rightarrow Y\) si, y sólo si, \( \forall x \in X, \exists y \in Y \cdot x \rightarrow y \wedge \nexists y' \cdot x \rightarrow y' \).</p>
+<p><strong>Definición</strong>: Sea el esquema de relación \(R(AT,DF)\), y sean \(X, Y \subseteq A\), a los que llamamos descriptores. Se dice que \(Y\) depende funcionalmente de \(X\) o que \(X\) implica o determina a \(Y\), y se denota como \(X \rightarrow Y\) si, y sólo si, \( \forall x \in X, \exists y \in Y \cdot x \rightarrow y \wedge \nexists y' \cdot x \rightarrow y' \).</p>
 
 <p>Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si \(Cod\_Estudiante\) toma el valor 2, \(nombre\) sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, \(nombre\) podría tomar cualquier valor del dominio sobre el que esta definido. Además, y adelandonos al concepto de clave que veremos más adelante, podemos afirmar que si \(A \subseteq AT\), es clave, \(A \rightarrow AT - A\), es decir, el resto de atributos de la relación dependenden de él. En caso contrario, es decir, A no es clave (o clave candidata), entonces se introduce cierta redundancia.</p>
 
@@ -155,7 +155,7 @@ Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos 
 
 <li> <strong>Dependencia funcional transitiva</strong>. Sea \(R(\{X,Y,Z\}, \{X \rightarrow Y, Y \rightarrow Z\})\), decimos que \(Z\) depende tansitivamente de \(X\). Si además \(Z \nrightarrow Y\) se dice que es estricta. 
 
-<p>Ejemplo: \(R(\{CP, Localidad, Provincia\}, DEP)\)</p>
+<p>Ejemplo: \(R(\{CP, Localidad, Provincia\}, DF)\)</p>
 <p>\(\{CP \rightarrow Localidad, Localidad \rightarrow Provincia\}\),</p>
 <p>decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.</p>
 </ul>
