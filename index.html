@@ -18,113 +18,115 @@
     </ul></nav>
   </header><!-- /#banner -->
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/hectormorago/normalizacion.html">Normalización</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2020-07-07T20:31:00+02:00">
-                Published: mar 07 julio 2020
-        </abbr>
-		<br />
-        <abbr class="modified" title="2020-07-07T20:31:00+02:00">
-                Updated: mar 07 julio 2020
-        </abbr>
-
+  <aside id="featured" class="body">
+    <article>
+      <h1 class="entry-title"><a href="/hectormorago/normalizacion.html">Normalización</a></h1>
+      <footer class="post-info">
+        <abbr class="published" title="2020-07-07T20:31:00+02:00">Published: mar 07 julio 2020</abbr>
+		    <br/>
+        <abbr class="modified" title="2020-07-07T20:31:00+02:00">Updated: mar 07 julio 2020</abbr>
         <address class="vcard author">
-                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
+          By<a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
         </address>
-<p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
-<p>tags: <a href="/hectormorago/tag/bbdd.html">BBDD</a> <a href="/hectormorago/tag/teoria.html">teoria</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
-</footer><!-- /.post-info --><p><link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-<style type="text/css">
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-td,
-th {
-  padding: 0;
-}
-.thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}
-.table-dark{color:#fff;background-color:#212529}
-</style>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script></p>
-<p> La <strong>normalización</strong> se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, es decir, que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {\( R_{1}, R_{2}, R_{3},  ..., R_{n} \)} sean <strong>correctas</strong> y <strong>no</strong> presenten <strong>inconsistencias</strong>.</p>
+        <p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
+        <p>tags: 
+          <a href="/hectormorago/tag/bbdd.html">BBDD</a> 
+          <a href="/hectormorago/tag/teoria.html">teoria</a> 
+          <a href="/hectormorago/tag/otros.html">otros</a> 
+        </p>
+      </footer><!-- /.post-info -->
+      <p>
+        <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+        <style type="text/css">
+            table {
+              border-spacing: 0;
+              border-collapse: collapse;
+            }
+            td,
+            th {
+              padding: 0;
+            }
+            .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}
+            .table-dark{color:#fff;background-color:#212529}
+        </style>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      </p>
+      <p> La <strong>normalización</strong> se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, es decir, que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {\( R_{1}, R_{2}, R_{3},  ..., R_{n} \)} sean <strong>correctas</strong> y <strong>no</strong> presenten <strong>inconsistencias</strong>.</p>
 
-<p>Al realizar el diseño de una base de datos (BBDD), ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes <strong>problemas</strong>:</p>
-<ul>
-<li>Redundancias.</li>
-<li>Ambigüedades.</li>
-<li>Pérdida de información.</li>
-<li>Existencia de valores no aplicables o desconocidos.</li>
-<li>Aparición de estados que no son válidos en el mundo real.</li>
-<li>Pérdidas de relaciones entre los datos.</li>
-</ul>
-<p>Con el fin de evitar estos problemas surge la teoría de la normalización. A continuación tenemos una relación de ejemplo una relación que presenta algunos de los problemas anteriormente citados.</p>
-<p><strong>Estudiante_solicita_beca</strong></p>
-<table class="table">
-  <thead class="thead-light">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">cod_est</th>
-      <th scope="col">nombre_est</th>
-      <th scope="col">cod_beca</th>
-      <th scope="col">nombre_beca</th>
-      <th scope="col">fecha</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>0</th>
-      <td>Roberto</td>
-      <td>B1</td>
-      <td>Erasmus</td>
-      <td>2020-01-21</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>1</th>
-      <td>Gema</td>
-      <td>B2</td>
-      <td>Apoyo biblioteca</td>
-      <td>2018-02-22</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>2</th>
-      <td>Laura</td>
-      <td>B2</td>
-      <td>Apoyo biblioteca</td>
-      <td>2018-02-22</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>3</th>
-      <td>Miguel</td>
-      <td>B3</td>
-      <td>Investigación</td>
-      <td>2020-03-24</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>2</th>
-      <td>Laura</td>
-      <td>B1</td>
-      <td>Erasmus</td>
-      <td>2020-01-21</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>3</th>
-      <td>Miguel</td>
-      <td>B1</td>
-      <td>Erasmus</td>
-      <td>2020-01-21</td>
-    </tr>
-  </tbody>
-</table>
+      <p>Al realizar el diseño de una base de datos (BBDD), ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes <strong>problemas</strong>:</p>
+      <ul>
+        <li>Redundancias.</li>
+        <li>Ambigüedades.</li>
+        <li>Pérdida de información.</li>
+        <li>Existencia de valores no aplicables o desconocidos.</li>
+        <li>Aparición de estados que no son válidos en el mundo real.</li>
+        <li>Pérdidas de relaciones entre los datos.</li>
+      </ul>
+      <p>Con el fin de evitar estos problemas surge la teoría de la normalización. A continuación tenemos una relación de ejemplo una relación que presenta algunos de los problemas anteriormente citados.</p>
+      <p><strong>Estudiante_solicita_beca</strong></p>
+      <table class="table">
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">cod_est</th>
+            <th scope="col">nombre_est</th>
+            <th scope="col">cod_beca</th>
+            <th scope="col">nombre_beca</th>
+            <th scope="col">fecha</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>0</th>
+            <td>Roberto</td>
+            <td>B1</td>
+            <td>Erasmus</td>
+            <td>2020-01-21</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>1</th>
+            <td>Gema</td>
+            <td>B2</td>
+            <td>Apoyo biblioteca</td>
+            <td>2018-02-22</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>2</th>
+            <td>Laura</td>
+            <td>B2</td>
+            <td>Apoyo biblioteca</td>
+            <td>2018-02-22</td>
+          </tr>
+          <tr>
+            <th scope="row">4</th>
+            <td>3</th>
+            <td>Miguel</td>
+            <td>B3</td>
+            <td>Investigación</td>
+            <td>2020-03-24</td>
+          </tr>
+          <tr>
+            <th scope="row">5</th>
+            <td>2</th>
+            <td>Laura</td>
+            <td>B1</td>
+            <td>Erasmus</td>
+            <td>2020-01-21</td>
+          </tr>
+          <tr>
+            <th scope="row">6</th>
+            <td>3</th>
+            <td>Miguel</td>
+            <td>B1</td>
+            <td>Erasmus</td>
+            <td>2020-01-21</td>
+          </tr>
+        </tbody>
+      </table>
 
 <p>De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundante los datos de un estudiante cada vez que este realiza una solicitud (con los datos de las becas pasa los mismo). Otros problemas que podemos observar son: inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas, problemas para almacenar los datos de estudiantes que no han solicitado becas o de becas que no han sido solicitadas, problemas en el borrado de solicitudes (perderíamos los datos del estudiante en el caso de sólo hubiese solicitado esa beca), etc.</p>
 <p>Con el fin de paliar estos problemas surge la teoría de la Normalización. Podemos afirmar que la teoría de la normalización permite afrontar el problema de diseño de BBDD relacionales de una manera rigurosa y objetiva.</p>
@@ -244,7 +246,8 @@ Para que la fórmula sea verdadera cada uno de las clausulas de la fórmula debe
 <li>Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001</li>
 <li>Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.</li>
 <li>Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. </li>
-</ul>                </article>
+</ul>                
+</article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
