@@ -41,38 +41,9 @@
                     </p>
                 </footer><!-- /.post-info -->      
                 <h2>Convertir XML a CSV </h2>
-                <pre><code class="language-python">
-                    # Importing the required libraries
-                    import xml.etree.ElementTree as Xet
-                    import pandas as pd
-                      
-                    cols = ["device_count", "device_pool", "device_type"]
-                    rows = []
-                      
-                    # Parsing the XML file
-                    xmlparse = Xet.parse('response.xml')
-                    root = xmlparse.getroot()
-
-                    result = root.iterfind(".//row/*")
-                    for i in result:
-                        escribe = False
-                        if i.tag == "device_count":
-                            device_count = i.text
-                        elif i.tag == "device_pool":
-                            device_pool = i.text
-                        elif i.tag == "device_type":
-                            device_type = i.text
-                            escribe = True
-                        if escribe:
-                            rows.append({"device_count": device_count,
-                                     "device_pool": device_pool,
-                                     "device_type": device_type})
-                      
-                    df = pd.DataFrame(rows, columns=cols)
-                      
-                    # Writing dataframe to csv
-                    df.to_csv('output.csv')
-                </code></pre>    
+                
+<blockquote><ol><li><font color="#808080">#&nbsp;Importing&nbsp;the&nbsp;required&nbsp;libraries</font></li><li><font color="#ff7700">import</font>&nbsp;<font color="#dc143c">xml</font>.<font>etree</font>.<font>ElementTree</font>&nbsp;<font color="#ff7700">as</font>&nbsp;Xet</li><li><font color="#ff7700">import</font>&nbsp;pandas&nbsp;<font color="#ff7700">as</font>&nbsp;pd</li><li>&nbsp;</li><li>cols&nbsp;<font color="#66cc66">=</font>&nbsp;<font>&#91;</font><font color="#483d8b">&quot;device_count&quot;</font><font color="#66cc66">,</font>&nbsp;<font color="#483d8b">&quot;device_pool&quot;</font><font color="#66cc66">,</font>&nbsp;<font color="#483d8b">&quot;device_type&quot;</font><font>&#93;</font></li><li>rows&nbsp;<font color="#66cc66">=</font>&nbsp;<font>&#91;</font><font>&#93;</font></li><li>&nbsp;</li><li><font color="#808080">#&nbsp;Parsing&nbsp;the&nbsp;XML&nbsp;file</font></li><li>xmlparse&nbsp;<font color="#66cc66">=</font>&nbsp;Xet.<font>parse</font><font>&#40;</font><font color="#483d8b">'response.xml'</font><font>&#41;</font></li><li>root&nbsp;<font color="#66cc66">=</font>&nbsp;xmlparse.<font>getroot</font><font>&#40;</font><font>&#41;</font></li><li>&nbsp;</li><li>result&nbsp;<font color="#66cc66">=</font>&nbsp;root.<font>iterfind</font><font>&#40;</font><font color="#483d8b">&quot;.//row/*&quot;</font><font>&#41;</font></li><li><font color="#ff7700">for</font>&nbsp;i&nbsp;<font color="#ff7700">in</font>&nbsp;result:</li><li>&nbsp;&nbsp;&nbsp;&nbsp;escribe&nbsp;<font color="#66cc66">=</font>&nbsp;<font color="#008000">False</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff7700">if</font>&nbsp;i.<font>tag</font>&nbsp;<font color="#66cc66">==</font>&nbsp;<font color="#483d8b">&quot;device_count&quot;</font>:</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;device_count&nbsp;<font color="#66cc66">=</font>&nbsp;i.<font>text</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff7700">elif</font>&nbsp;i.<font>tag</font>&nbsp;<font color="#66cc66">==</font>&nbsp;<font color="#483d8b">&quot;device_pool&quot;</font>:</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;device_pool&nbsp;<font color="#66cc66">=</font>&nbsp;i.<font>text</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff7700">elif</font>&nbsp;i.<font>tag</font>&nbsp;<font color="#66cc66">==</font>&nbsp;<font color="#483d8b">&quot;device_type&quot;</font>:</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;device_type&nbsp;<font color="#66cc66">=</font>&nbsp;i.<font>text</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;escribe&nbsp;<font color="#66cc66">=</font>&nbsp;<font color="#008000">True</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff7700">if</font>&nbsp;escribe:</li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rows.<font>append</font><font>&#40;</font><font>&#123;</font><font color="#483d8b">&quot;device_count&quot;</font>:&nbsp;device_count<font color="#66cc66">,</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#483d8b">&quot;device_pool&quot;</font>:&nbsp;device_pool<font color="#66cc66">,</font></li><li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#483d8b">&quot;device_type&quot;</font>:&nbsp;device_type<font>&#125;</font><font>&#41;</font></li><li>&nbsp;</li><li>df&nbsp;<font color="#66cc66">=</font>&nbsp;pd.<font>DataFrame</font><font>&#40;</font>rows<font color="#66cc66">,</font>&nbsp;columns<font color="#66cc66">=</font>cols<font>&#41;</font></li><li>&nbsp;</li><li><font color="#808080">#&nbsp;Writing&nbsp;dataframe&nbsp;to&nbsp;csv</font></li><li>df.<font>to_csv</font><font>&#40;</font><font color="#483d8b">'output.csv'</font><font>&#41;</font></li></ol></blockquote>
+                   
             </div><!-- /.entry-content -->
         </article>
     </section>
