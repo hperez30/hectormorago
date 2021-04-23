@@ -2,368 +2,232 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <title>Hector' log</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="/hectormorago/theme/css/main.css" />
     <link href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hector' log Atom Feed" />
 </head>
 
 <body id="index" class="home">
-  <header id="banner" class="body">
-    <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
-    <nav><ul>
-        <li><a href="/hectormorago/category/about-me.html">About Me</a></li>
-        <li><a href="/hectormorago/category/teaching.html">teaching</a></li>
-        <li><a href="/hectormorago/category/blog.html">blog</a></li>
-        <li><a href="/hectormorago/category/projects.html">Projects</a></li>
-        <li><a href="/hectormorago/category/utils.html">Utils</a></li>
-    </ul></nav>
-  </header><!-- /#banner -->
+    <header id="banner" class="body">
+        <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="/hectormorago/category/about-me.html">About Me</a></li>
+                <li><a href="/hectormorago/category/teaching.html">teaching</a></li>
+                <li><a href="/hectormorago/category/blog.html">blog</a></li>
+                <li><a href="/hectormorago/category/projects.html">Projects</a></li>
+                <li><a href="/hectormorago/category/utils.html">utils</a></li>
+            </ul>
+        </nav>
+    </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="/hectormorago/about-me.html" rel="bookmark"
+           title="Permalink to About Me">About Me</a></h1>
+    </header>
 
-  <aside id="featured" class="body">
-    <article>
-      <h1 class="entry-title"><a href="/hectormorago/normalizacion.html">Normalización</a></h1>
-      <footer class="post-info">
-        <abbr class="published" title="2020-07-07T20:31:00+02:00">Published: mar 07 julio 2020</abbr>
-		    <br/>
-        <abbr class="modified" title="2020-07-07T20:31:00+02:00">Updated: mar 07 julio 2020</abbr>
-        <address class="vcard author">
-          By<a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
-        </address>
-        <p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
-        <p>tags: 
-          <a href="/hectormorago/tag/bbdd.html">BBDD</a> 
-          <a href="/hectormorago/tag/teoria.html">teoria</a> 
-          <a href="/hectormorago/tag/otros.html">otros</a> 
-        </p>
-      </footer><!-- /.post-info -->
-      <p>
-        <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-        <style type="text/css">
-            table {
-              border-spacing: 0;
-              border-collapse: collapse;
-            }
-            td,
-            th {
-              padding: 0;
-            }
-            .thead-light th{color:#495057;background-color:#e9ecef;border-color:#dee2e6}
-            .table-dark{color:#fff;background-color:#212529}
-        </style>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-      </p>
-      <p> La <strong>normalización</strong> se ocupa de comprobar mediante un método sistematico si una determinada relación es correcta, es decir, que no presenta redundancias. En el caso de que una relación, R, presente redundancias, deberemos de proceder a su descomposición de modo que las relaciones resultantes {\( R_{1}, R_{2}, R_{3},  ..., R_{n} \)} sean <strong>correctas</strong> y <strong>no</strong> presenten <strong>inconsistencias</strong>.</p>
-
-      <p>Al realizar el diseño de una base de datos (BBDD), ya sea obteniendo el diseño relacional directamente o mediante el proceso en dos pasos (diseño conceptual y transformación a relacional), pueden aparecer los siguientes <strong>problemas</strong>:</p>
-      <ul>
-        <li>Redundancias.</li>
-        <li>Ambigüedades.</li>
-        <li>Pérdida de información.</li>
-        <li>Existencia de valores no aplicables o desconocidos.</li>
-        <li>Aparición de estados que no son válidos en el mundo real.</li>
-        <li>Pérdidas de relaciones entre los datos.</li>
-      </ul>
-      <p>Con el fin de evitar estos problemas surge la teoría de la normalización. A continuación tenemos una relación de ejemplo una relación que presenta algunos de los problemas anteriormente citados.</p>
-      <p><strong>Estudiante_solicita_beca</strong></p>
-      <table class="table">
-        <thead class="thead-light">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">cod_est</th>
-            <th scope="col">nombre_est</th>
-            <th scope="col">cod_beca</th>
-            <th scope="col">nombre_beca</th>
-            <th scope="col">fecha</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>0</th>
-            <td>Roberto</td>
-            <td>B1</td>
-            <td>Erasmus</td>
-            <td>2020-01-21</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>1</th>
-            <td>Gema</td>
-            <td>B2</td>
-            <td>Apoyo biblioteca</td>
-            <td>2018-02-22</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>2</th>
-            <td>Laura</td>
-            <td>B2</td>
-            <td>Apoyo biblioteca</td>
-            <td>2018-02-22</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>3</th>
-            <td>Miguel</td>
-            <td>B3</td>
-            <td>Investigación</td>
-            <td>2020-03-24</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>2</th>
-            <td>Laura</td>
-            <td>B1</td>
-            <td>Erasmus</td>
-            <td>2020-01-21</td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>3</th>
-            <td>Miguel</td>
-            <td>B1</td>
-            <td>Erasmus</td>
-            <td>2020-01-21</td>
-          </tr>
-        </tbody>
-      </table>
-
-<p>De un simple vistazo podemos ver algunos de los problemas mencionados. Por ejemplo, estamos almacenando de forma redundante los datos de un estudiante cada vez que este realiza una solicitud (con los datos de las becas pasa los mismo). Otros problemas que podemos observar son: inconsistencias debidas a la actualización de los datos de un estudiante o una beca en sólo algunas de las tuplas, problemas para almacenar los datos de estudiantes que no han solicitado becas o de becas que no han sido solicitadas, problemas en el borrado de solicitudes (perderíamos los datos del estudiante en el caso de sólo hubiese solicitado esa beca), etc.</p>
-<p>Con el fin de paliar estos problemas surge la teoría de la Normalización. Podemos afirmar que la teoría de la normalización permite afrontar el problema de diseño de BBDD relacionales de una manera rigurosa y objetiva.</p>
-<p>Un aspecto crucial en la normalización es el concepto de <strong>Dependencia Funcional</strong>. Las dependencias nos permiten representar interdependencias entre los datos. Son propiedades inherentes al contenido semántico de los datos y forman parte de las restricciones de usuario del Modelo Relacional. Se han de cumplir en cualquier extensión de un esquema de relación, es decir, son invariantes en el tiempo. Aquí cabe destacar que no es posible deducir una dependencia a partir de la observación de una extensión del esquema de relación.</p>
-<p>Existen diferentes tipos de dependencias: funcionales, multivaluadas, jerárquicas y de combinación. Sin embargo, en esta ocasión vamos a hablar sólo de las funcionales.</p>
-<p>Para el estudio de las dependencias vamos a considerar que el esquema relacional está compuesto por una única relación, \(R(AT, DEP)\), donde \(AT\) es el conjunto de atributos de la relación \(R\) y \(DEP\) es el conjunto de dependencias existentes entre los atributos.</p>
-
-<p>Una dependencia va tener el siguiente aspecto:  \(A \rightarrow B\), donde \(A, B \subseteq AT\). La parte de la izquierda recibe el nombre de determinante o implicante, mientras que la parte de la derecha recibe el nombre implicado.</p>
-
-<p>Por ejemplo: \(Cod\_Estudiante \rightarrow Nombre\)</p>
-
-<p><strong>Definición</strong>: Sea el esquema de relación \(R(A,DF)\), y sean \(X, Y \subseteq A\), a los que llamamos descriptores. Se dice que \(Y\) depende funcionalmente de \(X\) o que \(X\) implica o determina a \(Y\), y se denota como \(X \rightarrow Y\) si, y sólo si, \( \forall x \in X, \exists y \in Y \cdot x \rightarrow y \wedge \nexists y' \cdot x \rightarrow y' \).</p>
-
-<p>Otras consecuencia importante que introduce el concepto de dependencia es que restrigen el conjunto de valores que un atributo determinado puede tomar. Continuando con el ejemplo anterior, si \(Cod\_Estudiante\) toma el valor 2, \(nombre\) sólo puede tomar el valor Laura. Por otro lado, si no existiese esa dependencia, \(nombre\) podría tomar cualquier valor del dominio sobre el que esta definido. Además, y adelandonos al concepto de clave que veremos más adelante, podemos afirmar que si \(A \subseteq AT\), es clave, \(A \rightarrow AT - A\), es decir, el resto de atributos de la relación dependenden de él. En caso contrario, es decir, A no es clave (o clave candidata), entonces se introduce cierta redundancia.</p>
-
-<p>Este último aspecto, junto al hecho de que a mayor número de dependencias mayor sobrecarga se introduce en el Sistema de Gestión de Base Datos (SGBD), hace que sea importante tener en cuenta sólo aquellas dependencias (entre los datos que estamos modelando) que sean estrictamente necesarias.</p>
-<p><strong>Propiedades</strong> de la dependencias funcionales:</p>
-
-<ul>
-<li> Dos <strong>descriptores</strong> X e Y son <strong>equivalentes</strong> si: <p>\(X \rightarrow Y\) e \(Y \rightarrow X\), o bien, \(X \leftrightarrow Y\).</p>
-Ejemplo: \(Cod\_Estudiante \leftrightarrow DNI\)
-<li> Una <strong>dependencia</strong> se dice que es <strong>trivial</strong> si el implicado esta incluido en el implicante. Si \(X \rightarrow Y\), \(Y \subseteq X\), entonces \(X \rightarrow Y\) es trivial.
-
-Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Cod\_curso\)
-
-<li> <strong>Dependencia funcional plena</strong>, sea la dependencia \(X \rightarrow Y\) se dice que es plena, si \(\nexists X', X' \subset X \cdot X' \rightarrow Y\). En caso contrario se dice que no es plena, y que los atributos \(X-X'\), son extraños. 
-
-Ejemplo: \(Cod\_curso, Cod\_edicion \rightarrow Programa\) (suponemos que todos los cursos tienen el mismo programa independientemente de su edición). En este caso diríamos que \(Cod\_edicion\) es un <strong>atributo extraño</strong>.
-
-<li> <strong>Dependencia funcional transitiva</strong>. Sea \(R(\{X,Y,Z\}, \{X \rightarrow Y, Y \rightarrow Z\})\), decimos que \(Z\) depende tansitivamente de \(X\). Si además \(Z \nrightarrow Y\) se dice que es estricta. 
-
-<p>Ejemplo: \(R(\{CP, Localidad, Provincia\}, DEP)\)</p>
-<p>\(\{CP \rightarrow Localidad, Localidad \rightarrow Provincia\}\),</p>
-<p>decimos que \(Provincia\) depende transitivamente de \(CP\). Además, como \(Provincia \nrightarrow Localidad\), entonces decimos que es estricta.</p>
-</ul>
-
-<p>Otro aspecto importante en relación a las dependencias funcionales es el concepto de <strong>cierre de un conjunto de dependencias funcionales</strong>. El cierre de un conjunto de dependencias funcionales, \(DF^+\), es el conjunto de todas las dependencias que pertenecen a \(DF\) o pueden derivarse de este (por ejemplo por la aplicación de los <strong>axiomas de armstrong</strong>).</p>
-
-<p><strong>Axiomas de armstrong</strong>:</p>
-
-<ul>
-<li> Reflesividad: si \(Y \subset X \wedge X \rightarrow Y, X \rightarrow Y \) es trivial.
-<li> Aumento: si \(X \rightarrow Y, XZ \rightarrow YZ\) 
-<li> Transitividad: si \(X \rightarrow Y \wedge Y \rightarrow Z, X \rightarrow Z\) 
-</ul>
-
-<p>Se puede demostrar que toda dependencia \(X \rightarrow Y\) derivada de \(DF\) mediante la aplicación de los axiomas está en \(DF^+\).</p>
-
-<p>Por ejemplo, si queremos saber si una DF es cierta, es decir, si \(DF \in DF^+\): Calcular el cierre de un subconjunto, tal que \(X\) sea implicante: cierre transitivo de un descriptor \(X\) de \(R\) respecto al conjunto de dependencias \(DF\), \(X_{DF}^+\)</p>
-
-<p>Dado \(R(AT, DF)\), se define \(X_{DF}^+\) como un subconjunto de los atributos de \(AT\) tales que \(X \rightarrow X_{DF}^+ \in DF^+\), siendo \(X_{DF}^+\) máximo en el sentido de que la adición de cualquier atributo vulneraría la condición anterior.</p>
-
-<p>Consecuencias: con \(X_{DF}^+\)  es posible el cálculo de superclaves (SK) y claves (K)</p>
-
-<p>Esta no es la única forma de determinar si una \(DF\) es cierta. Por ejemplo, podemos utilizar herramientas como los SAT Solver o las librerías de BDD's para responder a esta pregunta. Un SAT Solver es una herramienta que nos permite determinar si una fórmula lógica en Forma Normal Conjuntiva (CNF) es satisfacible (existe al menos una asignación en la cual la fórmula se evalua a cierto) o no. Por otro lado, un BDD (binary decision diagram), es un grafo dirigido aciclico que nos permite representar de forma compacta la tabla de verdad de una forma lógica. En cualquiera de los dos casos, el proceso requiere de algunos conocimientos de lógica proposicional.</p>
-
-<p>Una forma de calcular el cierre de un descriptor es mediante el <strong>Algoritmo de Ullman</strong> que utiliza el concepto de transitividad es las dependencias. Vamos a ver con un ejemplo cual es su funcionamiento.</p>
-
-<p> Sea R ({A, B, C, D, E, F}, DF), donde DF = { </p>
-
-<p>\(A \rightarrow B\),</p>
-
-<p>\(B \rightarrow A\), </p>
-
-<p>\(C \rightarrow A\), </p>
-
-<p>\(D \rightarrow C\), </p>
-
-<p>\(A \rightarrow F\), </p>
-
-<p>\(C \rightarrow F\), </p>
-
-<p>\((E, C) \rightarrow D\)</p>
-
-<p><p> } </p></p>
-<p>Hallar el cierre del descriptor (E, C)</p>
-
-<p> \((E, C)^+\) = {E, C}  </p>
-
-<p> \((E, C)^+\) = {E, C, D} </p>
-
-<p> \((E, C)^+\) = {E, C, D, A} </p>
-
-<p> \((E, C)^+\) = {E, C, D, A, B} </p>
-
-<p> \((E, C)^+\) = {E, C, D, A, B, F} </p>
-
-<p>Por tanto, \((E, C)^+\) = {E, C, D, A, B, F} por lo que (E,C) es superclave.</p>
-
-<p>
-Nos interesa saber si una dependencia es cierta. Por ejemplo, ¿\(B \rightarrow F\)? 
-\(A \rightarrow B\) y \(B \rightarrow A\) (son equivalentes) por lo tanto \(B \rightarrow F\)
-</p>
-
-<p>
-Otra forma de calcularlo, es analizando la satisfacibilidad (SAT) de la fórmula lógica resultante, es decir:
-Si \(A \rightarrow B \wedge B \rightarrow A \wedge A \rightarrow F \wedge \neg (B \rightarrow F)\) es no SAT, 
-\(B \rightarrow F\) es cierta.  
-</p>
-
-<p>
-\((\neg A \vee B) \wedge (\neg B \vee A) \wedge (\neg A \vee F) \wedge (B \wedge \neg F)\)      
-</p>
-
-<p>
-Para que la fórmula sea verdadera cada uno de las clausulas de la fórmula debe evaluarse a verdadero. Para que 
-\( (B \wedge \neg F) \) sea cierto necesitamos que B sea cierto y F sea falso. Propagando estos valores al resto de clausulas podemos comprobar que está fórmula es no SAT por lo que \(B \rightarrow F\) es cierta.    
-</p>
-
-<p>
-\((\neg 0 \vee 1) \wedge (\neg 1 \vee 0) \wedge (\neg 0 \vee 0) \wedge (1 \wedge \neg 0)\)      
-</p>
-
-<p><strong>Bibliografia</strong></p>
-<ul>
-<li>Tecnología y Diseño de Bases de Datos. M. Piattini, E. Marcos, C. Calero y B. Vela Ed.: RAMA. 2006</li>
-<li>Date, C. J. "An Introduction to Database Systems" (8ª edición), Addison-Wesley, 2004. (Versión en español: "Introducción a los Sistemas de Bases de Datos" (7ª edición), Pearson, 2001</li>
-<li>Batini, C., Ceri, S., Navathe, S. "Diseño Conceptual de Bases de Datos. Un enfoque de entidades-interrelaciones." Addison-Wesley Iberoamericana, 1994.</li>
-<li>Elsmari, R. y Navathe, S. B. "Sistemas de Bases de Datos. Conceptos Fundamentales." Addison-Wesley Iberoamericana, 1997. </li>
-</ul>                
-</article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/hectormorago/about-me.html" rel="bookmark"
-                           title="Permalink to About Me">About Me</a></h1>
-                </header>
-
-                <div class="entry-content">
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-04-06T20:31:00+02:00">
                 Published: lun 06 abril 2020
         </abbr>
-		<br />
+    <br />
         <abbr class="modified" title="2020-04-06T20:31:00+02:00">
                 Updated: lun 06 abril 2020
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
+                By <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
         </address>
 <p>In <a href="/hectormorago/category/about-me.html">About Me</a>.</p>
 <p>tags: <a href="/hectormorago/tag/research.html">research</a> <a href="/hectormorago/tag/publications.html">publications</a> <a href="/hectormorago/tag/others.html">others</a> </p>
-</footer><!-- /.post-info -->                <p>This section provides a summarize of my research interests.</p>
-                <a class="readmore" href="/hectormorago/about-me.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+</footer><!-- /.post-info -->      <p><link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+<style> 
+    .label {
+    display: inline;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+.label-success{background-color:#5cb85c}
+.label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}
+.label-danger{background-color:#d9534f}
+.label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}
+.label-warning{background-color:#f0ad4e}
+.label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}
+</style></p>
+<h2>Research interest</h2>
+<p>My research interests include, but are not limited to Variability Modeling, 
+Software Product Lines, Feature Models, software testing, Binary Decision 
+Diagrams, and Bibliometric Techniques.</p>
+<h2>Publications</h2>
+<h3>Speeding up Derivative Configuration from Product Platforms</h3>
+<p>Heradio, R.; Fernandez-Amoros, D.; <strong>Perez-Morago, H.</strong>; Adan, A</p>
+<div>
+    <img src="https://www.mdpi.com/img/journals/entropy-logo.png?78b1902e596e9c35" alt="entropy-logo" title="entropy Open Access Journals" style="float: left; max-height: 50px; margin: 0 0 0 0; ">
+    <p>
+        <strong>Abstract</strong> : To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires that companies shift from mass production to mass customization. Under this approach, a generic architecture, named product platform, is designed to support the derivation of customized products through a configuration process that determines which components the product comprises. When a customer configures a derivative, typically not every combination of available components is valid. To guarantee that all dependencies and incompatibilities among the derivative constituent components are satisfied, automated configurators are used. Flexible product platforms provide a big number of interrelated components, and so, the configuration of all, but trivial, derivatives involves considerable effort to select which components the derivative should include. Our approach alleviates that effort by speeding up the derivative configuration using a heuristic based on the information theory concept of entropy. View Full-Text
+    </p>
+    <div id='journal'>
+        <spam class="label label-success">Journal Paper</spam>
+        Entropy June 2014, Volume 17, Pages 3329-3356
+    </div>
+    <div id='impact-factor'>
+        <spam class="label label-danger">Impact Factor</spam>
+        <strong id='impact-factor-number-entropy'>2.494</strong>
+        (Journal Citation Reports) | 2nd Quartile
+    </div>
+</div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/hectormorago/alg-fcfs.html" rel="bookmark"
-                           title="Permalink to Algoritmo de planificación First Come First Served">Algoritmo de planificación First Come First Served</a></h1>
-                </header>
+<p></br></p>
+<h3>Augmenting Measure Sensitivity to Detect Essential, Dispensable and Highly Incompatible Features in Mass Customization</h3>
+<p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Alferez, M.; Fernandez-Amoros, D.; Alferez G.</p>
+<div>
+    <img src="https://ars.els-cdn.com/content/image/X03772217.jpg" alt="ejor-logo" title="European Journal of Operational Research" style="float: left; max-height: 100px; margin: 0 0 0 0;">
+    <p>
+        <strong>Abstract</strong> : Mass customization is the new frontier in business competition for both manufacturing and service industries. To improve customer satisfaction, reduce lead-times and shorten costs, families of similar products are built jointly by combining reusable parts that implement the features demanded by the customers. To guarantee the validity of the products derived from mass customization processes, feature dependencies and incompatibilities are usually specified with a variability model. As market demand grows and evolves, variability models become increasingly complex. In such entangled models it is hard to identify which features are essential, dispensable, highly required by other features, or highly incompatible with the remaining features. This paper exposes the limitations of existing approaches to gather such knowledge and provides efficient algorithms to retrieve that information from variability models.
+    </p>
+    <div id='journal'>
+        <spam class="label label-success">Journal Paper</spam>
+        European Journal of Operational Research, August 2015, 248(3):1066-1077
+    </div>
+    <div id='impact-factor'>
+        <spam class="label label-danger">Impact Factor</spam>
+        <strong id='impact-factor-number-ejor'>4.213</strong>
+        (Journal Citation Reports) | 1st Quartile
+    </div>
+</div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-04-06T20:31:00+02:00">
-                Published: lun 06 abril 2020
-        </abbr>
-		<br />
-        <abbr class="modified" title="2020-04-06T20:31:00+02:00">
-                Updated: lun 06 abril 2020
-        </abbr>
+<p></br></p>
+<h3>A Bibliometric Analysis of 20 Years of Research on Software Product Lines</h3>
+<p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Fernandez-Amoros, D.; Cabrerizo, 
+Francisco Javier; Herrera-Viedma, Enrique</p>
+<div>
+    <img src="https://ars.els-cdn.com/content/image/X09505849.jpg" alt="ist-logo" title="Information and Software Technology" style="float: left; max-height: 100px; margin: 0 0 0 0; padding:2px;">
+    <div id='journal'>
+        <p>
+        <strong>Abstract</strong> : Context: Software product line engineering has proven to be an efficient paradigm to developing families of similar software systems at lower costs, in shorter time, and with higher quality.
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
-        </address>
-<p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
-<p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
-</footer><!-- /.post-info -->                <p>Algoritmo de planificación First Come First Served.</p>
-                <a class="readmore" href="/hectormorago/alg-fcfs.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+Objective: This paper analyzes the literature on product lines from 1995 to 2014, identifying the most influential publications, the most researched topics, and how the interest in those topics has evolved along the way.
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/hectormorago/alg-planificacion.html" rel="bookmark"
-                           title="Permalink to Planificación de procesos">Planificación de procesos</a></h1>
-                </header>
+Method: Bibliographic data have been gathered from ISI Web of Science and Scopus. The data have been examined using two prominent bibliometric approaches: science mapping and performance analysis.
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-04-06T20:31:00+02:00">
-                Published: lun 06 abril 2020
-        </abbr>
-		<br />
-        <abbr class="modified" title="2020-04-06T20:31:00+02:00">
-                Updated: lun 06 abril 2020
-        </abbr>
+Results: According to the study carried out, (i) software architecture was the initial motor of research in SPL; (ii) work on systematic software reuse has been essential for the development of the area; and (iii) feature modeling has been the most important topic for the last fifteen years, having the best evolution behavior in terms of number of published papers and received citations.
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
-        </address>
-<p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
-<p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
-</footer><!-- /.post-info -->                <p>Revisión de los principales algoritmos de planificación.</p>
-                <a class="readmore" href="/hectormorago/alg-planificacion.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
+Conclusion: Science mapping has been used to identify the main researched topics, the evolution of the interest in those topics and the relationships among topics. Performance analysis has been used to recognize the most influential papers, the journals and conferences that have published most papers, how numerous is the literature on product lines and what is its distribution over time.
+        </p>
+        <spam class="label label-success">Journal Paper</spam>
+        Information and Software Technology, 72, April 2016
+    </div>
+    <div id='impact-factor'>
+        <spam class="label label-danger">Impact Factor</spam>
+        <strong id='impact-factor-number-ejor'>2.726</strong>
+        (Journal Citation Reports) | 2nd Quartile
+    </div>
+</div>
 
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/hectormorago/alg-round-robin.html" rel="bookmark"
-                           title="Permalink to Algoritmo de planificación Round Robin">Algoritmo de planificación Round Robin</a></h1>
-                </header>
+<p></br></p>
+<h3>Efficient Identification of Core and Dead Features in Variability Models</h3>
+<p><strong>Hector Perez-Morago</strong>, Ruben Heradio, David Fernandez-Amoros, Roberto Bean and Jose Antonio Cerrada </p>
+<div>
+    <img src="https://ieeeaccess.ieee.org/wp-content/uploads/2016/05/IEEE_ACCESS_Logo-noTagline_FullColor_RGB-plus-margin-7800x2000-X-1000.png" alt="ieee_access-logo" title="IEEE Access" style="float: left ;max-height: 50px; margin: 0 0 0 0; ">
+    <p>
+        <strong>Abstract</strong> : Mass customization enables the creation of personalized products that fulfill the features desired by specific customers. In this context, variability models are used to specify which configurable features are supported and which constraints among the features must be satisfied to guarantee the validity of the derived products. As the market demand grows and evolves, variability models become increasingly complex. In such entangled models, it is hard to identify which features are absolutely essential or dispensable because they are required to be included or excluded from all the possible products, respectively. This paper exposes the limitations of existing approaches to automatically detect those features and provides an algorithm that efficiently performs such detection.
+    </p>
+    <div id='journal'>
+        <spam class="label label-success">Journal Paper</spam>
+        IEEE Access. Nov 2015.
+    </div>
+    <div id='impact-factor'>
+        <spam class="label label-danger">Impact Factor</spam>
+        <strong id='impact-factor-number-ejor'>3.557</strong>
+        (Journal Citation Reports) | 1st Quartile
+    </div>
+</div>
 
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-04-06T20:31:00+02:00">
-                Published: lun 06 abril 2020
-        </abbr>
-		<br />
-        <abbr class="modified" title="2020-04-06T20:31:00+02:00">
-                Updated: lun 06 abril 2020
-        </abbr>
+<p></br></p>
+<h3>Science Mapping Analysis of the Literature on Software Product Lines.</h3>
+<p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Fernandez-Amoros, D.; Cabrerizo, Francisco Javier; 
+Herrera-Viedma, Enrique</p>
+<div>
+    <img src="https://images.springer.com/sgw/books/medium/9783319226880.jpg" alt="somet2015-logo" title="Somet 2015" style="float: left ;max-height: 100px; margin: 0 0 0 0; padding:2px;">
+    <p>
+        <strong>Abstract</strong> : To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires companies to shift from mass production to mass customization. In the context of software development, software product line engineering has emerged as a cost effective approach to developing families of similar products by support high levels of mass customization. This paper analyzes the literature on software product lines from its beginnings to 2014. A science mapping approach is applied to identify the most researched topics, and how the interest in those topics has evolved along the way.
+    </p>
+    <div id='journal'>
+        <spam class="label label-warning">Conference Paper</spam>
+        The 14th International Conference on Intelligent Software Methodologies, Tools and Techniques Monumental Complex of St. Chiara, Naples, Italy September 15-17, 2015
+    </div>
+</div>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
-        </address>
-<p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
-<p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
-</footer><!-- /.post-info -->                <p>Algoritmo de planificación Round Robin.</p>
-                <a class="readmore" href="/hectormorago/alg-round-robin.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 2
-        <a href="/hectormorago/index2.html">&raquo;</a>
-</p>
-                </section><!-- /#content -->
+<p></br></p>
+<h3>Binary Decision Diagram Algorithms to Perform Hard Analysis Operations on Variability Models.</h3>
+<p>Heradio, R.; <strong>Perez-Morago, H.</strong>; Fernandez-Amoros, D.; 
+Bean, Roberto; Cabrerizo, Francisco Javier; Cerrada, Carlos; Herrera-Viedma, Enrique
+Conference Paper The 15th International Conference on Intelligent Software 
+Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016</p>
+<div>
+    <img src="https://www.cyprusconferences.org/somet2016/img/somet2016logonotitle.png" alt="somet2015-logo" title="Somet 2015" style="float: left ;max-height: 60px; margin: 0 0 0 0; padding:2px;">
+    <p>
+        <strong>Abstract</strong> : Variability models play a key role in software product line engineering as they are used to represent the common and variable features that products may include, and what constraints among the features must be satisfied to guarantee the validity of the products. Valuable analysis operations on variability models can be performed by black box reusing logic engines, such as SAT-solvers and binary decision diagram libraries. Unfortunately, such kind of reuse implies long computation times for operations that need calling the engines many times. To overcome this problem, we propose new algorithms that directly deal with the data structure of a binary decision diagram encoding a variability model. In particular, our algorithms are specifically designed to detect core & dead features, and the impact & exclusion sets of every feature.
+    </p>
+    <div id='journal'>
+        <spam class="label label-warning">Conference Paper</spam>
+        The 14th International Conference on Intelligent Software Methodologies, Tools and Techniques. Larnaca, Cyprus, 12-14, 2016
+    </div>
+</div>
+
+<p></br></p>
+<h2><strong>Phd dissertation</strong></h2>
+<h3>BDD Algorithms to Perform Hard Analysis Operations on Variability Models.</h3>
+<p><strong>Héctor José Pérez Morago</strong> 
+Universidad Nacional de Educación a Distancia (España). Escuela Internacional de Doctorado. Programa de Doctorado en Ingeniería de Sistemas y Control</p>
+<p><strong>Abstract</strong>
+To compete in the global marketplace, manufacturers try to differentiate their products by focusing on individual customer needs. Fulfilling this goal requires companies to shift from mass production to mass customization. In the context of software development, software product line engineering has emerged as a cost-effective approach to developing families of similar products by supporting high levels of mass customization. Variability models are often used to specify the common and variable features of the products in one such family. Moreover, they model the inter-feature constraints which must be satisfied to guarantee the validity of the derived products. Despite the benefits of variability models, constructing and maintaining them can be a laborious task, especially in product lines with a large number of features and constraints. As a consequence, the study of automated techniques to reason on variability models has become an important research topic for the product line community. The aim of most automated techniques can be grouped in two classes: (i) ensuring the correctness of variability models, and (ii) providing guidance to derive products from a variability model. The former is usually put in the practise by means of analysis operations, which can be performed by black box reusing logic engines, such as SAT-solvers and binary decision diagram libraries. Unfortunately, such kind of reuse implies long computation times, and for some operations that need calling the logic engine an excessive amount of times, the approach does not scale. To overcome this problem, this thesis proposes new algorithms that directly deal with the binary decision decision diagram data structure encoding a variability model. In particular, our algorithms are specifically designed to detect those features that need to be included in all legal products, those ones that do not belong to any legal product, the number of products that include a particular feature, as well as the set of features that a particular feature needs to include or exclude to be part in any legal product. The second problem this thesis faces is related to product derivation. In complex variability models, deriving a valid product is not trivial task at all, since a lot of constraints between the features must be taken into account. To speed up product derivation, this thesis proposes a new approach that tries to minimise the number of configuration steps required on average to derive a whole product. Our approach, based on the information theory concept of entropy, takes advantage of the fact that, due to the inter-feature constraints, some decisions may be automatically derived from other decisions previously made.</p>
+<p><a href="http://e-spacio.uned.es/fez/view/tesisuned:IngInf-Hjperez"><strong>Full version</strong></a></p>
+<script type="text/javascript">
+  var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+  function doCORSRequest(options, printResult) {
+    var x = new XMLHttpRequest();
+    x.open(options.method, cors_api_url + options.url);
+    x.onload = x.onerror = function() {
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(x.responseText, "text/html");
+      elem = doc.getElementsByClassName("header-impact-factor-sci")[0];
+      elem = elem.getElementsByClassName("number")[0].innerHTML;
+      printResult((elem || ''));
+    };
+    x.send();
+  }
+
+  // Bind event
+  (function() {
+    var urlField = document.getElementById('url');
+    var outputField = document.getElementById('impact-factor-number-entropy');
+    window.onload = function(e) {
+      e.preventDefault();
+      doCORSRequest({
+        method: 'GET',
+        url: 'https://mdpi.com/journal/entropy/stats#if',
+      }, function printResult(result) {
+        //console.log(result);
+        outputField.innerHTML += result;
+      });
+    };
+  })();
+</script>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>
