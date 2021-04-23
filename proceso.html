@@ -41,23 +41,24 @@
 <p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
 <p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/teoria.html">teoria</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
 </footer><!-- /.post-info -->      <p><link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"></p>
-<p>Un <strong>proceso</strong> es un programa en ejecución. Puede haber varias réplicas de un mismo programa en ejecución. Los procesos son independientes, aunque sean instancias de un mismo programa.</p>
-<p>Un proceso no es solamente el código del programa, también incluye la actividad actual como:</p>
+<p>Un <strong>proceso</strong> es una instancia de un programa en ejecución. En un instante determinado puede haber varias instancias (réplicas) de un mismo programa en ejecución.</p> 
+<p>Los procesos son independientes, aunque sean instancias de un mismo programa.</p>
+<p>Un proceso se compone de varios elementos, es decir, no es solamente el código del programa, también incluye la actividad actual como:</p>
 <ul>
-<li>Contador de programa</li>
-<li>Registros del procesador</li>
-<li>Imagen de memoria</li>
+    <li>Contador de programa</li>
+    <li>Registros del procesador</li>
+    <li>Imagen de memoria</li>
 </ul>
-<p>Un proceso desde su creación hasta su finalización, puede pasar por varios estados distintos:</p>
+<p>Un proceso puede pasar por varios estados distintos desde su creación hasta su finalización. Es lo que se conoce como ciclo de vida de un proceso. El número de estados depende del SO en cuestión pero entre :</p>
 <ul>
-<li>Nuevo: el proceso está siendo creado.</li>
-<li>Listo: está a la espera de que le asignen un procesador.</li>
-<li>En ejecución: se están ejecutando instrucciones del proceso.</li>
-<li>Bloqueado: esperando que ocurra algún suceso (E/S, comunicación, sincronización . . .) que lo desbloquee.</li>
-<li>Terminado.</li>
-<li>Otros estados:</li>
-<li>Preparado: el proceso está a la espera para ser ejecutado cuando tenga suficientes recursos (ejemplo: ejecución por lotes).</li>
-<li>Suspendido: no puede pasar a ejecución porque reside enteramente en la memoria de intercambio. El objetivo de suspender procesos es el de reducir el grado de multiprogramación (número de procesos que instante determinado se encuentran cargados en memoria principal).</li>
+    <li>Nuevo: el proceso está siendo creado.</li>
+    <li>Listo: está a la espera de que le asignen un procesador.</li>
+    <li>En ejecución: se están ejecutando instrucciones del proceso.</li>
+    <li>Bloqueado: esperando que ocurra algún suceso (E/S, comunicación, sincronización . . .) que lo desbloquee.</li>
+    <li>Terminado.</li>
+    <li>Otros estados:</li>
+    <li>Preparado: el proceso está a la espera para ser ejecutado cuando tenga suficientes recursos (ejemplo: ejecución por lotes).</li>
+    <li>Suspendido: no puede pasar a ejecución porque reside enteramente en la memoria de intercambio. El objetivo de suspender procesos es el de reducir el grado de multiprogramación (número de procesos que instante determinado se encuentran cargados en memoria principal).</li>
 </ul>
 <p>Cada proceso se representa dentro del SO con un bloque de control de proceso o PCB. El PCB contiene información asociada al proceso, como:</p>
 <ul>
