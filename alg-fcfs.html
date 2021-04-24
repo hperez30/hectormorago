@@ -9,15 +9,16 @@
 
 <body id="index" class="home">
     <header id="banner" class="body">
-        <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
-        <nav>
-            <ul>
-                <li><a href="/hectormorago/category/about-me.html">About Me</a></li>
-                <li><a href="/hectormorago/category/teaching.html">teaching</a></li>
-                <li class="active"><a href="/hectormorago/category/blog.html">blog</a></li>
-                <li><a href="/hectormorago/category/projects.html">Projects</a></li>
-            </ul>
-        </nav>
+    <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
+    <nav>
+        <ul>
+            <li><a href="/hectormorago/category/about-me.html">About Me</a></li>
+            <li><a href="/hectormorago/category/teaching.html">Teaching</a></li>
+            <li class="active"><a href="/hectormorago/category/blog.html">Blog</a></li>
+            <li><a href="/hectormorago/category/projects.html">Projects</a></li>
+            <li><a href="/hectormorago/category/utils.html">Utils</a></li>
+        </ul>
+    </nav>
     </header><!-- /#banner -->
     <section id="content" class="body">
         <article>
@@ -43,7 +44,7 @@
                 <h2>FCFS</h2>
                 <p>
                     Primero en llegar primero en ser servido, FCFS (First Come First Served). Es uno de los algoritmos de planificación 
-                más sencillos de implementar. El planificador maneja la cola de procesos como una cola FIFO. Entre sus <strong>ventajas</strong> destacamos:
+                más sencillos de implementar. Se asigna la CPU a los procesos en función de su orden de llegada. El planificador maneja la cola de procesos como una cola FIFO. Entre sus <strong>ventajas</strong> destacamos:
                 </p>
                 <ul>
                     <li>Facilidad de implementación.</li>
@@ -52,8 +53,7 @@
                 <p>Sus principales <strong>desventajas</strong> son:</p>
                 <ul>
                     <li>Penaliza los procesos con tiempos de ráfaga más cortos con respecto a aquellos que tienen tiempo de ráfaga más largos.</li>
-                    <li>Puede aparecer lo que se denomina como efecto convoy.</li>
-                    <li>Sufre la anomalía de belady.</li>
+                    <li>Puede aparecer lo que se denomina como efecto convoy. El tiempo de espera depende mucho del orden de llegada de los procesos y su duración. </li>
                 </ul>
             </div><!-- /.entry-content -->
         </article>
