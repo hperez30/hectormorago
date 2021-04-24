@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="utf-8" />
-    <title>Hector' log - projects</title>
+    <title>Convertir xml a csv con python</title>
     <link rel="stylesheet" href="/hectormorago/theme/css/main.css" />
     <link href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hector' log Atom Feed" />
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
@@ -30,59 +30,62 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
-                <nav><ul>
+            <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
+            <nav>
+                <ul>
                     <li><a href="/hectormorago/category/about-me.html">About Me</a></li>
                     <li><a href="/hectormorago/category/teaching.html">Teaching</a></li>
                     <li><a href="/hectormorago/category/blog.html">Blog</a></li>
                     <li><a href="/hectormorago/category/projects.html">Projects</a></li>
-                    <li class="active"><a href="/hectormorago/category/utils.html">Utils</a></li>
-                </ul></nav>
+                    <li active="class"><a href="/hectormorago/category/projects.html">Utils</a></li>
+                </ul>
+            </nav>
         </header><!-- /#banner -->
-
-        <section id="content" class="body">
-        <article>
-            <header>
-                <h1 class="entry-title">
-                <a href="/hectormorago/xml2csv.html" rel="bookmark" title="Permalink to convertir xml a csv">Convertir xml a csv</a></h1>
-            </header>
-            <p>Pequeño script implmentado en python que te permite convertir ficheros en xml a csv.</p>
-        </article>
+    <section id="content" class="body">
         <article>
             <header>
                 <h1 class="entry-title">
                 <a href="/hectormorago/json2csv.html" rel="bookmark" title="Permalink to convertir json a csv">Convertir json a csv</a></h1>
             </header>
-            <p>Pequeño script implmentado en python que te permite convertir ficheros en xml a csv.</p>
+
             <div class="entry-content">
                 <footer class="post-info">
                     <abbr class="published" title="2021-04-08T20:31:00+02:00">Published: jue 08 abril 2021</abbr>
-                    <br />
+            		<br />
                     <abbr class="modified" title="2021-04-08T20:31:00+02:00">Updated: jue 08 abril 2021</abbr>
                     <address class="vcard author">
                         By <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
                     </address>
                     <p>In <a href="/hectormorago/category/utils.html">utils</a>.</p>
                 </footer><!-- /.post-info -->      
+                <h2>Convertir json a CSV </h2>
+                <p>El objetivo de este script es transformar un archivo json en formato csv, de tal modo que podamos trabajar con él 
+                con algún software que maneje datos tabulares. Este código fue creado para transformar un archivo que contenia 
+                datos acerca de los dispositivos registrados en DOMjudge.</p>  
+                <br>
+
+                <script src="https://gist.github.com/hperez30/90c56ca47abd7312ef98b3568a83993c.js"></script>
+                   
             </div><!-- /.entry-content -->
         </article>
     </section>
     <section id="extras" class="body">
         <div class="blogroll">
-            <h2>links</h2>
-            <ul>
-                <li><a href="https://www.researchgate.net/profile/Hector_Perez-Morago"><i class="ai ai-researchgate ai-2x"></i></a></li>
-                <li><a href="https://scholar.google.es/citations?user=kayx53AAAAAJ&hl=es"><i class="ai ai-google-scholar-square ai-2x"></i></a></li>
-                <li><a href="https://publons.com/researcher/1280179/hector-perez-morago/"><i class="ai ai-publons ai-2x"></i></a></li>
-                <li><a href="http://getpelican.com/">Pelican</a></li>
-                <li><a href="http://python.org/">Python.org</a></li>
-                <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-            </ul>
+                <h2>links</h2>
+                <ul>
+                    <li><a href="https://www.researchgate.net/profile/Hector_Perez-Morago"><i class="ai ai-researchgate ai-2x"></i></a></li>
+                    <li><a href="https://scholar.google.es/citations?user=kayx53AAAAAJ&hl=es"><i class="ai ai-google-scholar-square ai-2x"></i></a></li>
+                    <li><a href="https://publons.com/researcher/1280179/hector-perez-morago/"><i class="ai ai-publons ai-2x"></i></a></li>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                </ul>
         </div><!-- /.blogroll -->
         <div class="social">
                 <h2>social</h2>
                 <ul>
                     <li><a href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
                     <li><a href="https://github.com/hperez30">Github</a></li>
                     <li><a href="https://es.linkedin.com/in/hector-perez-morago">Linkedin</a></li>
                 </ul>
