@@ -1,126 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-        <meta charset="utf-8" />
-        <title>Planificación de procesos</title>
-        <link rel="stylesheet" href="/hectormorago/theme/css/main.css" />
-        <link href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hector' log Atom Feed" />
+    <meta charset="utf-8" />
+    <title>Planificación de procesos</title>
+    <link rel="stylesheet" href="/hectormorago/theme/css/main.css" />
+    <link href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hector' log Atom Feed" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 </head>
 
 <body id="index" class="home">
-        <header id="banner" class="body">
-    <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
-    <nav>
-        <ul>
-            <li><a href="/hectormorago/category/about-me.html">About Me</a></li>
-            <li><a href="/hectormorago/category/teaching.html">Teaching</a></li>
-            <li class="active"><a href="/hectormorago/category/blog.html">Blog</a></li>
-            <li><a href="/hectormorago/category/projects.html">Projects</a></li>
-            <li><a href="/hectormorago/category/utils.html">Utils</a></li>
-        </ul>
-    </nav>
-  </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="/hectormorago/alg-planificacion.html" rel="bookmark"
-           title="Permalink to Planificación de procesos">Planificación de procesos</a></h1>
-    </header>
+    <header id="banner" class="body">
+        <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
+        <nav>
+            <ul>
+                <li><a href="/hectormorago/category/about-me.html">About Me</a></li>
+                <li><a href="/hectormorago/category/teaching.html">Teaching</a></li>
+                <li class="active"><a href="/hectormorago/category/blog.html">Blog</a></li>
+                <li><a href="/hectormorago/category/projects.html">Projects</a></li>
+                <li><a href="/hectormorago/category/utils.html">Utils</a></li>
+            </ul>
+        </nav>
+    </header><!-- /#banner -->
+    <section id="content" class="body">
+        <article>
+            <header>
+              <h1 class="entry-title">
+                <a href="/hectormorago/alg-planificacion.html" rel="bookmark"
+                   title="Permalink to Planificación de procesos">Planificación de procesos</a>
+               </h1>
+            </header>
+            <div class="entry-content">
+                <footer class="post-info">
+                    <abbr class="published" title="2020-04-06T20:31:00+02:00">
+                        Published: lun 06 abril 2020
+                    </abbr>
+            		<br />
+                    <abbr class="modified" title="2020-04-06T20:31:00+02:00">
+                        Updated: lun 06 abril 2020
+                    </abbr>
+                    <address class="vcard author">
+                        By<a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
+                    </address>
+                    <p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
+                    <p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> 
+                             <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> 
+                             <a href="/hectormorago/tag/otros.html">otros</a> </p>
+                </footer><!-- /.post-info -->      
+                <p>En <strong>sistemas operativos multitarea</strong>, donde podemos ejecutar cientos procesos al mismo tiempo,
+                necesitamos de herramientas que de algún modo <strong>multiplexen los recursos hardware</strong> del sistema. Una de estas herramientas la proporciona el sistema operativo (SO), mediante el <strong>planificador</strong> o scheduler. </p>
+                <p>El planificador se encarga de repartir la CPU entre los procesos que se encuentran en el sistema listos para ejecutarse. Su funcionamiento básico se basa en la forma en la que los procesos se ejecutan, que consiste en realizar de forma alternativa ráfagas de CPU y de E/S (ver Figura 1). En función de la duración de dichas ráfagas podemos distinguir entre procesos que se encuentran limitados por la CPU (donde la duración de las ráfagas de CPU es mucho mayor que las de E/S) y procesos que se encuentran limitados por la E/S (donde la duración de las ráfagas de E/S es mucho mayor que las de E/S). El SO consciente de este funcionamiento aprovecha las ráfagas de E/S para ejecutar otro proceso, ya que en caso contrario la CPU se quedaría inactiva.</p>
+                <p>La duración de las ráfagas de CPU dependen de cada proceso, pero sin pérdida de generalidad podemos decir que son cortas.</p>
+                <p>En general podemos distinguir tres <strong>niveles de planificación</strong>: </p>
+                <ul>
+                    <li><strong>a corto plazo</strong>, se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre  aquellos que se encuentran preparados para su ejecución. </li>
+                    <li><strong>a medio plazo</strong>, decide entre los procesos que están en memoria secundaria cual pasa a memoria principal, y viceversa. Es decir, regula el grado de multiprogramación. </li>
+                    <li><strong>a largo plazo</strong>, decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación de un proceso.</li>
+                </ul>
+                <p>Aparte de estos tres niveles de planificación se puede distinguir un cuarto nivel, la <strong>planificación de E/S</strong> que decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho dispositivo.</p>
+                <p>La parte del SO que se encarga de realizar las tareas de planificación puede dividirse en los siguientes componentes:</p>
+                <ul>
+                    <li><strong>Encolador</strong>  o enqueuer.</li>
+                    <li><strong>Conmutador de contexto</strong> o context switcher.</li>
+                    <li><strong>Distribuidor</strong>,  despachador o dispatcher. Se encarga de seleccionar un proceso de la cola de procesos preparados de acuerdo con un determinado algoritmo de planificación.</li>
+                </ul>
+                <p>Es importante destacar que la tarea de planificación introduce <strong>sobrecarga</strong>, es decir, tiempo que el SO está dedicado a tareas que no repercute en los procesos de los usuarios y que, por tanto, hay que minimizar. A la hora de seleccionar un algoritmo de planificación podemos utilizar determinadas métricas como: la <strong>latencia de despacho</strong>, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten que se pueda expropiar un proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de despacho puede ser larga ya que algunas llamadas al sistema son complejas.</p>
+                <p>En las siguientes situaciones puede ser necesario tomar una decisión sobre planificación:
+                1) Cuando un proceso pasa del estado de ejecución al estado de espera.
+                2) Cuando un proceso pasa del estado de ejecución al estado de preparado.
+                3) Cuando un proceso pasa del estado de espera al estado de preparado.
+                4) Cuando un proceso termina.</p>
+                <p>Sólo se pueden tomar decisiones de planificación en 1 y 4 cuando la planificación es sin desalojo, cooperativa o no expulsiva. Miéntras que cuando la planificación es con desalojo, apropiativa (preemptive) o expulsiva se puede decidir en todos los casos.</p>
+                <p>En general a la hora de planificar procesos vamos a tener en cuenta una serie de <strong>criterios generales</strong>:</p>
+                <ul>
+                    <li>Previsibilidad. Tareas similares igual tiempo.</li>
+                    <li>Uso equilibrado de recursos.</li>
+                    <li>Proporcionalidad. Tareas que parecen sencillas deben ejecutarse en plazos relativamente cortos.</li>
+                    <li>Equidad. Los recursos se deben repartir de forma equitativa</li>
+                </ul>
+                <p>Entre los <strong>principales algoritmos de planificación</strong> podemos citar los siguientes: 
+                <a href="https://hperez30.github.io/alg-fcfs/">FCFS</a>, <a href="https://hperez30.github.io/alg-sjf/">SJF</a>, 
+                <a href="https://hperez30.github.io/alg-srt/">SRT</a>, <a href="https://hperez30.github.io/alg-round-robin/">Round Robin</a>, etc.</p>
+                <p><strong>Bibliografia</strong></p>
+                <ul>
+                    <li>"Fundamentos de sistemas operativos" Silberschatz, Galvin, Gagne. Editorial Mc Graw Hill.</li>
+                    <li>"Sistemas Operativos: una visión aplicada" 2a ed. Carretero, García, De Miguel, Pérez. Editorial Mc Graw Hill.</li>
+                </ul>
+            </div><!-- /.entry-content -->
+        </article>
+    </section>
+    <section id="extras" class="body">
+        <div class="blogroll">
+            <h2>links</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.researchgate.net/profile/Hector_Perez-Morago">
+                            <i class="ai ai-researchgate ai-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://scholar.google.es/citations?user=kayx53AAAAAJ&hl=es">
+                            <i class="ai ai-google-scholar-square ai-2x"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://publons.com/researcher/1280179/hector-perez-morago/">
+                            <i class="ai ai-publons ai-2x"></i>
+                        </a>
+                    </li>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+                <h2>social</h2>
+                <ul>
+                    <li><a href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
-    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-04-06T20:31:00+02:00">
-                Published: lun 06 abril 2020
-        </abbr>
-		<br />
-        <abbr class="modified" title="2020-04-06T20:31:00+02:00">
-                Updated: lun 06 abril 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
-        </address>
-<p>In <a href="/hectormorago/category/blog.html">blog</a>.</p>
-<p>tags: <a href="/hectormorago/tag/ssoo.html">SSOO</a> <a href="/hectormorago/tag/algoritmos.html">algoritmos</a> <a href="/hectormorago/tag/otros.html">otros</a> </p>
-</footer><!-- /.post-info -->      <p><link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"></p>
-<p>En <strong>sistemas operativos multitarea</strong>, donde podemos ejecutar cientos procesos al mismo tiempo,
-necesitamos de herramientas que de algún modo <strong>multiplexen los recursos hardware</strong> del sistema. Una de estas herramientas la proporciona el sistema operativo (SO), mediante el <strong>planificador</strong> o scheduler. </p>
-<p>El planificador se encarga de repartir la CPU entre los procesos que se encuentran en el sistema listos para ejecutarse. 
-Su funcionamiento básico se basa en la forma en la que los procesos se ejecutan, que consiste en realizar de forma alternativa ráfagas de CPU y de E/S (ver Figura 1). En función de la duración de dichas ráfagas podemos distinguir entre procesos que se encuentran limitados por la CPU (donde la duración de las ráfagas de CPU es mucho mayor que las de E/S) y procesos que se encuentran limitados por la E/S (donde la duración de las ráfagas de E/S es mucho mayor que las de E/S). El SO consciente de este funcionamiento aprovecha las ráfagas de E/S para ejecutar otro proceso, ya que en caso contrario la CPU se quedaría inactiva. </p>
-<p>La duración de las ráfagas de CPU dependen de cada proceso, pero sin pérdida de generalidad podemos decir que son cortas.</p>
-<p>En general podemos distinguir tres <strong>niveles de planificación</strong>: </p>
-<ul>
-<li><strong>a corto plazo</strong>, se encarga de decidir el siguiente proceso que pasará a ejecutarse de entre  aquellos que se encuentran preparados para su ejecución. </li>
-<li><strong>a medio plazo</strong>, decide entre los procesos que están en memoria secundaria cual pasa a memoria principal, y viceversa. Es decir, regula el grado de multiprogramación. </li>
-<li><strong>a largo plazo</strong>, decide qué trabajo de la cola de trabajo por lotes pasa a ser ejecutado en el sistema mediante la creación de un proceso.</li>
-</ul>
-<p>Aparte de estos tres niveles de planificación se puede distinguir un cuarto nivel, la <strong>planificación de E/S</strong> que
-decide qué proceso en una cola de un dispositivo de E/S pasa a utilizar dicho dispositivo.</p>
-<p>La parte del SO que se encarga de realizar las tareas de planificación puede dividirse en los siguientes componentes:</p>
-<ul>
-<li><strong>Encolador</strong>  o enqueuer.</li>
-<li><strong>Conmutador de contexto</strong> o context switcher.</li>
-<li><strong>Distribuidor</strong>,  despachador o dispatcher. Se encarga de seleccionar un proceso de la cola de procesos preparados de 
-acuerdo con un determinado algoritmo de planificación.</li>
-</ul>
-<p>Es importante destacar que la tarea de planificación introduce <strong>sobrecarga</strong>, es decir, tiempo que el SO está dedicado a tareas que no repercute en los procesos de los usuarios y que, por tanto, hay que minimizar. A la hora de seleccionar un algoritmo de planificación podemos utilizar determinadas métricas como: la <strong>latencia de despacho</strong>, es el tiempo promedio que tarda el distribuidor en detener un proceso y comenzar la ejecución de otro. Lo deseable que la latencia de despacho sea lo más pequeña posible. Sin embargo, muchos SOs con objeto de asegurar la integridad de sus estructuras de datos no permiten que se pueda expropiar un proceso en modo núcleo que esté realizando una llamada al sistema, hasta que ésta no se complete o el proceso entre en el estado bloqueado. Tales SOs se dicen que son de núcleo no expropiable. En dicho caso la latencia de despacho puede ser larga ya que algunas llamadas al sistema son complejas.</p>
-<p>En las siguientes situaciones puede ser necesario tomar una decisión sobre planificación:
-1) Cuando un proceso pasa del estado de ejecución al estado de espera.
-2) Cuando un proceso pasa del estado de ejecución al estado de preparado.
-3) Cuando un proceso pasa del estado de espera al estado de preparado.
-4) Cuando un proceso termina.</p>
-<p>§ Decisiones solamente en 1 y 4: planificación sin desalojo, cooperativa o no expulsiva.
-§ Decisiones en todos los casos: planificación con desalojo, apropiativa (preemptive) o expulsiva.</p>
-<p>En general a la hora de planificar procesos vamos a tener en cuenta una serie de criterios generales:</p>
-<ul>
-    <li>Previsibilidad. Tareas similares igual tiempo.</li>
-    <li>Uso equilibrado de recursos.</li>
-    <li>Proporcionalidad. Tareas que parecen sencillas deben ejecutarse en plazos relativamente cortos.</li>
-    <li>Equidad. Los recursos se deben repartir de forma equitativa</li>
-</ul>
-<p>Entre los <strong>principales algoritmos de planificación</strong> podemos citar los siguientes: 
-<a href="https://hperez30.github.io/alg-fcfs/">FCFS</a>, <a href="https://hperez30.github.io/alg-sjf/">SJF</a>, 
-<a href="https://hperez30.github.io/alg-srt/">SRT</a>, <a href="https://hperez30.github.io/alg-round-robin/">Round Robin</a>, etc.</p>
-<p><strong>Bibliografia</strong></p>
-<ul>
-<li>"Fundamentos de sistemas operativos" Silberschatz, Galvin, Gagne. Editorial Mc Graw Hill.</li>
-<li>"Sistemas Operativos: una visión aplicada" 2a ed. Carretero, García, De Miguel, Pérez. Editorial Mc Graw Hill.</li>
-</ul>
-    </div><!-- /.entry-content -->
-
-  </article>
-</section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="https://www.researchgate.net/profile/Hector_Perez-Morago"><i class="ai ai-researchgate ai-2x"></i></a></li>
-                            <li><a href="https://scholar.google.es/citations?user=kayx53AAAAAJ&hl=es"><i class="ai ai-google-scholar-square ai-2x"></i></a></li>
-                            <li><a href="https://publons.com/researcher/1280179/hector-perez-morago/"><i class="ai ai-publons ai-2x"></i></a></li>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
-
-                            <li><a href="https://github.com/hperez30">Github</a></li>
-                            <li><a href="https://es.linkedin.com/in/hector-perez-morago">Linkedin</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
+                    <li><a href="https://github.com/hperez30">Github</a></li>
+                    <li><a href="https://es.linkedin.com/in/hector-perez-morago">Linkedin</a></li>
+                </ul>
+        </div><!-- /.social -->
+    </section><!-- /#extras -->
+    <footer id="contentinfo" class="body">
+        <address id="about" class="vcard body">
+        Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+        </address><!-- /#about -->
+        <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+    </footer><!-- /#contentinfo -->
 </body>
 </html>
