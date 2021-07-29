@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Traversing trees with python</title>
+    <link rel="stylesheet" href="/hectormorago/theme/css/main.css" />
+    <link href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Hector' log Atom Feed" />
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <style> 
+        .label {
+        display: inline;
+        padding: .2em .6em .3em;
+        font-size: 75%;
+        font-weight: 700;
+        line-height: 1;
+        color: #fff;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: baseline;
+        border-radius: .25em;
+        }
+        .label-success{background-color:#5cb85c}
+        .label-success[href]:focus,.label-success[href]:hover{background-color:#449d44}
+        .label-danger{background-color:#d9534f}
+        .label-danger[href]:focus,.label-danger[href]:hover{background-color:#c9302c}
+        .label-warning{background-color:#f0ad4e}
+        .label-warning[href]:focus,.label-warning[href]:hover{background-color:#ec971f}
+    </style>
+    <script type="text/javascript">
+
+var rfc3021=false;
+
+function initializeIPCalc(){
+	
+	genIPFields('ipdec','datadec','onChangeDecInput',true);
+	genIPFields('maskdec','datadec','onChangeDecInput');
+	genIPFields('netdec','datadec','',true);
+
+	genIPFields('ipbin','databin','');
+	genIPFields('maskbin','databin','');
+	genIPFields('netbin','databin','');
+	
+	genIPFields('broadcastdec','datadec','');
+	genIPFields('firsthostdec','datadec','');
+	genIPFields('lasthostdec','datadec','');
+
+
+	setFieldValue('ip','192.168.0.1');
+	setPrefix(24);
+}
+
+function genIPFields(placeholderName,className,eventName) {
+	var ipFields="";
+	var idName="";
+	var onChange="";
+	var inputType="number";	
+	var appendAttr="";
+
+	for(var i=1;i<=4;i++){
+		idName=placeholderName+i;
+	
+		if(placeholderName.slice(-3)=='bin'){
+			inputType='text';
+		}
+
+		if(eventName!=""){
+			/*inputType='number';
+			appendAttr='min="0" max="255" onchange="' + eventName + "(event,'" + placeholderName.slice(0,placeholderName.length-3) + "'," + i + ')"';*/
+
+			inputType='text';
+			appendAttr='onchange="' + eventName + "(event,'" + placeholderName.slice(0,placeholderName.length-3) + "'," + i + ')"';
+			appendAttr+=' onkeypress="checkKeyPressed(event, ' + "'" + placeholderName + "'" + ', ' + i + ')"';
+			
+		} else {
+			inputType='text';
+			appendAttr='readonly';		
+		}
+
+		ipFields+='<input type="' + inputType + '" name="' + idName + '" id="' + idName + '" class="' + className + '" ' + appendAttr + '>'
+
+		if(i<4){
+			ipFields+='.';		
+		}		
+	}
+	
+	var placeholder=document.getElementById(placeholderName);
+	placeholder.innerHTML=ipFields + placeholder.innerHTML;
+
+}
+
+function getCurrentMask(){
+	var currMask='';
+	for(var i=1;i<=4;i++){
+		currMask+=document.getElementById('maskdec'+i).value;
+		if(i<4){
+			currMask+='.';
+		}
+	}
+	return currMask;
+}
+
+
+function onChangeDecInput(e,fieldType,num) {
+	var decField=document.getElementById(fieldType+'dec'+num);
+	var val;
+	var foundErr=false;
+	var errMsg="";
+	var oldMask;
+	var newMask;
+
+	try{
+		val=parseInt(decField.value);
+	} catch (e){
+		val=0;
+	}
+
+	if(!isInteger(val)){
+		val=0;
+	}
+	
+	if(val<0){
+		val=0;	
+	} else {
+		if(val>255){
+			val=255;		
+		}	
+	}
+
+	if(fieldType=='mask'){
+		oldMask=getCurrentMask();
+		if((num==1)&&(val<128)){
+			val=128;
+			foundErr=true;
+		} else {
+			if(num==4){
+				if(rfc3021){				
+					if(val>254){
+						foundErr=true;
+						val=254;
+					}
+				} else {
+					if(val>252){
+						foundErr=true;
+						val=252;
+					}
+				}
+			}
+		}
+	}
+	
+	if(val==0){
+		decField.value=0;
+		if(fieldType=='mask'){
+			for(var i=num+1;i<=4;i++){
+				document.getElementById(fieldType+'dec'+i).value=0;	
+				document.getElementById(fieldType+'bin'+i).value=binString(0);
+			}
+		}
+	} else {
+		if(val==255){
+			decField.value=255;
+			if(fieldType=='mask'){
+				for(var i=num-1;i>=1;i--){
+					document.getElementById(fieldType+'dec'+i).value=255;	
+					document.getElementById(fieldType+'bin'+i).value=binString(255);
+				}
+			}
+		} else {
+
+			if(fieldType=='mask'){
+				var valmask=0;
+				var valbit=128;
+				
+				while (valmask<val){
+					valmask=valmask+valbit;
+					valbit/=2;			
+				}
+				
+				if(val!=valmask){
+					val=valmask;
+					foundErr=true;					
+				}
+	
+				for(var i=num-1;i>=1;i--){
+					document.getElementById(fieldType+'dec'+i).value=255;	
+					document.getElementById(fieldType+'bin'+i).value=binString(255);
+				}
+	
+				for(var i=num+1;i<=4;i++){
+					document.getElementById(fieldType+'dec'+i).value=0;	
+					document.getElementById(fieldType+'bin'+i).value=binString(0);
+				}
+			}
+
+		}
+	}
+
+	decField.value=val;
+	document.getElementById(fieldType+'bin'+num).value=binString(decField.value);
+	
+	if(fieldType='mask'){
+		newMask=getCurrentMask();
+	}
+
+	if(foundErr){
+		//alert("Error: " + errMsg);
+		errMsg='Máscara ' + oldMask + ' no válida.<br>Autocorregida a ' + newMask + '.';
+		document.getElementById('warningMsg').innerHTML=errMsg;
+		document.getElementById('warningArea').style.display='block';
+	} else {
+		document.getElementById('warningMsg').innerHTML='';
+		document.getElementById('warningArea').style.display='none';		
+	}
+
+	applyMask();
+}
+
+function checkKeyPressed(event,fieldName,i){
+	var keyPressed=event.which;
+	var keyCode=event.keyCode;
+	
+	var cancelEvent=true;
+
+	if(keyPressed==0){
+		cancelEvent=false;	
+	} else {
+		if(((keyPressed>=48)&&(keyPressed<=57))||(keyPressed==9)){
+			cancelEvent=false;	
+		} else {
+			if((keyPressed==8)||(keyPressed==9)){
+				cancelEvent=false;
+			}
+		}
+	}
+
+	if(cancelEvent){
+		switch(keyPressed) {				
+			case 46:
+				if(!(i<4)){
+					break;				
+				}
+
+			case 13:
+				if(i<4){
+					document.getElementById(fieldName + (i+1)).focus();
+				} else {
+					switch(fieldName) {
+						case 'ipdec':
+							document.getElementById('ipPrefix').focus();
+							break;
+
+						case 'maskdec':
+							document.getElementById('ipdec1').focus();
+							break;
+
+						case 'ipPrefix':
+							document.getElementById('maskdec1').focus();
+							break;								
+					} 
+				}
+				break;				
+		}
+	} 
+
+	if(cancelEvent){
+		event.preventDefault();
+	}	
+	
+}
+
+
+function repeatChar(char,num){
+	var tmp="";
+	
+	for(var i=1;i<=num;i++){
+		tmp+=char;
+	}
+	
+	return (tmp);
+}
+
+function setPrefix(val){
+	document.getElementById('ipPrefix').value=val;
+	document.getElementById('netPrefix').value=val;
+
+	var q=Math.floor(val/8);
+	var r=val % 8;
+	
+	for(var i=1;i<=q;i++){
+		document.getElementById('maskdec'+i).value=255;
+		document.getElementById('maskbin'+i).value=binString(255);
+	}
+	
+
+	if(r>0){
+		//var bitStr="1".repeat(r) + "0".repeat(8-r);
+		var bitStr=repeatChar("1",r) + repeatChar("0",8-r);
+		var newVal=parseInt(bitStr,2);
+		document.getElementById('maskdec'+(q+1)).value=parseInt(newVal);			
+		document.getElementById('maskbin'+(q+1)).value=binString(newVal);
+
+		for(var i=q+2;i<=4;i++){
+			document.getElementById('maskdec'+i).value=0;
+			document.getElementById('maskbin'+i).value=binString(0);
+		}	
+
+	} else {
+		for(var i=q+1;i<=4;i++){
+			document.getElementById('maskdec'+i).value=0;
+			document.getElementById('maskbin'+i).value=binString(0);
+		}		
+	}
+
+	document.getElementById('warningMsg').innerHTML='';
+	document.getElementById('warningArea').style.display='none';		
+	applyMask();
+}
+
+function isInteger(num){
+	if(typeof num==='number' && (num%1)===0){
+		return (true);
+	} else {
+		return (false);
+	}
+}
+
+function onChangePrefix() {
+	var decField=document.getElementById('ipPrefix');
+	var val;
+
+
+	try{
+		val=parseInt(decField.value);
+	} catch (e){
+		val=0;
+	}
+
+	if(!isInteger(val)){
+		val=0;
+	}
+
+	
+	if(val<1){
+		val=1;	
+	} else {
+		if(rfc3021){
+			if(val>31){
+				val=31;		
+			}	
+		} else {
+			if(val>30){
+				val=30;		
+			}	
+		}
+	}
+	
+	setPrefix(val);	
+		
+}
+
+function setFieldValue(fieldType, str){
+	var slices=str.split('.');
+	var decField;
+	var binField;
+	for(var i=1; i<=slices.length; i++){
+		decField=document.getElementById(fieldType+'dec'+ i);
+		decField.value=slices[i-1];
+		binField=document.getElementById(fieldType+'bin'+ i);	
+		binField.value=binString(decField.value);
+	}
+}
+
+function setFieldValueNum(fieldType, num) {
+	var str;
+		
+	for(var i=1;i<=4;i++){
+		if(str==''){
+			sep='';		
+		} else {
+			sep='.';		
+		}
+		str=(num & 0xFF).toString() + sep + str;
+		num=(num>>8);			
+	}
+	return setFieldValue(fieldType,str);
+}
+
+
+function binString(decValue){
+	var binStr=parseInt(decValue).toString(2);
+	//binStr="0".repeat(8-binStr.length) + binStr;
+	binStr=repeatChar("0",8-binStr.length) + binStr;
+	binStr=binStr.slice(0,4) + " " + binStr.slice(4,8);
+	return binStr;	
+}
+
+function countOnes(num){
+	var binStr=parseInt(num).toString(2);
+	var count=0;
+	for(var i=0;i<binStr.length;i++){
+		if(binStr[i]=='1'){
+			count++;		
+		} else {
+			break;
+		}
+	}
+	return(count);
+}
+
+
+function applyMask() {
+	var ip;
+	var mask;
+	var net;
+	var binMask=0;
+	var diff=0;
+	var lastDiff=0;
+	var firsthost;
+	var lasthost;
+	var numhosts;
+	var prefixLength=0;	
+
+	for(var i=1;i<=4;i++){
+		mask=document.getElementById('maskdec'+i).value;
+		prefixLength+=countOnes(mask);
+	}
+	
+	for(var i=1;i<=4;i++){
+		ip=document.getElementById('ipdec'+i).value;
+		mask=document.getElementById('maskdec'+i).value;
+		net=ip & mask;
+
+		broadcast=net + (mask ^ 0xFF);
+				
+		document.getElementById('netbin'+i).value=binString(net);
+		document.getElementById('netdec'+i).value=net;
+		if(prefixLength<31){
+			document.getElementById('broadcastdec'+i).value=broadcast;
+		} else {
+			document.getElementById('broadcastdec'+i).value='---';
+		}	
+		
+		if((i<4)||(prefixLength==31)){
+			firsthost=net;
+			lasthost=broadcast;
+		} else {
+			firsthost=net+1;
+			lasthost=broadcast-1;
+		}
+
+		document.getElementById('firsthostdec'+i).value=firsthost;		
+		document.getElementById('lasthostdec'+i).value=lasthost;
+	
+		diff=lastDiff+(lasthost-firsthost);
+		lastDiff=diff<<8;
+	}	
+	numhosts=diff+1;
+
+	document.getElementById('numdirs').value=numhosts.toLocaleString();	
+	document.getElementById('ipPrefix').value=prefixLength;	
+	document.getElementById('netPrefix').value=prefixLength;	
+}
+  </script>
+</head>
+
+<body id="index" class="home" onload="initializeIPCalc()>
+    <header id="banner" class="body">
+        <h1><a href="/hectormorago/">Hector' log<strong>A personal blog.</strong></a></h1>
+        <nav>
+            <ul>
+                <li><a href="/hectormorago/category/about-me.html">About Me</a></li>
+                <li><a href="/hectormorago/category/teaching.html">Teaching</a></li>
+                <li><a href="/hectormorago/category/blog.html">Blog</a></li>
+                <li><a href="/hectormorago/category/projects.html">Projects</a></li>
+                <li active="class"><a href="/hectormorago/category/utils.html">Utils</a></li>
+            </ul>
+        </nav>
+    </header><!-- /#banner -->
+    <section id="content" class="body">
+        <article>
+            <header>
+                <h1 class="entry-title">
+                    <a href="/hectormorago/ip-calculator.html" rel="bookmark" title="Permalink to use of unittest">
+                        A simple way to calculate ips features in javascript
+                    </a>
+                </h1>
+            </header>
+
+            <div class="entry-content">
+                <footer class="post-info">
+                    <abbr class="published" title="2021-07-29T20:31:00+02:00">Published: jue 24 abril 2021</abbr>
+            		<br />
+                    <abbr class="modified" title="2021-07-29T20:31:00+02:00">Updated: jue 24 abril 2021</abbr>
+                    <address class="vcard author">
+                        By <a class="url fn" href="/hectormorago/author/hector-perez-morago.html">Hector Perez-Morago</a>
+                    </address>
+                    <p>In <a href="/hectormorago/category/utils.html">utils</a>.</p>
+                </footer><!-- /.post-info -->      
+                <h2>Introduce the ip</h2>
+                <p>Introduce una dirección IP (IPv4) junto con la máscara de red (en formato decimal o mediante una longitud de prefijo), PULSA ENTER, y obtendrás la dirección de la subred a la que pertenece dicha dirección IP, la dirección de broadcast de dicha subred, la primera y última dirección IP asignable, y el número total de direcciones IP asignables en la subred.</p>  
+                <br>
+                <section id="ipcalc">
+<form id="ipform">
+
+<div id="decimal" class="ipblock">
+	Dirección IP:
+	<div id="ipdec" class="placeholder"><input type="text" name="ipdec1" id="ipdec1" class="datadec" onchange="onChangeDecInput(event,'ip',1)" onkeypress="checkKeyPressed(event, 'ipdec', 1)">.<input type="text" name="ipdec2" id="ipdec2" class="datadec" onchange="onChangeDecInput(event,'ip',2)" onkeypress="checkKeyPressed(event, 'ipdec', 2)">.<input type="text" name="ipdec3" id="ipdec3" class="datadec" onchange="onChangeDecInput(event,'ip',3)" onkeypress="checkKeyPressed(event, 'ipdec', 3)">.<input type="text" name="ipdec4" id="ipdec4" class="datadec" onchange="onChangeDecInput(event,'ip',4)" onkeypress="checkKeyPressed(event, 'ipdec', 4)"> / <input type="text" name="ipPrefix" id="ipPrefix" class="datadec" onchange="onChangePrefix()" onkeypress="checkKeyPressed(event,'ipPrefix',4)">
+	</div> 
+	Máscara de subred:
+	<div id="maskdec" class="placeholder"><input type="text" name="maskdec1" id="maskdec1" class="datadec" onchange="onChangeDecInput(event,'mask',1)" onkeypress="checkKeyPressed(event, 'maskdec', 1)">.<input type="text" name="maskdec2" id="maskdec2" class="datadec" onchange="onChangeDecInput(event,'mask',2)" onkeypress="checkKeyPressed(event, 'maskdec', 2)">.<input type="text" name="maskdec3" id="maskdec3" class="datadec" onchange="onChangeDecInput(event,'mask',3)" onkeypress="checkKeyPressed(event, 'maskdec', 3)">.<input type="text" name="maskdec4" id="maskdec4" class="datadec" onchange="onChangeDecInput(event,'mask',4)" onkeypress="checkKeyPressed(event, 'maskdec', 4)"></div>
+	<div id="warningArea" style="display: none;">
+		<div id="warningMsg"></div>
+	</div>
+</div>
+
+
+<div id="subnetcalc">
+	<div id="binary" class="ipblock">
+		Dirección IP (binario):
+		<div id="ipbin" class="placeholder"><input type="text" name="ipbin1" id="ipbin1" class="databin" readonly="">.<input type="text" name="ipbin2" id="ipbin2" class="databin" readonly="">.<input type="text" name="ipbin3" id="ipbin3" class="databin" readonly="">.<input type="text" name="ipbin4" id="ipbin4" class="databin" readonly=""></div> 
+		Máscara de subred (binario):
+		<div id="maskbin" class="placeholder"><input type="text" name="maskbin1" id="maskbin1" class="databin" readonly="">.<input type="text" name="maskbin2" id="maskbin2" class="databin" readonly="">.<input type="text" name="maskbin3" id="maskbin3" class="databin" readonly="">.<input type="text" name="maskbin4" id="maskbin4" class="databin" readonly=""></div>
+	</div>
+	
+	<div id="binresults" class="ipblock">
+		Dirección de subred (binario):
+		<div id="netbin" class="placeholder"><input type="text" name="netbin1" id="netbin1" class="databin" readonly="">.<input type="text" name="netbin2" id="netbin2" class="databin" readonly="">.<input type="text" name="netbin3" id="netbin3" class="databin" readonly="">.<input type="text" name="netbin4" id="netbin4" class="databin" readonly=""></div>
+	</div>
+</div>
+
+
+<div id="decresults" class="ipblock">
+	Dirección de subred:
+	<div id="netdec" class="placeholder"><input type="text" name="netdec1" id="netdec1" class="datadec" readonly="">.<input type="text" name="netdec2" id="netdec2" class="datadec" readonly="">.<input type="text" name="netdec3" id="netdec3" class="datadec" readonly="">.<input type="text" name="netdec4" id="netdec4" class="datadec" readonly=""> / <input type="text" name="netPrefix" id="netPrefix" class="datadec" readonly=""></div>
+	Dirección de broadcast:
+	<div id="broadcastdec" class="placeholder"><input type="text" name="broadcastdec1" id="broadcastdec1" class="datadec" readonly="">.<input type="text" name="broadcastdec2" id="broadcastdec2" class="datadec" readonly="">.<input type="text" name="broadcastdec3" id="broadcastdec3" class="datadec" readonly="">.<input type="text" name="broadcastdec4" id="broadcastdec4" class="datadec" readonly=""></div>
+	Primera dirección IP:
+	<div id="firsthostdec" class="placeholder"><input type="text" name="firsthostdec1" id="firsthostdec1" class="datadec" readonly="">.<input type="text" name="firsthostdec2" id="firsthostdec2" class="datadec" readonly="">.<input type="text" name="firsthostdec3" id="firsthostdec3" class="datadec" readonly="">.<input type="text" name="firsthostdec4" id="firsthostdec4" class="datadec" readonly=""></div>
+	Última dirección IP:
+	<div id="lasthostdec" class="placeholder"><input type="text" name="lasthostdec1" id="lasthostdec1" class="datadec" readonly="">.<input type="text" name="lasthostdec2" id="lasthostdec2" class="datadec" readonly="">.<input type="text" name="lasthostdec3" id="lasthostdec3" class="datadec" readonly="">.<input type="text" name="lasthostdec4" id="lasthostdec4" class="datadec" readonly=""></div>
+	Direcciones IP disponibles:
+	<div id="numdirssec" class="placeholder">
+		<input type="text" name="numdirs" id="numdirs" readonly="">	
+	</div>
+</div>
+
+
+
+</form>
+
+</section>
+
+                <br>   
+            </div><!-- /.entry-content -->
+        </article>
+    </section>
+    <section id="extras" class="body">
+        <div class="blogroll">
+                <h2>links</h2>
+                <ul>
+                    <li><a href="https://www.researchgate.net/profile/Hector_Perez-Morago"><i class="ai ai-researchgate ai-2x"></i></a></li>
+                    <li><a href="https://scholar.google.es/citations?user=kayx53AAAAAJ&hl=es"><i class="ai ai-google-scholar-square ai-2x"></i></a></li>
+                    <li><a href="https://publons.com/researcher/1280179/hector-perez-morago/"><i class="ai ai-publons ai-2x"></i></a></li>
+                    <li><a href="http://getpelican.com/">Pelican</a></li>
+                    <li><a href="http://python.org/">Python.org</a></li>
+                    <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                </ul>
+        </div><!-- /.blogroll -->
+        <div class="social">
+                <h2>social</h2>
+                <ul>
+                    <li><a href="/hectormorago/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                    <li><a href="https://github.com/hperez30">Github</a></li>
+                    <li><a href="https://es.linkedin.com/in/hector-perez-morago">Linkedin</a></li>
+                </ul>
+        </div><!-- /.social -->
+    </section><!-- /#extras -->
+
+    <footer id="contentinfo" class="body">
+        <address id="about" class="vcard body">
+        Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+        </address><!-- /#about -->
+
+        <p>The theme is by 
+            <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!
+        </p>
+    </footer><!-- /#contentinfo -->
+</body>
+</html>
