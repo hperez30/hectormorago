@@ -582,10 +582,20 @@ function applyMask() {
 
 <div id="decimal" class="ipblock">
 	Dirección IP:
-	<div id="ipdec" class="placeholder"><input type="text" name="ipdec1" id="ipdec1" class="datadec" onchange="onChangeDecInput(event,'ip',1)" onkeypress="checkKeyPressed(event, 'ipdec', 1)">.<input type="text" name="ipdec2" id="ipdec2" class="datadec" onchange="onChangeDecInput(event,'ip',2)" onkeypress="checkKeyPressed(event, 'ipdec', 2)">.<input type="text" name="ipdec3" id="ipdec3" class="datadec" onchange="onChangeDecInput(event,'ip',3)" onkeypress="checkKeyPressed(event, 'ipdec', 3)">.<input type="text" name="ipdec4" id="ipdec4" class="datadec" onchange="onChangeDecInput(event,'ip',4)" onkeypress="checkKeyPressed(event, 'ipdec', 4)"> / <input type="text" name="ipPrefix" id="ipPrefix" class="datadec" onchange="onChangePrefix()" onkeypress="checkKeyPressed(event,'ipPrefix',4)">
+	<div id="ipdec" class="placeholder">
+		<input type="text" name="ipdec1" id="ipdec1" class="datadec" onchange="onChangeDecInput(event,'ip',1)" onkeypress="checkKeyPressed(event, 'ipdec', 1)">.
+		<input type="text" name="ipdec2" id="ipdec2" class="datadec" onchange="onChangeDecInput(event,'ip',2)" onkeypress="checkKeyPressed(event, 'ipdec', 2)">.
+		<input type="text" name="ipdec3" id="ipdec3" class="datadec" onchange="onChangeDecInput(event,'ip',3)" onkeypress="checkKeyPressed(event, 'ipdec', 3)">.
+		<input type="text" name="ipdec4" id="ipdec4" class="datadec" onchange="onChangeDecInput(event,'ip',4)" onkeypress="checkKeyPressed(event, 'ipdec', 4)"> / 
+		<input type="text" name="ipPrefix" id="ipPrefix" class="datadec" onchange="onChangePrefix()" onkeypress="checkKeyPressed(event,'ipPrefix',4)">
 	</div> 
 	Máscara de subred:
-	<div id="maskdec" class="placeholder"><input type="text" name="maskdec1" id="maskdec1" class="datadec" onchange="onChangeDecInput(event,'mask',1)" onkeypress="checkKeyPressed(event, 'maskdec', 1)">.<input type="text" name="maskdec2" id="maskdec2" class="datadec" onchange="onChangeDecInput(event,'mask',2)" onkeypress="checkKeyPressed(event, 'maskdec', 2)">.<input type="text" name="maskdec3" id="maskdec3" class="datadec" onchange="onChangeDecInput(event,'mask',3)" onkeypress="checkKeyPressed(event, 'maskdec', 3)">.<input type="text" name="maskdec4" id="maskdec4" class="datadec" onchange="onChangeDecInput(event,'mask',4)" onkeypress="checkKeyPressed(event, 'maskdec', 4)"></div>
+	<div id="maskdec" class="placeholder">
+		<input type="text" name="maskdec1" id="maskdec1" class="datadec" onchange="onChangeDecInput(event,'mask',1)" onkeypress="checkKeyPressed(event, 'maskdec', 1)">.
+		<input type="text" name="maskdec2" id="maskdec2" class="datadec" onchange="onChangeDecInput(event,'mask',2)" onkeypress="checkKeyPressed(event, 'maskdec', 2)">.
+		<input type="text" name="maskdec3" id="maskdec3" class="datadec" onchange="onChangeDecInput(event,'mask',3)" onkeypress="checkKeyPressed(event, 'maskdec', 3)">.
+		<input type="text" name="maskdec4" id="maskdec4" class="datadec" onchange="onChangeDecInput(event,'mask',4)" onkeypress="checkKeyPressed(event, 'maskdec', 4)">
+	</div>
 	<div id="warningArea" style="display: none;">
 		<div id="warningMsg"></div>
 	</div>
@@ -595,14 +605,29 @@ function applyMask() {
 <div id="subnetcalc">
 	<div id="binary" class="ipblock">
 		Dirección IP (binario):
-		<div id="ipbin" class="placeholder"><input type="text" name="ipbin1" id="ipbin1" class="databin" readonly="">.<input type="text" name="ipbin2" id="ipbin2" class="databin" readonly="">.<input type="text" name="ipbin3" id="ipbin3" class="databin" readonly="">.<input type="text" name="ipbin4" id="ipbin4" class="databin" readonly=""></div> 
+		<div id="ipbin" class="placeholder">
+			<input type="text" name="ipbin1" id="ipbin1" class="databin" readonly="">.
+			<input type="text" name="ipbin2" id="ipbin2" class="databin" readonly="">.
+			<input type="text" name="ipbin3" id="ipbin3" class="databin" readonly="">.
+			<input type="text" name="ipbin4" id="ipbin4" class="databin" readonly="">
+		</div> 
 		Máscara de subred (binario):
-		<div id="maskbin" class="placeholder"><input type="text" name="maskbin1" id="maskbin1" class="databin" readonly="">.<input type="text" name="maskbin2" id="maskbin2" class="databin" readonly="">.<input type="text" name="maskbin3" id="maskbin3" class="databin" readonly="">.<input type="text" name="maskbin4" id="maskbin4" class="databin" readonly=""></div>
+		<div id="maskbin" class="placeholder">
+			<input type="text" name="maskbin1" id="maskbin1" class="databin" readonly="">.
+			<input type="text" name="maskbin2" id="maskbin2" class="databin" readonly="">.
+			<input type="text" name="maskbin3" id="maskbin3" class="databin" readonly="">.
+			<input type="text" name="maskbin4" id="maskbin4" class="databin" readonly="">
+		</div>
 	</div>
 	
 	<div id="binresults" class="ipblock">
 		Dirección de subred (binario):
-		<div id="netbin" class="placeholder"><input type="text" name="netbin1" id="netbin1" class="databin" readonly="">.<input type="text" name="netbin2" id="netbin2" class="databin" readonly="">.<input type="text" name="netbin3" id="netbin3" class="databin" readonly="">.<input type="text" name="netbin4" id="netbin4" class="databin" readonly=""></div>
+		<div id="netbin" class="placeholder">
+			<input type="text" name="netbin1" id="netbin1" class="databin" readonly="">.
+			<input type="text" name="netbin2" id="netbin2" class="databin" readonly="">.
+			<input type="text" name="netbin3" id="netbin3" class="databin" readonly="">.
+			<input type="text" name="netbin4" id="netbin4" class="databin" readonly="">
+		</div>
 	</div>
 </div>
 
